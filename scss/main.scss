@@ -1,0 +1,12 @@
+@import 'resets';
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(110deg, #000, #000 40%, #fff);
+
+    &#logo {
+        margin-right: 5px;
+    }
+}

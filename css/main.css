@@ -1,1 +1,15 @@
-/*# sourceMappingURL=main.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(110deg, #000, #000 40%, #fff);
+}
+header#logo {
+  margin-right: 5px;
+}/*# sourceMappingURL=main.css.map */
