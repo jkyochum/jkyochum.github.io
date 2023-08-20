@@ -7,6 +7,14 @@ const burger = document.querySelector('.navLine');
 
 btnNavToggle.addEventListener('click', toggleNav);
 
+headerNav.addEventListener('click', (e) => {
+    console.log(e);
+    const className = e.target.parentElement.className;
+    if (className === 'navLink') {
+        toggleNav();
+    }
+});
+
 
 //Helper Functions
 
