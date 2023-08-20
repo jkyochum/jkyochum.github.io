@@ -21,20 +21,29 @@ header #headerNav {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  right: -104%;
+  top: -100%;
+  opacity: 0;
   background-color: #a33c3c;
   transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header #headerNav ul {
-  position: absolute;
-  top: 36%;
-  left: 37%;
   list-style: none;
   font-size: xx-large;
 }
 header #headerNav ul li {
   color: #fff;
   padding: 12px 0;
+}
+header #headerNav.closed {
+  top: -100%;
+  opacity: 0;
+}
+header #headerNav.open {
+  top: 0%;
+  opacity: 1;
 }
 header #navToggle {
   position: relative;
@@ -60,6 +69,7 @@ header #navToggle .navLine::before {
   width: 30px;
   height: 3px;
   background-color: #000;
+  transition: 0.2s all ease-in-out;
 }
 header #navToggle .navLine::after {
   content: "";
@@ -68,4 +78,14 @@ header #navToggle .navLine::after {
   width: 30px;
   height: 3px;
   background-color: #000;
+  transition: 0.2s all ease-in-out;
+}
+header #navToggle .navLine.open {
+  background: transparent;
+}
+header #navToggle .navLine.open::before {
+  transform: rotate(45deg) translate(12px, 5px);
+}
+header #navToggle .navLine.open::after {
+  transform: rotate(-45deg) translate(12px, -5px);
 }/*# sourceMappingURL=main.css.map */

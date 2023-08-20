@@ -1,5 +1,7 @@
+const body = document.querySelector('body');
 const headerNav = document.querySelector('#headerNav');
 const btnNavToggle = document.querySelector('#navToggle');
+const burger = document.querySelector('.navLine');
 
 //Event Handlers
 
@@ -8,14 +10,30 @@ btnNavToggle.addEventListener('click', toggleNav);
 
 //Helper Functions
 
+function toggleScrollbar(open) {
+    if (open) {
+        body.style.overflow = 'hidden';
+    } else {
+        body.style.overflow = '';
+    }
+}
+
 function toggleNav() {
     if (headerNav.classList.contains('closed')) {
-        headerNav.style.right = '-3%';
         headerNav.classList.add('open');
         headerNav.classList.remove('closed');
+        burger.classList.add('open');
+        burger.classList.remove('closed');
+        navToggle.style.right = '2.05rem';
+        toggleScrollbar(true);
+
     } else {
-        headerNav.style.right = '-104%';
         headerNav.classList.add('closed');
         headerNav.classList.remove('open');
+        burger.classList.add('closed');
+        burger.classList.remove('open');
+        navToggle.style.right = '1rem';
+        toggleScrollbar(false);
+
     }
 }
