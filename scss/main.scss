@@ -1,4 +1,8 @@
-@import 'resets';
+@import 'resets', 'variables';
+
+body {
+    background-color: $tapioca-white;
+}
 
 header {
     display: flex;
@@ -6,7 +10,43 @@ header {
     justify-content: space-between;
     background: linear-gradient(110deg, #000, #000 40%, #fff);
 
-    &#logo {
+    #logo {
         margin-right: 5px;
+    }
+
+    #navToggle {
+        position: relative;
+        right: 1rem;
+        width: 48px;
+        height: 48px;
+        align-self: center;
+        border-radius: 5px;
+
+        .navLine {
+            position: absolute;
+            top: 50%;
+            left: 17%;
+            width: 25px;
+            height: 3px;
+            background-color: lighten(#000, 41%);
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 10.5px;
+                width: 30px;
+                height: 3px;
+                background-color: #000;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10.5px;
+                width: 30px;
+                height: 3px;
+                background-color: #000;
+            }
+        }
     }
 }

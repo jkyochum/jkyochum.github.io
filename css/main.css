@@ -4,12 +4,48 @@
   padding: 0;
 }
 
+body {
+  background-color: #faf7e8;
+}
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background: linear-gradient(110deg, #000, #000 40%, #fff);
 }
-header#logo {
+header #logo {
   margin-right: 5px;
+}
+header #navToggle {
+  position: relative;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  align-self: center;
+  border-radius: 5px;
+}
+header #navToggle .navLine {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  width: 25px;
+  height: 3px;
+  background-color: dimgray;
+}
+header #navToggle .navLine::before {
+  content: "";
+  position: absolute;
+  bottom: 10.5px;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+}
+header #navToggle .navLine::after {
+  content: "";
+  position: absolute;
+  bottom: -10.5px;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
 }/*# sourceMappingURL=main.css.map */
