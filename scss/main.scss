@@ -14,6 +14,28 @@ header {
         margin-right: 5px;
     }
 
+    #headerNav {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        right: -104%;
+        background-color: $burnt-red;
+        transition: .3s ease-in-out;
+
+        ul {
+            position: absolute;
+            top: 36%;
+            left: 37%;
+            list-style: none;
+            font-size: xx-large;
+
+            li {
+                color: #fff;
+                padding: 12px 0
+            }
+        }
+    }
+
     #navToggle {
         position: relative;
         right: 1rem;
@@ -21,6 +43,7 @@ header {
         height: 48px;
         align-self: center;
         border-radius: 5px;
+        cursor: pointer;
 
         .navLine {
             position: absolute;
