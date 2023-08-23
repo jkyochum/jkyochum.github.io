@@ -42,6 +42,5 @@ function toggleNav() {
         burger.classList.remove('open');
         navToggle.style.right = '1rem';
         toggleScrollbar(false);
-
     }
 }

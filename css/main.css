@@ -6,6 +6,7 @@
 
 body {
   background-color: #faf7e8;
+  font-family: Mada, sans-serif;
 }
 
 header {
@@ -88,4 +89,32 @@ header #navToggle .navLine.open::before {
 }
 header #navToggle .navLine.open::after {
   transform: rotate(-45deg) translate(12px, -5px);
+}
+
+#stack #techWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#stack #techWrapper .utility {
+  display: flex;
+  align-items: center;
+}
+#stack #techWrapper .utility:nth-child(1) img {
+  width: 51px;
+}
+#stack #techWrapper .utility:nth-child(2) img {
+  width: 51px;
+}
+#stack #techWrapper .utility:nth-child(3) img {
+  width: 70px;
+}
+#stack #techWrapper .utility:nth-child(4) img {
+  width: 93px;
+}
+#stack #techWrapper .utility:nth-child(5) img {
+  width: 88px;
+}
+#stack #techWrapper .utility:nth-child(6) img {
+  width: 70px;
 }/*# sourceMappingURL=main.css.map */
