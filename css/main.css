@@ -9,23 +9,6 @@ body {
   font-family: Urbanist, sans-serif;
 }
 
-#welcome {
-  font-family: Caveat, Nunito sans-serif;
-  font-weight: 200;
-  height: 100vh;
-  background: url("../svgs/mizu.svg"), url("../images/paper.jpg");
-  background-repeat: no-repeat;
-  background-size: contain, cover;
-  background-position: right, center;
-}
-#welcome h1 {
-  font-weight: 700;
-}
-#welcome h1 .firstLetter {
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -107,6 +90,23 @@ header #navToggle .navLine.open::before {
 }
 header #navToggle .navLine.open::after {
   transform: rotate(-45deg) translate(12px, -5px);
+}
+
+#welcome {
+  font-family: Caveat, Nunito, sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  background: url("../svgs/mizu.svg"), url("../images/paper.jpg");
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  background-position: right, center;
+}
+#welcome h1 {
+  font-weight: 700;
+}
+#welcome h1 .firstLetter {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 #stack #techWrapper {
