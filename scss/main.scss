@@ -144,10 +144,10 @@ header {
 
     #welcomeWrapper {
         margin-left: 12px;
-        width: 235px;
+        width: 80%;
 
         h1 {
-            font-size: 2em;
+            font-size: 2.8em;
             font-weight: 700;
 
             .firstLetter {
@@ -166,10 +166,36 @@ header {
                 font-size: 1.3em;
             }
         }
-
     }
 
+    #scrollArrow {
+        position: absolute;
+        top: 28%;
+        left: 42%;
+        cursor: pointer;
 
+        &::before {
+            content: '';
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: #000;
+            transform: rotate(28deg) translateX(4px);
+        }
+
+        &::after {
+            content: '';
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: #000;
+            transform: rotate(-28deg) translateX(-4px);
+        }
+    }
 }
 
 #stack {

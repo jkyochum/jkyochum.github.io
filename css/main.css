@@ -121,10 +121,10 @@ header #navToggle .navLine.open::after {
 }
 #welcome #welcomeWrapper {
   margin-left: 12px;
-  width: 235px;
+  width: 80%;
 }
 #welcome #welcomeWrapper h1 {
-  font-size: 2em;
+  font-size: 2.8em;
   font-weight: 700;
 }
 #welcome #welcomeWrapper h1 .firstLetter {
@@ -136,6 +136,32 @@ header #navToggle .navLine.open::after {
 }
 #welcome #welcomeWrapper p:nth-of-type(2) {
   font-size: 1.3em;
+}
+#welcome #scrollArrow {
+  position: absolute;
+  top: 28%;
+  left: 42%;
+  cursor: pointer;
+}
+#welcome #scrollArrow::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #000;
+  transform: rotate(28deg) translateX(4px);
+}
+#welcome #scrollArrow::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #000;
+  transform: rotate(-28deg) translateX(-4px);
 }
 
 #stack #techWrapper {
