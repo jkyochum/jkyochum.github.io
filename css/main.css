@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #faf7e8;
   font-family: Urbanist, sans-serif;
@@ -112,7 +117,7 @@ header #navToggle .navLine.open::after {
   background: url("../svgs/mizu.svg"), url("../images/paper.jpg");
   background-repeat: no-repeat;
   background-size: contain, cover;
-  background-position: right, center;
+  background-position: right bottom, center;
 }
 #welcome #welcomeWrapper {
   margin-left: 12px;
