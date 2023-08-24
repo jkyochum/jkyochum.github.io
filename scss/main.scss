@@ -186,3 +186,30 @@ header {
     }
 
 }
+
+footer {
+    height: 50px;
+    background: linear-gradient(110deg, #fff, #000 45%, #000);
+
+
+    #footerNav {
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            li {
+                list-style: none;
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    fill: #fff;
+                }
+            }
+
+        }
+
+    }
+}

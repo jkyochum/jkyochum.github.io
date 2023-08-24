@@ -135,4 +135,22 @@ header #navToggle .navLine.open::after {
 }
 #stack #techWrapper .utility:nth-child(6) img {
   width: 70px;
+}
+
+footer {
+  height: 50px;
+  background: linear-gradient(110deg, #fff, #000 45%, #000);
+}
+footer #footerNav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+footer #footerNav ul li {
+  list-style: none;
+}
+footer #footerNav ul li svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
 }/*# sourceMappingURL=main.css.map */
