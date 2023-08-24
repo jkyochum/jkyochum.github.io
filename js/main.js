@@ -1,8 +1,10 @@
+const html = document.querySelector('html');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
 const headerNav = document.querySelector('#headerNav');
 const btnNavToggle = document.querySelector('#navToggle');
 const burger = document.querySelector('.navLine');
+const welcomeWrapper = document.querySelector('#welcomeWrapper');
 
 //Event Handlers
 
@@ -17,13 +19,16 @@ headerNav.addEventListener('click', (e) => {
 });
 
 document.addEventListener('scroll', (e) => {
-    console.log(e);
     if (window.scrollY > 90) {
-        header.style.top = '0';
+        // header.style.top = '0';
+        header.classList.add('open');
+        header.classList.remove('closed');
     }
     else {
-        header.style.top = '-104px';
-        header.style.position = 'fixed';
+        // header.style.top = '-70px';
+        // header.style.position = 'fixed';
+        header.classList.add('closed');
+        header.classList.remove('open');
     }
 });
 
@@ -33,8 +38,12 @@ document.addEventListener('scroll', (e) => {
 function toggleScrollbar(open) {
     if (open) {
         body.style.overflow = 'hidden';
+        welcomeWrapper.style.zIndex = '2';
+
     } else {
         body.style.overflow = '';
+        welcomeWrapper.style.zIndex = '';
+
     }
 }
 

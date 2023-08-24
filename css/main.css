@@ -10,14 +10,20 @@ body {
 }
 
 header {
-  position: absolute;
-  top: -104px;
+  position: fixed;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background: linear-gradient(110deg, #000, #000 40%, #fff);
   height: 70px;
+  transition: 0.3s all ease-in-out;
+}
+header.open {
+  top: 0;
+}
+header.closed {
+  top: -70px;
 }
 header #logo {
   align-self: center;
@@ -30,7 +36,7 @@ header #headerNav {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  top: -1%;
+  top: 0%;
   opacity: 0;
   background-color: #a33c3c;
   transition: 0.3s ease-in-out;
@@ -51,7 +57,6 @@ header #headerNav.closed {
   opacity: 0;
 }
 header #headerNav.open {
-  top: 0%;
   opacity: 1;
 }
 header #navToggle {
@@ -109,12 +114,23 @@ header #navToggle .navLine.open::after {
   background-size: contain, cover;
   background-position: right, center;
 }
-#welcome h1 {
+#welcome #welcomeWrapper {
+  margin-left: 12px;
+  width: 235px;
+}
+#welcome #welcomeWrapper h1 {
+  font-size: 2em;
   font-weight: 700;
 }
-#welcome h1 .firstLetter {
+#welcome #welcomeWrapper h1 .firstLetter {
   font-size: 1.5em;
   font-weight: 600;
+}
+#welcome #welcomeWrapper p:nth-of-type(1) {
+  font-size: 1.5em;
+}
+#welcome #welcomeWrapper p:nth-of-type(2) {
+  font-size: 1.3em;
 }
 
 #stack #techWrapper {
