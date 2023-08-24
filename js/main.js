@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const header = document.querySelector('header');
 const headerNav = document.querySelector('#headerNav');
 const btnNavToggle = document.querySelector('#navToggle');
 const burger = document.querySelector('.navLine');
@@ -12,6 +13,17 @@ headerNav.addEventListener('click', (e) => {
     const className = e.target.parentElement.className;
     if (className === 'navLink') {
         toggleNav();
+    }
+});
+
+document.addEventListener('scroll', (e) => {
+    console.log(e);
+    if (window.scrollY > 90) {
+        header.style.top = '0';
+    }
+    else {
+        header.style.top = '-104px';
+        header.style.position = 'fixed';
     }
 });
 
@@ -44,3 +56,8 @@ function toggleNav() {
         toggleScrollbar(false);
     }
 }
+
+
+// window.onload = (e) => {
+//     window.scrollY = 0;
+// };
