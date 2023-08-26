@@ -24,15 +24,14 @@ header {
     background: linear-gradient(110deg, #000, #000 40%, #fff);
     height: 70px;
     transition: .3s all ease-in-out;
+    z-index: 2;
 
     &.open {
         top: 0;
-
     }
 
     &.closed {
         top: -70px;
-
     }
 
 
@@ -49,7 +48,7 @@ header {
         position: fixed;
         height: 100vh;
         width: 100vw;
-        top: 0%;
+        right: -100%;
         opacity: 0;
         background-color: $burnt-red;
         transition: .3s ease-in-out;
@@ -68,12 +67,12 @@ header {
         }
 
         &.closed {
-            top: -100%;
-            opacity: 0;
+            right: -100%;
+            // opacity: 0;
         }
 
         &.open {
-            // top: 0%;
+            right: 0%;
             opacity: 1;
         }
     }
@@ -143,7 +142,9 @@ header {
     background-position: right bottom, center;
 
     #welcomeWrapper {
-        margin-left: 12px;
+        position: relative;
+        left: 10px;
+        top: -14px;
         width: 80%;
 
         h1 {
@@ -171,29 +172,31 @@ header {
     #scrollArrow {
         position: absolute;
         top: 28%;
-        left: 42%;
+        left: 44%;
         cursor: pointer;
 
         &::before {
             content: '';
             position: relative;
             display: inline-block;
-            width: 40px;
+            width: 30px;
             height: 4px;
             border-radius: 5px;
-            background-color: #000;
-            transform: rotate(28deg) translateX(4px);
+            background-color: lighten(#000000, 70%);
+            // opacity: .5;
+            transform: rotate(28deg) translateX(3px);
         }
 
         &::after {
             content: '';
             position: relative;
             display: inline-block;
-            width: 40px;
+            width: 30px;
             height: 4px;
             border-radius: 5px;
-            background-color: #000;
-            transform: rotate(-28deg) translateX(-4px);
+            background-color: lighten(#000, 70%);
+            // opacity: .5;
+            transform: rotate(-28deg) translateX(-3px);
         }
     }
 }

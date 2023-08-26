@@ -23,6 +23,7 @@ header {
   background: linear-gradient(110deg, #000, #000 40%, #fff);
   height: 70px;
   transition: 0.3s all ease-in-out;
+  z-index: 2;
 }
 header.open {
   top: 0;
@@ -41,7 +42,7 @@ header #headerNav {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  top: 0%;
+  right: -100%;
   opacity: 0;
   background-color: #a33c3c;
   transition: 0.3s ease-in-out;
@@ -58,10 +59,10 @@ header #headerNav ul li {
   padding: 12px 0;
 }
 header #headerNav.closed {
-  top: -100%;
-  opacity: 0;
+  right: -100%;
 }
 header #headerNav.open {
+  right: 0%;
   opacity: 1;
 }
 header #navToggle {
@@ -120,7 +121,9 @@ header #navToggle .navLine.open::after {
   background-position: right bottom, center;
 }
 #welcome #welcomeWrapper {
-  margin-left: 12px;
+  position: relative;
+  left: 10px;
+  top: -14px;
   width: 80%;
 }
 #welcome #welcomeWrapper h1 {
@@ -140,28 +143,28 @@ header #navToggle .navLine.open::after {
 #welcome #scrollArrow {
   position: absolute;
   top: 28%;
-  left: 42%;
+  left: 44%;
   cursor: pointer;
 }
 #welcome #scrollArrow::before {
   content: "";
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 30px;
   height: 4px;
   border-radius: 5px;
-  background-color: #000;
-  transform: rotate(28deg) translateX(4px);
+  background-color: #b3b3b3;
+  transform: rotate(28deg) translateX(3px);
 }
 #welcome #scrollArrow::after {
   content: "";
   position: relative;
   display: inline-block;
-  width: 40px;
+  width: 30px;
   height: 4px;
   border-radius: 5px;
-  background-color: #000;
-  transform: rotate(-28deg) translateX(-4px);
+  background-color: #b3b3b3;
+  transform: rotate(-28deg) translateX(-3px);
 }
 
 #stack #techWrapper {

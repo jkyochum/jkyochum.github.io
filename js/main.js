@@ -38,11 +38,9 @@ document.addEventListener('scroll', (e) => {
 function toggleScrollbar(open) {
     if (open) {
         body.style.overflow = 'hidden';
-        welcomeWrapper.style.zIndex = '2';
 
     } else {
         body.style.overflow = '';
-        welcomeWrapper.style.zIndex = '';
 
     }
 }
@@ -53,7 +51,7 @@ function toggleNav() {
         headerNav.classList.remove('closed');
         burger.classList.add('open');
         burger.classList.remove('closed');
-        navToggle.style.right = '2.05rem';
+        // navToggle.style.right = '2.05rem';
         toggleScrollbar(true);
 
     } else {
@@ -61,7 +59,7 @@ function toggleNav() {
         headerNav.classList.remove('open');
         burger.classList.add('closed');
         burger.classList.remove('open');
-        navToggle.style.right = '1rem';
+        // navToggle.style.right = '1rem';
         toggleScrollbar(false);
     }
 }
