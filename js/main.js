@@ -1,22 +1,26 @@
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
-const headerNav = document.querySelector('#headerNav');
+const headerMenu = document.querySelector('#headerMenu');
 const btnNavToggle = document.querySelector('#navToggle');
 const burger = document.querySelector('.navLine');
 const welcomeWrapper = document.querySelector('#welcomeWrapper');
+const scrollArrow = document.querySelector('#scrollArrow');
+const projects = document.querySelector('#projects');
 
 //Event Handlers
 
 btnNavToggle.addEventListener('click', toggleNav);
 
-headerNav.addEventListener('click', (e) => {
+headerMenu.addEventListener('click', (e) => {
     console.log(e);
     const className = e.target.parentElement.className;
     if (className === 'navLink') {
         toggleNav();
     }
 });
+
+scrollArrow.addEventListener('click', arrowScroll);
 
 document.addEventListener('scroll', (e) => {
     if (window.scrollY > 90) {
@@ -45,21 +49,25 @@ function toggleScrollbar(open) {
     }
 }
 
+function arrowScroll() {
+    projects.scrollIntoView();
+}
+
 function toggleNav() {
-    if (headerNav.classList.contains('closed')) {
-        headerNav.classList.add('open');
-        headerNav.classList.remove('closed');
+    if (headerMenu.classList.contains('closed')) {
+        headerMenu.classList.add('open');
+        headerMenu.classList.remove('closed');
         burger.classList.add('open');
         burger.classList.remove('closed');
-        // navToggle.style.right = '2.05rem';
+        navToggle.style.right = '2.1rem';
         toggleScrollbar(true);
 
     } else {
-        headerNav.classList.add('closed');
-        headerNav.classList.remove('open');
+        headerMenu.classList.add('closed');
+        headerMenu.classList.remove('open');
         burger.classList.add('closed');
         burger.classList.remove('open');
-        // navToggle.style.right = '1rem';
+        navToggle.style.right = '1rem';
         toggleScrollbar(false);
     }
 }

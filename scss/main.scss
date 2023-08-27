@@ -7,6 +7,7 @@
 html {
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
+    background-color: $burnt-red;
 }
 
 body {
@@ -44,14 +45,15 @@ header {
         }
     }
 
-    #headerNav {
+    #headerMenu {
         position: fixed;
         height: 100vh;
         width: 100vw;
-        right: -100%;
-        opacity: 0;
+        top: 0%;
+        right: -104%;
+        // opacity: 0;
         background-color: $burnt-red;
-        transition: .3s ease-in-out;
+        transition: .3s right ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -67,13 +69,14 @@ header {
         }
 
         &.closed {
-            right: -100%;
+            right: -104%;
             // opacity: 0;
         }
 
         &.open {
-            right: 0%;
-            opacity: 1;
+            // top: 0%;
+            right: 0;
+            // opacity: 1;
         }
     }
 

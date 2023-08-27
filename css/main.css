@@ -7,6 +7,7 @@
 html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
+  background-color: #a33c3c;
 }
 
 body {
@@ -38,32 +39,31 @@ header #logo svg {
   width: 50px;
   height: 50px;
 }
-header #headerNav {
+header #headerMenu {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  right: -100%;
-  opacity: 0;
+  top: 0%;
+  right: -104%;
   background-color: #a33c3c;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s right ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header #headerNav ul {
+header #headerMenu ul {
   list-style: none;
   font-size: xx-large;
 }
-header #headerNav ul li {
+header #headerMenu ul li {
   color: #fff;
   padding: 12px 0;
 }
-header #headerNav.closed {
-  right: -100%;
+header #headerMenu.closed {
+  right: -104%;
 }
-header #headerNav.open {
-  right: 0%;
-  opacity: 1;
+header #headerMenu.open {
+  right: 0;
 }
 header #navToggle {
   position: fixed;
