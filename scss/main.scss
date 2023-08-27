@@ -16,6 +16,10 @@ body {
     background-color: $tapioca-white;
     font-family: $main-text-font;
 
+    h2 {
+        margin-bottom: 15px;
+    }
+
     p {
         font-weight: 500;
     }
@@ -216,6 +220,7 @@ header {
 #projects {
     width: 90%;
     margin: 20px auto 20px;
+    scroll-margin-block-start: 85px;
 
     #projectsWrapper {
         display: flex;
@@ -269,7 +274,7 @@ header {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 7px;
 
         .utility {
             display: flex;
@@ -278,42 +283,42 @@ header {
             &:nth-child(1) {
 
                 img {
-                    width: 51px;
+                    width: 46px;
                 }
             }
 
             &:nth-child(2) {
 
                 img {
-                    width: 51px;
+                    width: 46px;
                 }
             }
 
             &:nth-child(3) {
 
                 img {
-                    width: 70px;
+                    width: 65px;
                 }
             }
 
             &:nth-child(4) {
 
                 img {
-                    width: 93px;
+                    width: 88px;
                 }
             }
 
             &:nth-child(5) {
 
                 img {
-                    width: 88px;
+                    width: 83px;
                 }
             }
 
             &:nth-child(6) {
 
                 img {
-                    width: 70px;
+                    width: 65px;
                 }
             }
         }
@@ -346,7 +351,7 @@ header {
     }
 
     p {
-        margin-top: 8px;
+        margin-top: 2px;
         text-indent: 1rem;
 
         #firstLetter {
@@ -384,7 +389,7 @@ footer {
                     transition: .3s all ease-in-out;
 
                     &:hover {
-                        transform: scale(1.4);
+                        transform: scale(1.3);
                     }
                 }
             }
