@@ -5,6 +5,7 @@
 }
 
 html {
+  scrollbar-gutter: stable;
   scroll-behavior: smooth;
 }
 
@@ -180,15 +181,23 @@ header #navToggle .navLine.open::after {
   background: url("../images/paper.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   max-width: 500px;
   align-self: center;
 }
+#projects #projectsWrapper .card h3 {
+  font-size: 1.2em;
+  color: #a33c3c;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 6px;
+}
 #projects #projectsWrapper .card img {
   width: 200px;
+  height: 150px;
   float: right;
+  margin-left: 5px;
 }
 
 #stack #techWrapper {

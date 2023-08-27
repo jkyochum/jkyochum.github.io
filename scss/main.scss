@@ -5,7 +5,7 @@
 }
 
 html {
-    // scrollbar-gutter: stable;
+    scrollbar-gutter: stable;
     scroll-behavior: smooth;
     // background-color: lighten($burnt-red, 10%);
 }
@@ -225,15 +225,26 @@ header {
             background: url('../images/paper.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            padding: 10px;
+            padding: 15px;
             border: 1px solid rgba(0, 0, 0, .5);
             border-radius: 4px;
             max-width: 500px;
             align-self: center;
 
+            h3 {
+                font-size: 1.2em;
+                color: $burnt-red;
+                border-bottom: 1px solid $black;
+                margin-bottom: 6px;
+            }
+
+
+
             img {
                 width: 200px;
+                height: 150px;
                 float: right;
+                margin-left: 5px;
             }
         }
     }
