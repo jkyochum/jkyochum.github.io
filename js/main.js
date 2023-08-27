@@ -40,13 +40,22 @@ document.addEventListener('scroll', (e) => {
 //Helper Functions
 
 function toggleScrollbar(open) {
+    // if (open) {
+    //     setTimeout(() => {
+    //         body.style.overflow = 'hidden';
+    //     }, '800');
     if (open) {
         body.style.overflow = 'hidden';
-
     } else {
-        body.style.overflow = '';
-
+        body.style.overflow = 'auto';
     }
+
+    // } else {
+    //     setTimeout(() => {
+    //         body.style.overflow = '';
+    //     }, '800');
+
+    // }
 }
 
 function arrowScroll() {
@@ -76,3 +85,4 @@ function toggleNav() {
 // window.onload = (e) => {
 //     window.scrollY = 0;
 // };
+

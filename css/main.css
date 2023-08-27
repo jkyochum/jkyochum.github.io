@@ -5,9 +5,7 @@
 }
 
 html {
-  scrollbar-gutter: stable;
   scroll-behavior: smooth;
-  background-color: #a33c3c;
 }
 
 body {
@@ -21,7 +19,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: linear-gradient(110deg, #000, #000 40%, #fff);
+  background: linear-gradient(110deg, #000000, #000000 40%, #fff);
   height: 70px;
   transition: 0.3s all ease-in-out;
   z-index: 2;
@@ -68,7 +66,7 @@ header #headerMenu.open {
 header #navToggle {
   position: fixed;
   top: 9px;
-  right: 12px;
+  right: 1rem;
   width: 48px;
   height: 48px;
   align-self: center;
@@ -89,7 +87,7 @@ header #navToggle .navLine::before {
   bottom: 10.5px;
   width: 30px;
   height: 3px;
-  background-color: #000;
+  background-color: #000000;
   transition: 0.2s all ease-in-out;
 }
 header #navToggle .navLine::after {
@@ -98,7 +96,7 @@ header #navToggle .navLine::after {
   bottom: -10.5px;
   width: 30px;
   height: 3px;
-  background-color: #000;
+  background-color: #000000;
   transition: 0.2s all ease-in-out;
 }
 header #navToggle .navLine.open {
@@ -167,6 +165,32 @@ header #navToggle .navLine.open::after {
   transform: rotate(-28deg) translateX(-3px);
 }
 
+#projects {
+  width: 90%;
+  margin: 20px auto 20px;
+}
+#projects #projectsWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 8px;
+}
+#projects #projectsWrapper .card {
+  background: url("../images/paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  max-width: 500px;
+  align-self: center;
+}
+#projects #projectsWrapper .card img {
+  width: 200px;
+  float: right;
+}
+
 #stack #techWrapper {
   display: flex;
   justify-content: space-between;
@@ -197,7 +221,7 @@ header #navToggle .navLine.open::after {
 
 footer {
   height: 50px;
-  background: linear-gradient(110deg, #fff, #000 60%, #000);
+  background: linear-gradient(110deg, #fff, #000000 60%, #000000);
 }
 footer #footerNav ul {
   display: flex;

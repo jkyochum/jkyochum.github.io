@@ -5,12 +5,14 @@
 }
 
 html {
-    scrollbar-gutter: stable;
+    // scrollbar-gutter: stable;
     scroll-behavior: smooth;
-    background-color: $burnt-red;
+    // background-color: lighten($burnt-red, 10%);
 }
 
 body {
+    // scrollbar-gutter: stable;
+
     background-color: $tapioca-white;
     font-family: $main-text-font;
 }
@@ -22,7 +24,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(110deg, #000, #000 40%, #fff);
+    background: linear-gradient(110deg, $black, $black 40%, #fff);
     height: 70px;
     transition: .3s all ease-in-out;
     z-index: 2;
@@ -57,6 +59,8 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        // scrollbar-gutter: stable;
+
 
         ul {
             list-style: none;
@@ -75,6 +79,7 @@ header {
 
         &.open {
             // top: 0%;
+            // width: 100vw;
             right: 0;
             // opacity: 1;
         }
@@ -83,7 +88,7 @@ header {
     #navToggle {
         position: fixed;
         top: 9px;
-        right: 12px;
+        right: 1rem;
         width: 48px;
         height: 48px;
         align-self: center;
@@ -96,7 +101,7 @@ header {
             left: 17%;
             width: 25px;
             height: 3px;
-            background-color: lighten(#000, 41%);
+            background-color: lighten($black, 41%);
 
             &::before {
                 content: '';
@@ -104,7 +109,7 @@ header {
                 bottom: 10.5px;
                 width: 30px;
                 height: 3px;
-                background-color: #000;
+                background-color: $black;
                 transition: .2s all ease-in-out;
             }
 
@@ -114,7 +119,7 @@ header {
                 bottom: -10.5px;
                 width: 30px;
                 height: 3px;
-                background-color: #000;
+                background-color: $black;
                 transition: .2s all ease-in-out;
             }
 
@@ -185,7 +190,7 @@ header {
             width: 30px;
             height: 4px;
             border-radius: 5px;
-            background-color: lighten(#000000, 70%);
+            background-color: lighten($black, 70%);
             // opacity: .5;
             transform: rotate(28deg) translateX(3px);
         }
@@ -197,9 +202,39 @@ header {
             width: 30px;
             height: 4px;
             border-radius: 5px;
-            background-color: lighten(#000, 70%);
+            background-color: lighten($black, 70%);
             // opacity: .5;
             transform: rotate(-28deg) translateX(-3px);
+        }
+    }
+}
+
+#projects {
+    width: 90%;
+    margin: 20px auto 20px;
+
+    #projectsWrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        // justify-content: center;
+        margin: auto;
+        gap: 8px;
+
+        .card {
+            background: url('../images/paper.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, .5);
+            border-radius: 4px;
+            max-width: 500px;
+            align-self: center;
+
+            img {
+                width: 200px;
+                float: right;
+            }
         }
     }
 }
@@ -265,7 +300,7 @@ header {
 
 footer {
     height: 50px;
-    background: linear-gradient(110deg, #fff, #000 60%, #000);
+    background: linear-gradient(110deg, #fff, $black 60%, $black);
 
 
     #footerNav {
