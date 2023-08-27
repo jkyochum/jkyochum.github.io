@@ -7,6 +7,7 @@
 html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
+  transition: 0.3s all ease-in-out;
 }
 
 body {
@@ -51,7 +52,7 @@ header #headerMenu {
   top: 0%;
   right: -104%;
   background-color: #a33c3c;
-  transition: 0.3s right ease-in-out;
+  transition: 0.3s all ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,9 +67,11 @@ header #headerMenu ul li {
 }
 header #headerMenu.closed {
   right: -104%;
+  opacity: 0;
 }
 header #headerMenu.open {
   right: 0;
+  opacity: 1;
 }
 header #navToggle {
   position: fixed;
@@ -141,6 +144,7 @@ header #navToggle .navLine.open::after {
 }
 #welcome #welcomeWrapper p:nth-of-type(1) {
   font-size: 1.5em;
+  margin-bottom: 4px;
 }
 #welcome #welcomeWrapper p:nth-of-type(2) {
   font-size: 1.3em;
@@ -174,7 +178,7 @@ header #navToggle .navLine.open::after {
 
 #projects {
   width: 90%;
-  margin: 20px auto 20px;
+  margin: 25px auto 25px;
   scroll-margin-block-start: 85px;
 }
 #projects #projectsWrapper {
@@ -217,7 +221,7 @@ header #navToggle .navLine.open::after {
 
 #stack {
   width: 90%;
-  margin: 20px auto 20px;
+  margin: 25px auto 25px;
 }
 #stack #techWrapper {
   display: flex;
@@ -301,7 +305,7 @@ footer #footerNav ul li svg {
   width: 30px;
   height: 30px;
   fill: #fff;
-  transition: 0.3s all ease-in-out;
+  transition: 0.25s all ease-in-out;
 }
 footer #footerNav ul li svg:hover {
   transform: scale(1.3);

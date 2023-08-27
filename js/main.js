@@ -70,6 +70,7 @@ function toggleNav() {
         burger.classList.remove('closed');
         navToggle.style.right = '2.1rem';
         toggleScrollbar(true);
+        html.style.backgroundColor = '#a33c3c';
 
     } else {
         headerMenu.classList.add('closed');
@@ -78,6 +79,7 @@ function toggleNav() {
         burger.classList.remove('open');
         navToggle.style.right = '1rem';
         toggleScrollbar(false);
+        html.style.backgroundColor = '#ffffff';
     }
 }
 
