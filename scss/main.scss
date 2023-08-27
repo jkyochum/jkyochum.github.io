@@ -258,11 +258,14 @@ header {
 }
 
 #stack {
+    width: 90%;
+    margin: 20px auto 20px;
 
     #techWrapper {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        gap: 10px;
 
         .utility {
             display: flex;
@@ -309,11 +312,24 @@ header {
                     width: 70px;
                 }
             }
-
         }
-
     }
+}
 
+#bio {
+    width: 90%;
+    margin: 20px auto 20px;
+    background: url('../images/paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    // box-shadow: 3px 3px 5px rgba($black, .7);
+    border-radius: 4px;
+
+    h2 {
+        margin-bottom: 15px;
+    }
 }
 
 footer {
@@ -337,8 +353,6 @@ footer {
                     fill: #fff;
                 }
             }
-
         }
-
     }
 }

@@ -208,10 +208,15 @@ header #navToggle .navLine.open::after {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+#stack {
+  width: 90%;
+  margin: 20px auto 20px;
+}
 #stack #techWrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 #stack #techWrapper .utility {
   display: flex;
@@ -234,6 +239,20 @@ header #navToggle .navLine.open::after {
 }
 #stack #techWrapper .utility:nth-child(6) img {
   width: 70px;
+}
+
+#bio {
+  width: 90%;
+  margin: 20px auto 20px;
+  background: url("../images/paper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+#bio h2 {
+  margin-bottom: 15px;
 }
 
 footer {
