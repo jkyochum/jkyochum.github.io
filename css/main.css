@@ -13,6 +13,9 @@ body {
   background-color: #faf7e8;
   font-family: Urbanist, sans-serif;
 }
+body p {
+  font-weight: 500;
+}
 
 header {
   position: fixed;
@@ -252,7 +255,24 @@ header #navToggle .navLine.open::after {
   border-radius: 4px;
 }
 #bio h2 {
-  margin-bottom: 15px;
+  float: left;
+  margin-top: 55px;
+  margin-left: 15px;
+  font-size: 2em;
+}
+#bio img {
+  width: 165px;
+  border-radius: 50%;
+  margin-left: 65px;
+  clear: both;
+}
+#bio p {
+  margin-top: 8px;
+  text-indent: 1rem;
+}
+#bio p #firstLetter {
+  font-size: 1.8em;
+  font-weight: 400;
 }
 
 footer {
@@ -263,12 +283,22 @@ footer #footerNav ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  gap: 15px;
+  margin-right: 15px;
+  height: 50px;
 }
 footer #footerNav ul li {
   list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 footer #footerNav ul li svg {
   width: 30px;
   height: 30px;
   fill: #fff;
+  transition: 0.3s all ease-in-out;
+}
+footer #footerNav ul li svg:hover {
+  transform: scale(1.4);
 }/*# sourceMappingURL=main.css.map */
