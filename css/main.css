@@ -175,7 +175,7 @@ header #navToggle .navLine.open::after {
   flex-direction: column;
   flex-wrap: wrap;
   margin: auto;
-  gap: 8px;
+  gap: 12px;
 }
 #projects #projectsWrapper .card {
   background: url("../images/paper.jpg");
@@ -183,21 +183,29 @@ header #navToggle .navLine.open::after {
   background-size: cover;
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   max-width: 500px;
   align-self: center;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+#projects #projectsWrapper .card:hover {
+  transform: scale(1.01);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 #projects #projectsWrapper .card h3 {
   font-size: 1.2em;
   color: #a33c3c;
   border-bottom: 1px solid #000000;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 #projects #projectsWrapper .card img {
   width: 200px;
   height: 150px;
   float: right;
   margin-left: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #stack #techWrapper {

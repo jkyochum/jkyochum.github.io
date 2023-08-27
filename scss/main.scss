@@ -219,7 +219,7 @@ header {
         flex-wrap: wrap;
         // justify-content: center;
         margin: auto;
-        gap: 8px;
+        gap: 12px;
 
         .card {
             background: url('../images/paper.jpg');
@@ -227,24 +227,31 @@ header {
             background-size: cover;
             padding: 15px;
             border: 1px solid rgba(0, 0, 0, .5);
+            box-shadow: 3px 3px 5px rgba($black, .7);
             border-radius: 4px;
             max-width: 500px;
             align-self: center;
+            cursor: pointer;
+            transition: .2s all ease-in-out;
+
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: 5px 5px 5px rgba($black, .7);
+            }
 
             h3 {
                 font-size: 1.2em;
                 color: $burnt-red;
                 border-bottom: 1px solid $black;
-                margin-bottom: 6px;
+                margin-bottom: 10px;
             }
-
-
 
             img {
                 width: 200px;
                 height: 150px;
                 float: right;
                 margin-left: 5px;
+                border: 1px solid rgba($black, .2);
             }
         }
     }
