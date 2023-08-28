@@ -36,7 +36,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     background: linear-gradient(110deg, $black, $black 40%, #fff);
-    height: 70px;
+    height: 60px;
     transition: .3s all ease-in-out;
     z-index: 2;
 
@@ -78,8 +78,19 @@ header {
             font-size: xx-large;
 
             li {
-                color: #fff;
-                padding: 12px 0
+                color: darken($white, 10%);
+                padding: 12px 0;
+
+
+                a {
+                    text-decoration: none;
+
+                    &:visited {
+                        color: darken($white, 10%);
+                    }
+
+
+                }
             }
         }
 
@@ -98,13 +109,17 @@ header {
 
     #navToggle {
         position: fixed;
-        top: 9px;
+        top: 4px;
         right: 1rem;
         width: 48px;
         height: 48px;
         align-self: center;
         border-radius: 5px;
         cursor: pointer;
+
+        &:active {
+            background: transparent;
+        }
 
         .navLine {
             position: absolute;
@@ -138,11 +153,11 @@ header {
                 background: transparent;
 
                 &::before {
-                    transform: rotate(45deg) translate(12px, 5px);
+                    transform: rotate(45deg) translate(6px, 10px);
                 }
 
                 &::after {
-                    transform: rotate(-45deg) translate(12px, -5px);
+                    transform: rotate(-45deg) translate(8px, -12px);
                 }
             }
         }
@@ -159,15 +174,17 @@ header {
     background-repeat: no-repeat;
     background-size: contain, cover;
     background-position: right bottom, center;
+    border-bottom: 1px solid $black;
+    box-shadow: 0px 3px 10px rgba($black, 0.7);
 
     #welcomeWrapper {
         position: relative;
         left: 10px;
-        top: -14px;
+        top: -6px;
         width: 80%;
 
         h1 {
-            font-size: 2.8em;
+            font-size: 2em;
             font-weight: 700;
 
             .firstLetter {
@@ -191,8 +208,8 @@ header {
 
     #scrollArrow {
         position: absolute;
-        top: 28%;
-        left: 44%;
+        top: 30%;
+        left: 42%;
         cursor: pointer;
 
         &::before {
@@ -260,10 +277,10 @@ header {
             }
 
             img {
-                width: 200px;
-                height: 150px;
-                float: right;
-                margin-left: 5px;
+                width: 80%;
+                height: 155px;
+                // float: right;
+                margin: 0 0 3px 10%;
                 border: 1px solid rgba($black, .2);
             }
         }

@@ -68,7 +68,7 @@ function toggleNav() {
         headerMenu.classList.remove('closed');
         burger.classList.add('open');
         burger.classList.remove('closed');
-        navToggle.style.right = '2.1rem';
+        // navToggle.style.right = '2.1rem';
         toggleScrollbar(true);
         html.style.backgroundColor = '#a33c3c';
 
