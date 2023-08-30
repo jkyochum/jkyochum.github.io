@@ -1,0 +1,12 @@
+@mixin transition($time, $target: all) {
+    transition: $time $target ease-in-out;
+}
+
+@mixin flex($display: flex, $flexDir: row, $wrap: wrap, $justify: null, $align: null, $gap: null) {
+    display: $display;
+    flex-direction: $flexDir;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
