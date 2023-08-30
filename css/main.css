@@ -226,7 +226,7 @@ header #navToggle .navLine.open::after {
 #projects #projectsWrapper .card img {
   width: 80%;
   height: 155px;
-  margin: 0 0 3px 10%;
+  margin: 0 0 8px 10%;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -236,31 +236,31 @@ header #navToggle .navLine.open::after {
 }
 #stack #techWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 14px 30px;
 }
 #stack #techWrapper .utility {
   display: flex;
   align-items: center;
 }
 #stack #techWrapper .utility:nth-child(1) img {
-  width: 46px;
+  width: 50px;
 }
 #stack #techWrapper .utility:nth-child(2) img {
-  width: 46px;
+  width: 50px;
 }
 #stack #techWrapper .utility:nth-child(3) img {
-  width: 65px;
+  width: 59px;
 }
 #stack #techWrapper .utility:nth-child(4) img {
-  width: 88px;
+  width: 70px;
 }
 #stack #techWrapper .utility:nth-child(5) img {
-  width: 83px;
+  width: 65px;
 }
 #stack #techWrapper .utility:nth-child(6) img {
-  width: 65px;
+  width: 61px;
 }
 
 #bio {
@@ -274,20 +274,19 @@ header #navToggle .navLine.open::after {
   border-radius: 4px;
 }
 #bio h2 {
-  float: left;
-  margin-top: 55px;
-  margin-left: 15px;
+  text-align: center;
   font-size: 2em;
 }
 #bio img {
-  width: 165px;
+  width: 50%;
   border-radius: 50%;
-  margin-left: 65px;
-  clear: both;
+  float: left;
+  margin: 18px 10px 7px 0px;
 }
 #bio p {
   margin-top: 2px;
-  text-indent: 1rem;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
 #bio p #firstLetter {
   font-size: 1.8em;
