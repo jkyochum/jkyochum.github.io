@@ -297,6 +297,32 @@ footer {
   height: 50px;
   background: linear-gradient(110deg, #fff, #000000 60%, #000000);
 }
+@keyframes airSlide {
+  0% {
+    opacity: 0;
+    transform: translate(60%, -60%);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes textSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 footer #footerNav ul {
   display: flex;
   flex-direction: row;
@@ -319,4 +345,19 @@ footer #footerNav ul li svg {
 }
 footer #footerNav ul li svg:hover {
   transform: scale(1.3);
+}
+footer #footerNav ul li svg:hover .midLine {
+  animation: airSlide 0.2s linear forwards;
+}
+footer #footerNav ul li svg:hover .leftLine {
+  animation: airSlide 0.3s linear forwards;
+}
+footer #footerNav ul li svg:hover .rightLine {
+  animation: airSlide 0.4s linear forwards;
+}
+footer #footerNav ul li svg:hover .topLine {
+  animation: textSlide 0.3s linear forwards;
+}
+footer #footerNav ul li svg:hover .bottomLine {
+  animation: textSlide 0.5s linear forwards;
 }/*# sourceMappingURL=main.css.map */
