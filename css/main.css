@@ -197,15 +197,26 @@ header #navToggle .navLine.open::after {
     top: 27%;
   }
 }
+@media only screen and (min-width: 425px) {
+  #welcome #scrollArrow {
+    top: 23%;
+    left: 43%;
+  }
+}
 
 #projects {
   width: 90%;
   margin: 20px auto;
   scroll-margin-block-start: 80px;
 }
+@media only screen and (min-width: 425px) {
+  #projects {
+    width: 85%;
+  }
+}
 #projects #projectsWrapper {
   display: flex;
-  flex-direction: col;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 12px;
   margin: auto;
@@ -222,6 +233,9 @@ header #navToggle .navLine.open::after {
   align-self: center;
   cursor: pointer;
   transition: 0.2s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 #projects #projectsWrapper .card:hover {
   transform: scale(1.01);
@@ -236,18 +250,25 @@ header #navToggle .navLine.open::after {
 #projects #projectsWrapper .card img {
   width: 210px;
   height: 155px;
-  margin: 0 0 8px 9%;
+  margin-bottom: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  align-self: center;
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 425px) {
   #projects #projectsWrapper .card img {
-    margin: 0 0 8px 15%;
+    width: 226px;
+    height: 171px;
   }
 }
 
 #stack {
   width: 90%;
   margin: 25px auto 25px;
+}
+@media only screen and (min-width: 425px) {
+  #stack {
+    width: 85%;
+  }
 }
 #stack h2 {
   text-align: center;
@@ -256,8 +277,24 @@ header #navToggle .navLine.open::after {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 15px 2.5em;
+  justify-content: center;
+  gap: 10px 2.5em;
+}
+@media only screen and (min-width: 375px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 3.5em;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 4em;
+  }
 }
 #stack #techWrapper .utility {
   display: flex;
@@ -295,6 +332,11 @@ header #navToggle .navLine.open::after {
   border-radius: 4px;
   scroll-margin-block-start: 61px;
 }
+@media only screen and (min-width: 425px) {
+  #bio {
+    width: 85%;
+  }
+}
 #bio h2 {
   text-align: center;
   font-size: 2em;
@@ -303,7 +345,7 @@ header #navToggle .navLine.open::after {
   width: 50%;
   border-radius: 50%;
   float: left;
-  margin: 18px 10px 7px 0px;
+  margin: 18px 10px 4px 0px;
 }
 @media only screen and (min-width: 375px) {
   #bio img {

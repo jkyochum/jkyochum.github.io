@@ -24,13 +24,10 @@ scrollArrow.addEventListener('click', arrowScroll);
 
 document.addEventListener('scroll', (e) => {
     if (window.scrollY > 90) {
-        // header.style.top = '0';
         header.classList.add('open');
         header.classList.remove('closed');
     }
     else {
-        // header.style.top = '-70px';
-        // header.style.position = 'fixed';
         header.classList.add('closed');
         header.classList.remove('open');
     }
@@ -40,22 +37,11 @@ document.addEventListener('scroll', (e) => {
 //Helper Functions
 
 function toggleScrollbar(open) {
-    // if (open) {
-    //     setTimeout(() => {
-    //         body.style.overflow = 'hidden';
-    //     }, '800');
     if (open) {
         body.style.overflow = 'hidden';
     } else {
         body.style.overflow = 'auto';
     }
-
-    // } else {
-    //     setTimeout(() => {
-    //         body.style.overflow = '';
-    //     }, '800');
-
-    // }
 }
 
 function arrowScroll() {
@@ -77,7 +63,7 @@ function toggleNav() {
         headerMenu.classList.remove('open');
         burger.classList.add('closed');
         burger.classList.remove('open');
-        navToggle.style.right = '1rem';
+        // navToggle.style.right = '1rem';
         toggleScrollbar(false);
         html.style.backgroundColor = '#ffffff';
     }
