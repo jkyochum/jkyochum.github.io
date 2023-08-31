@@ -70,6 +70,10 @@ header {
                 a {
                     text-decoration: none;
 
+                    &:link {
+                        color: darken($white, 10%);
+                    }
+
                     &:visited {
                         color: darken($white, 10%);
                     }
@@ -213,6 +217,10 @@ header {
             background-color: lighten($black, 70%);
             transform: rotate(-28deg) translateX(-3px);
         }
+
+        @include break(mobile-medium) {
+            top: 27%;
+        }
     }
 }
 
@@ -251,10 +259,14 @@ header {
             }
 
             img {
-                width: 80%;
+                width: 210px;
                 height: 155px;
-                margin: 0 0 8px 10%;
+                margin: 0 0 8px 9%;
                 border: 1px solid rgba($black, .2);
+
+                @include break(mobile-medium) {
+                    margin: 0 0 8px 15%;
+                }
             }
         }
     }
@@ -269,7 +281,11 @@ header {
     }
 
     #techWrapper {
-        @include flex($justify: space-evenly, $gap: 14px 30px);
+        @include flex($justify: space-evenly, $gap: 14px 3.5em);
+
+        @include break(mobile-medium) {
+            @include flex($gap: 14px 4em);
+        }
 
         .utility {
             @include flex($align: center);

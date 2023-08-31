@@ -10,3 +10,41 @@
     align-items: $align;
     gap: $gap;
 }
+
+@mixin break ($breakpoint) {
+    @if($breakpoint ==mobile-medium) {
+        @media only screen and (min-width: 375px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint ==mobile-large) {
+        @media only screen and (min-width: 425px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint ==tablet) {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint ==laptop) {
+        @media only screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint ==laptop-large) {
+        @media only screen and (min-width: 1440px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint ==4k) {
+        @media only screen and (min-width: 2560px) {
+            @content;
+        }
+    }
+}

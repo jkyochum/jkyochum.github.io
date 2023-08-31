@@ -72,6 +72,9 @@ header #headerMenu ul li {
 header #headerMenu ul li a {
   text-decoration: none;
 }
+header #headerMenu ul li a:link {
+  color: #e6e6e6;
+}
 header #headerMenu ul li a:visited {
   color: #e6e6e6;
 }
@@ -189,6 +192,11 @@ header #navToggle .navLine.open::after {
   background-color: #b3b3b3;
   transform: rotate(-28deg) translateX(-3px);
 }
+@media only screen and (min-width: 375px) {
+  #welcome #scrollArrow {
+    top: 27%;
+  }
+}
 
 #projects {
   width: 90%;
@@ -226,10 +234,15 @@ header #navToggle .navLine.open::after {
   margin-bottom: 10px;
 }
 #projects #projectsWrapper .card img {
-  width: 80%;
+  width: 210px;
   height: 155px;
-  margin: 0 0 8px 10%;
+  margin: 0 0 8px 9%;
   border: 1px solid rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 375px) {
+  #projects #projectsWrapper .card img {
+    margin: 0 0 8px 15%;
+  }
 }
 
 #stack {
@@ -244,7 +257,15 @@ header #navToggle .navLine.open::after {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 14px 30px;
+  gap: 14px 3.5em;
+}
+@media only screen and (min-width: 375px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px 4em;
+  }
 }
 #stack #techWrapper .utility {
   display: flex;
