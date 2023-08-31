@@ -168,7 +168,7 @@ header #navToggle .navLine.open::after {
 }
 #welcome #scrollArrow {
   position: absolute;
-  top: 30%;
+  top: 32%;
   left: 42%;
   cursor: pointer;
 }
@@ -257,15 +257,7 @@ header #navToggle .navLine.open::after {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 14px 3.5em;
-}
-@media only screen and (min-width: 375px) {
-  #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 14px 4em;
-  }
+  gap: 15px 2.5em;
 }
 #stack #techWrapper .utility {
   display: flex;
@@ -312,6 +304,11 @@ header #navToggle .navLine.open::after {
   border-radius: 50%;
   float: left;
   margin: 18px 10px 7px 0px;
+}
+@media only screen and (min-width: 375px) {
+  #bio img {
+    width: 46%;
+  }
 }
 #bio p {
   margin-top: 2px;

@@ -192,7 +192,7 @@ header {
 
     #scrollArrow {
         position: absolute;
-        top: 30%;
+        top: 32%;
         left: 42%;
         cursor: pointer;
 
@@ -281,11 +281,7 @@ header {
     }
 
     #techWrapper {
-        @include flex($justify: space-evenly, $gap: 14px 3.5em);
-
-        @include break(mobile-medium) {
-            @include flex($gap: 14px 4em);
-        }
+        @include flex($justify: space-evenly, $gap: 15px 2.5em);
 
         .utility {
             @include flex($align: center);
@@ -356,6 +352,10 @@ header {
         border-radius: 50%;
         float: left;
         margin: 18px 10px 7px 0px;
+
+        @include break(mobile-medium) {
+            width: 46%;
+        }
     }
 
     p {
