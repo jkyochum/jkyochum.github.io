@@ -18,32 +18,38 @@
         }
     }
 
-    @if($breakpoint ==mobile-large) {
+    @else if($breakpoint ==mobile-large) {
         @media only screen and (min-width: 425px) {
             @content;
         }
     }
 
-    @if($breakpoint ==tablet) {
+    @else if($breakpoint ==tablet) {
         @media only screen and (min-width: 768px) {
             @content;
         }
     }
 
-    @if($breakpoint ==laptop) {
+    @else if($breakpoint ==laptop) {
         @media only screen and (min-width: 1024px) {
             @content;
         }
     }
 
-    @if($breakpoint ==laptop-large) {
+    @else if($breakpoint ==laptop-large) {
         @media only screen and (min-width: 1440px) {
             @content;
         }
     }
 
-    @if($breakpoint ==4k) {
+    @else if($breakpoint ==4k) {
         @media only screen and (min-width: 2560px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (min-width: $breakpoint) {
             @content;
         }
     }

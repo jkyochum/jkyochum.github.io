@@ -203,6 +203,16 @@ header #navToggle .navLine.open::after {
     left: 43%;
   }
 }
+@media only screen and (min-width: 450px) {
+  #welcome #scrollArrow {
+    left: 23%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #welcome #scrollArrow {
+    top: 25%;
+  }
+}
 
 #projects {
   width: 90%;
@@ -229,7 +239,7 @@ header #navToggle .navLine.open::after {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   border-radius: 4px;
-  max-width: 500px;
+  max-width: 375px;
   align-self: center;
   cursor: pointer;
   transition: 0.2s all ease-in-out;

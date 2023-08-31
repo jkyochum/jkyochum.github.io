@@ -226,6 +226,14 @@ header {
             top: 23%;
             left: 43%;
         }
+
+        @include break(450px) {
+            left: 23%;
+        }
+
+        @include break(tablet) {
+            top: 25%;
+        }
     }
 }
 
@@ -250,7 +258,7 @@ header {
             border: 1px solid rgba($black, .5);
             box-shadow: 3px 3px 5px rgba($black, .7);
             border-radius: 4px;
-            max-width: 500px;
+            max-width: 375px;
             align-self: center;
             cursor: pointer;
             @include transition(.2s);
