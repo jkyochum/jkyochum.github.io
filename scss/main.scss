@@ -25,6 +25,21 @@ body {
     p {
         font-weight: 500;
     }
+
+    @include break(laptop) {
+        @include grid($templateAreas: "footer main");
+    }
+}
+
+main {
+    grid-area: main;
+
+    @include break(laptop) {
+        @include grid($templateAreas: "welcome welcome"
+            "projects projects"
+            "bio stack"
+        );
+    }
 }
 
 header {
@@ -35,10 +50,7 @@ header {
     height: 60px;
     @include transition(.3s);
     z-index: 2;
-
-    @include break(tablet) {
-        height: 63px;
-    }
+    grid-area: main-header;
 
     &.open {
         top: 0;
@@ -154,6 +166,10 @@ header {
             }
         }
     }
+
+    @include break(tablet) {
+        height: 63px;
+    }
 }
 
 #welcome {
@@ -168,6 +184,7 @@ header {
     background-position: right bottom, center;
     border-bottom: 1px solid $black;
     box-shadow: 0px 3px 10px rgba($black, 0.7);
+    grid-area: welcome;
 
     #welcomeWrapper {
         position: relative;
@@ -262,22 +279,11 @@ header {
     width: 90%;
     margin: 20px auto;
     scroll-margin-block-start: 80px;
-
-    @include break(mobile-large) {
-        width: 85%;
-    }
-
-    @include break(tablet) {
-        width: 92%;
-    }
+    grid-area: projects;
 
     #projectsWrapper {
         @include flex($flexDir: column, $gap: 12px);
         margin: auto;
-
-        @include break(tablet) {
-            @include flex($flexDir: row, $justify: space-between, $gap: 22px);
-        }
 
         .card {
             background: url('../images/paper.jpg');
@@ -292,11 +298,6 @@ header {
             cursor: pointer;
             @include transition(.2s);
             @include flex($flexDir: column);
-
-            @include break(tablet) {
-                width: 338px;
-                height: 340px;
-            }
 
             &:hover {
                 transform: scale(1.01);
@@ -322,17 +323,31 @@ header {
                     height: 171px;
                 }
             }
+
+            @include break(tablet) {
+                width: 338px;
+                height: 340px;
+            }
         }
+
+        @include break(tablet) {
+            @include flex($flexDir: row, $justify: space-between, $gap: 22px);
+        }
+    }
+
+    @include break(mobile-large) {
+        width: 85%;
+    }
+
+    @include break(tablet) {
+        width: 92%;
     }
 }
 
 #stack {
     width: 90%;
     margin: 25px auto 25px;
-
-    @include break(mobile-large) {
-        width: 85%;
-    }
+    grid-area: stack;
 
     h2 {
         text-align: center;
@@ -340,18 +355,6 @@ header {
 
     #techWrapper {
         @include flex($justify: center, $gap: 10px 2.5em);
-
-        @include break(mobile-medium) {
-            @include flex($gap: 15px 3.5em);
-        }
-
-        @include break(mobile-large) {
-            @include flex($gap: 15px 4em);
-        }
-
-        @include break(tablet) {
-            @include flex($gap: 15px 2.5em);
-        }
 
         .utility {
             @include flex($align: center);
@@ -398,6 +401,22 @@ header {
                 }
             }
         }
+
+        @include break(mobile-medium) {
+            @include flex($gap: 15px 3.5em);
+        }
+
+        @include break(mobile-large) {
+            @include flex($gap: 15px 4em);
+        }
+
+        @include break(tablet) {
+            @include flex($gap: 15px 2.5em);
+        }
+    }
+
+    @include break(mobile-large) {
+        width: 85%;
     }
 }
 
@@ -411,16 +430,7 @@ header {
     border: 1px solid rgba($black, .5);
     border-radius: 4px;
     scroll-margin-block-start: 61px;
-
-    @include break(mobile-large) {
-        width: 85%;
-    }
-
-    @include break(tablet) {
-        @include grid($templateColumns: 25% 75%, $justify: start, $templateAreas: "header story"
-            "image story"
-        );
-    }
+    grid-area: bio;
 
     h2 {
         text-align: center;
@@ -467,11 +477,22 @@ header {
             margin: 0 15px;
         }
     }
+
+    @include break(mobile-large) {
+        width: 85%;
+    }
+
+    @include break(tablet) {
+        @include grid($templateColumns: 25% 75%, $justify: start, $templateAreas: "header story"
+            "image story"
+        );
+    }
 }
 
 footer {
     height: 50px;
     background: linear-gradient(110deg, $white, $black 60%, $black);
+    grid-area: footer;
 
 
     #footerNav {
@@ -549,6 +570,25 @@ footer {
                     }
                 }
             }
+
+            @include break(laptop) {
+                flex-direction: column;
+                align-self: flex-end;
+                margin: 0 0 5px 0;
+                height: 184px;
+            }
         }
+
+        @include break(laptop) {
+            display: flex;
+        }
+    }
+
+    @include break(laptop) {
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        width: 47px;
+        justify-content: center;
     }
 }

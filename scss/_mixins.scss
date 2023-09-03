@@ -11,7 +11,7 @@
     gap: $gap;
 }
 
-@mixin grid($display: grid, $templateColumns: null, $templateRows: auto, $templateAreas: null, $justify: null, $align: null, $gap: null) {
+@mixin grid($display: grid, $templateColumns: null, $templateRows: auto, $justify: null, $align: null, $gap: null, $templateAreas: null) {
     display: $display;
     grid-template-columns: $templateColumns;
     grid-template-rows: $templateRows;

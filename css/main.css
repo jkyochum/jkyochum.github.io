@@ -26,6 +26,24 @@ body h2 {
 body p {
   font-weight: 500;
 }
+@media only screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "footer main";
+  }
+}
+
+main {
+  grid-area: main;
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: "welcome welcome" "projects projects" "bio stack";
+  }
+}
 
 header {
   position: fixed;
@@ -38,11 +56,7 @@ header {
   height: 60px;
   transition: 0.3s all ease-in-out;
   z-index: 2;
-}
-@media only screen and (min-width: 768px) {
-  header {
-    height: 63px;
-  }
+  grid-area: main-header;
 }
 header.open {
   top: 0;
@@ -143,6 +157,11 @@ header #navToggle .navLine.open::before {
 header #navToggle .navLine.open::after {
   transform: rotate(-45deg) translate(8px, -12px);
 }
+@media only screen and (min-width: 768px) {
+  header {
+    height: 63px;
+  }
+}
 
 #welcome {
   font-family: Caveat, Nunito, sans-serif;
@@ -154,6 +173,7 @@ header #navToggle .navLine.open::after {
   background-position: right bottom, center;
   border-bottom: 1px solid #000000;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  grid-area: welcome;
 }
 #welcome #welcomeWrapper {
   position: relative;
@@ -244,16 +264,7 @@ header #navToggle .navLine.open::after {
   width: 90%;
   margin: 20px auto;
   scroll-margin-block-start: 80px;
-}
-@media only screen and (min-width: 425px) {
-  #projects {
-    width: 85%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #projects {
-    width: 92%;
-  }
+  grid-area: projects;
 }
 #projects #projectsWrapper {
   display: flex;
@@ -261,15 +272,6 @@ header #navToggle .navLine.open::after {
   flex-wrap: wrap;
   gap: 12px;
   margin: auto;
-}
-@media only screen and (min-width: 768px) {
-  #projects #projectsWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 22px;
-  }
 }
 #projects #projectsWrapper .card {
   background: url("../images/paper.jpg");
@@ -286,12 +288,6 @@ header #navToggle .navLine.open::after {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
-@media only screen and (min-width: 768px) {
-  #projects #projectsWrapper .card {
-    width: 338px;
-    height: 340px;
-  }
 }
 #projects #projectsWrapper .card:hover {
   transform: scale(1.01);
@@ -316,15 +312,36 @@ header #navToggle .navLine.open::after {
     height: 171px;
   }
 }
+@media only screen and (min-width: 768px) {
+  #projects #projectsWrapper .card {
+    width: 338px;
+    height: 340px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #projects #projectsWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 22px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #projects {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #projects {
+    width: 92%;
+  }
+}
 
 #stack {
   width: 90%;
   margin: 25px auto 25px;
-}
-@media only screen and (min-width: 425px) {
-  #stack {
-    width: 85%;
-  }
+  grid-area: stack;
 }
 #stack h2 {
   text-align: center;
@@ -335,30 +352,6 @@ header #navToggle .navLine.open::after {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px 2.5em;
-}
-@media only screen and (min-width: 375px) {
-  #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 3.5em;
-  }
-}
-@media only screen and (min-width: 425px) {
-  #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 4em;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 2.5em;
-  }
 }
 #stack #techWrapper .utility {
   display: flex;
@@ -384,6 +377,35 @@ header #navToggle .navLine.open::after {
 #stack #techWrapper .utility:nth-child(6) img {
   width: 61px;
 }
+@media only screen and (min-width: 375px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 3.5em;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 2.5em;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #stack {
+    width: 85%;
+  }
+}
 
 #bio {
   width: 90%;
@@ -395,20 +417,7 @@ header #navToggle .navLine.open::after {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   scroll-margin-block-start: 61px;
-}
-@media only screen and (min-width: 425px) {
-  #bio {
-    width: 85%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #bio {
-    display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: auto;
-    justify-items: start;
-    grid-template-areas: "header story" "image story";
-  }
+  grid-area: bio;
 }
 #bio h2 {
   text-align: center;
@@ -456,10 +465,25 @@ header #navToggle .navLine.open::after {
     margin: 0 15px;
   }
 }
+@media only screen and (min-width: 425px) {
+  #bio {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #bio {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    justify-items: start;
+    grid-template-areas: "header story" "image story";
+  }
+}
 
 footer {
   height: 50px;
   background: linear-gradient(110deg, #ffffff, #000000 60%, #000000);
+  grid-area: footer;
 }
 @keyframes airSlide {
   0% {
@@ -527,4 +551,26 @@ footer #footerNav ul li svg:hover .topLine {
 }
 footer #footerNav ul li svg:hover .bottomLine {
   animation: textSlide 0.5s linear forwards;
+}
+@media only screen and (min-width: 1024px) {
+  footer #footerNav ul {
+    flex-direction: column;
+    align-self: flex-end;
+    margin: 0 0 5px 0;
+    height: 184px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer #footerNav {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  footer {
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    width: 47px;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=main.css.map */
