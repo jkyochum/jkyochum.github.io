@@ -18,6 +18,11 @@ body {
 body h2 {
   margin-bottom: 15px;
 }
+@media only screen and (min-width: 768px) {
+  body h2 {
+    font-size: 1.8em;
+  }
+}
 body p {
   font-weight: 500;
 }
@@ -33,6 +38,11 @@ header {
   height: 60px;
   transition: 0.3s all ease-in-out;
   z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    height: 63px;
+  }
 }
 header.open {
   top: 0;
@@ -159,12 +169,27 @@ header #navToggle .navLine.open::after {
   font-size: 1.5em;
   font-weight: 600;
 }
+@media only screen and (min-width: 768px) {
+  #welcome #welcomeWrapper h1 {
+    font-size: 2.6em;
+  }
+}
 #welcome #welcomeWrapper p:nth-of-type(1) {
   font-size: 1.5em;
   margin-bottom: 4px;
 }
+@media only screen and (min-width: 768px) {
+  #welcome #welcomeWrapper p:nth-of-type(1) {
+    font-size: 1.7;
+  }
+}
 #welcome #welcomeWrapper p:nth-of-type(2) {
   font-size: 1.3em;
+}
+@media only screen and (min-width: 768px) {
+  #welcome #welcomeWrapper p:nth-of-type(2) {
+    font-size: 1.5;
+  }
 }
 #welcome #scrollArrow {
   position: absolute;
@@ -210,7 +235,8 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 768px) {
   #welcome #scrollArrow {
-    top: 25%;
+    top: 91%;
+    left: 47%;
   }
 }
 
@@ -224,12 +250,26 @@ header #navToggle .navLine.open::after {
     width: 85%;
   }
 }
+@media only screen and (min-width: 768px) {
+  #projects {
+    width: 92%;
+  }
+}
 #projects #projectsWrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 12px;
   margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  #projects #projectsWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 22px;
+  }
 }
 #projects #projectsWrapper .card {
   background: url("../images/paper.jpg");
@@ -246,6 +286,12 @@ header #navToggle .navLine.open::after {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  #projects #projectsWrapper .card {
+    width: 338px;
+    height: 340px;
+  }
 }
 #projects #projectsWrapper .card:hover {
   transform: scale(1.01);

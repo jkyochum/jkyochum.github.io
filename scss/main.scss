@@ -16,6 +16,10 @@ body {
 
     h2 {
         margin-bottom: 15px;
+
+        @include break(tablet) {
+            font-size: 1.8em;
+        }
     }
 
     p {
@@ -31,6 +35,10 @@ header {
     height: 60px;
     @include transition(.3s);
     z-index: 2;
+
+    @include break(tablet) {
+        height: 63px;
+    }
 
     &.open {
         top: 0;
@@ -175,6 +183,10 @@ header {
                 font-size: 1.5em;
                 font-weight: 600;
             }
+
+            @include break(tablet) {
+                font-size: 2.6em;
+            }
         }
 
         p {
@@ -182,10 +194,18 @@ header {
             &:nth-of-type(1) {
                 font-size: 1.5em;
                 margin-bottom: 4px;
+
+                @include break(tablet) {
+                    font-size: 1.7;
+                }
             }
 
             &:nth-of-type(2) {
                 font-size: 1.3em;
+
+                @include break(tablet) {
+                    font-size: 1.5;
+                }
             }
         }
     }
@@ -232,7 +252,8 @@ header {
         }
 
         @include break(tablet) {
-            top: 25%;
+            top: 91%;
+            left: 47%;
         }
     }
 }
@@ -246,9 +267,17 @@ header {
         width: 85%;
     }
 
+    @include break(tablet) {
+        width: 92%;
+    }
+
     #projectsWrapper {
         @include flex($flexDir: column, $gap: 12px);
         margin: auto;
+
+        @include break(tablet) {
+            @include flex($flexDir: row, $justify: space-between, $gap: 22px);
+        }
 
         .card {
             background: url('../images/paper.jpg');
@@ -263,6 +292,11 @@ header {
             cursor: pointer;
             @include transition(.2s);
             @include flex($flexDir: column);
+
+            @include break(tablet) {
+                width: 338px;
+                height: 340px;
+            }
 
             &:hover {
                 transform: scale(1.01);
