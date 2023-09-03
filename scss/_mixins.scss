@@ -11,6 +11,16 @@
     gap: $gap;
 }
 
+@mixin grid($display: grid, $templateColumns: null, $templateRows: auto, $templateAreas: null, $justify: null, $align: null, $gap: null) {
+    display: $display;
+    grid-template-columns: $templateColumns;
+    grid-template-rows: $templateRows;
+    justify-items: $justify;
+    align-items: $align;
+    gap: $gap;
+    grid-template-areas: $templateAreas;
+}
+
 @mixin break ($breakpoint) {
     @if($breakpoint ==mobile-medium) {
         @media only screen and (min-width: 375px) {

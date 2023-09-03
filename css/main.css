@@ -352,6 +352,14 @@ header #navToggle .navLine.open::after {
     gap: 15px 4em;
   }
 }
+@media only screen and (min-width: 768px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 2.5em;
+  }
+}
 #stack #techWrapper .utility {
   display: flex;
   flex-direction: row;
@@ -393,29 +401,60 @@ header #navToggle .navLine.open::after {
     width: 85%;
   }
 }
+@media only screen and (min-width: 768px) {
+  #bio {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    justify-items: start;
+    grid-template-areas: "header story" "image story";
+  }
+}
 #bio h2 {
   text-align: center;
   font-size: 2em;
+  grid-area: header;
+}
+@media only screen and (min-width: 768px) {
+  #bio h2 {
+    align-self: end;
+    margin: 0 auto 22px;
+  }
 }
 #bio img {
   width: 50%;
+  max-width: 220px;
   border-radius: 50%;
   float: left;
   margin: 18px 10px 4px 0px;
+  grid-area: image;
 }
 @media only screen and (min-width: 375px) {
   #bio img {
     width: 46%;
   }
 }
+@media only screen and (min-width: 768px) {
+  #bio img {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
 #bio p {
   margin-top: 2px;
   font-size: 0.95em;
   line-height: 1.4;
+  grid-area: story;
 }
 #bio p #firstLetter {
   font-size: 1.8em;
   font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  #bio p {
+    text-align: center;
+    margin: 0 15px;
+  }
 }
 
 footer {

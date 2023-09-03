@@ -349,6 +349,10 @@ header {
             @include flex($gap: 15px 4em);
         }
 
+        @include break(tablet) {
+            @include flex($gap: 15px 2.5em);
+        }
+
         .utility {
             @include flex($align: center);
 
@@ -412,19 +416,38 @@ header {
         width: 85%;
     }
 
+    @include break(tablet) {
+        @include grid($templateColumns: 25% 75%, $justify: start, $templateAreas: "header story"
+            "image story"
+        );
+    }
+
     h2 {
         text-align: center;
         font-size: 2em;
+        grid-area: header;
+
+        @include break(tablet) {
+            align-self: end;
+            margin: 0 auto 22px;
+        }
     }
 
     img {
         width: 50%;
+        max-width: 220px;
         border-radius: 50%;
         float: left;
         margin: 18px 10px 4px 0px;
+        grid-area: image;
 
         @include break(mobile-medium) {
             width: 46%;
+        }
+
+        @include break(tablet) {
+            width: 85%;
+            margin: 0 auto;
         }
     }
 
@@ -432,10 +455,16 @@ header {
         margin-top: 2px;
         font-size: .95em;
         line-height: 1.4;
+        grid-area: story;
 
         #firstLetter {
             font-size: 1.8em;
             font-weight: 400;
+        }
+
+        @include break(tablet) {
+            text-align: center;
+            margin: 0 15px;
         }
     }
 }
