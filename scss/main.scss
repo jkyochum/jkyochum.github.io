@@ -35,10 +35,8 @@ main {
     grid-area: main;
 
     @include break(laptop) {
-        @include grid($templateAreas: "welcome welcome"
-            "projects projects"
-            "bio stack"
-        );
+        @include grid($templateAreas: "welcome welcome" "projects projects" "bio stack");
+        margin-left: 47px;
     }
 }
 
@@ -66,10 +64,15 @@ header {
         svg {
             width: 50px;
             height: 50px;
+
+            @include break(laptop) {
+                width: 47px;
+                height: 47px;
+            }
         }
     }
 
-    #headerMenu {
+    #slidingMenu {
         position: fixed;
         height: 100vh;
         width: 100vw;
@@ -165,15 +168,23 @@ header {
                 }
             }
         }
+
+        @include break(laptop) {
+            display: none;
+        }
     }
 
     @include break(tablet) {
         height: 63px;
     }
+
+    @include break(laptop) {
+        background: transparent;
+    }
 }
 
 #welcome {
-    font-family: $header-font;
+    font-family: $welcome-font;
     font-weight: 200;
     height: 100vh;
     background:
@@ -227,6 +238,41 @@ header {
         }
     }
 
+    #fixedMenu {
+        display: none;
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        width: 200px;
+        height: 300px;
+        background: rgba($black, 0.1);
+        border-radius: 10px;
+        font-family: $main-text-font;
+
+        ul {
+            height: 100%;
+            font-size: 2.5em;
+            font-weight: 300;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            li {
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+                }
+            }
+        }
+
+        @include break(laptop) {
+            @include flex($justify: center, $align: center);
+        }
+
+    }
+
     #scrollArrow {
         position: absolute;
         top: 32%;
@@ -272,6 +318,10 @@ header {
             top: 91%;
             left: 46%;
         }
+
+        @include break(laptop) {
+            display: none;
+        }
     }
 }
 
@@ -293,7 +343,7 @@ header {
             border: 1px solid rgba($black, .5);
             box-shadow: 3px 3px 5px rgba($black, .7);
             border-radius: 4px;
-            max-width: 375px;
+            // max-width: 375px;
             align-self: center;
             cursor: pointer;
             @include transition(.2s);
@@ -309,6 +359,10 @@ header {
                 color: $burnt-red;
                 border-bottom: 1px solid $black;
                 margin-bottom: 10px;
+
+                @include break(laptop) {
+                    font-size: 1.8em;
+                }
             }
 
             img {
@@ -322,11 +376,28 @@ header {
                     width: 226px;
                     height: 171px;
                 }
+
+                @include break(laptop) {
+                    width: 255px;
+                    height: 192px;
+                }
+            }
+
+            p {
+
+                @include break(laptop) {
+                    font-size: 1.2em;
+                }
             }
 
             @include break(tablet) {
                 width: 338px;
                 height: 340px;
+            }
+
+            @include break(laptop) {
+                width: 430px;
+                height: 350px;
             }
         }
 
@@ -341,6 +412,10 @@ header {
 
     @include break(tablet) {
         width: 92%;
+    }
+
+    @include break(laptop) {
+        scroll-margin-block-start: 20px;
     }
 }
 
@@ -413,10 +488,18 @@ header {
         @include break(tablet) {
             @include flex($gap: 15px 2.5em);
         }
+
+        @include break(laptop) {
+            @include flex($justify: space-between);
+        }
     }
 
     @include break(mobile-large) {
         width: 85%;
+    }
+
+    @include break(laptop) {
+        width: 39%;
     }
 }
 
@@ -486,6 +569,14 @@ header {
         @include grid($templateColumns: 25% 75%, $justify: start, $templateAreas: "header story"
             "image story"
         );
+    }
+
+    @include break(laptop) {
+        width: 100%;
+        @include grid($templateAreas: "image header"
+            "story story");
+        margin-left: 8%;
+        width: 95%;
     }
 }
 
@@ -587,8 +678,8 @@ footer {
     @include break(laptop) {
         height: 100vh;
         position: fixed;
-        display: flex;
+        @include flex($justify: center);
         width: 47px;
-        justify-content: center;
+        background: $black;
     }
 }

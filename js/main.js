@@ -1,7 +1,7 @@
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
-const headerMenu = document.querySelector('#headerMenu');
+const slidingMenu = document.querySelector('#slidingMenu');
 const btnNavToggle = document.querySelector('#navToggle');
 const burger = document.querySelector('.navLine');
 const welcomeWrapper = document.querySelector('#welcomeWrapper');
@@ -12,7 +12,7 @@ const projects = document.querySelector('#projects');
 
 btnNavToggle.addEventListener('click', toggleNav);
 
-headerMenu.addEventListener('click', (e) => {
+slidingMenu.addEventListener('click', (e) => {
     console.log(e);
     const className = e.target.parentElement.className;
     if (className === 'navLink') {
@@ -49,9 +49,9 @@ function arrowScroll() {
 }
 
 function toggleNav() {
-    if (headerMenu.classList.contains('closed')) {
-        headerMenu.classList.add('open');
-        headerMenu.classList.remove('closed');
+    if (slidingMenu.classList.contains('closed')) {
+        slidingMenu.classList.add('open');
+        slidingMenu.classList.remove('closed');
         burger.classList.add('open');
         burger.classList.remove('closed');
         // navToggle.style.right = '2.1rem';
@@ -59,8 +59,8 @@ function toggleNav() {
         html.style.backgroundColor = '#a33c3c';
 
     } else {
-        headerMenu.classList.add('closed');
-        headerMenu.classList.remove('open');
+        slidingMenu.classList.add('closed');
+        slidingMenu.classList.remove('open');
         burger.classList.add('closed');
         burger.classList.remove('open');
         // navToggle.style.right = '1rem';
