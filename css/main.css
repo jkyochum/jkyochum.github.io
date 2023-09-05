@@ -40,8 +40,9 @@ main {
 @media only screen and (min-width: 1024px) {
   main {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "welcome welcome" "projects projects" "bio stack";
+    grid-template-areas: "welcome welcome welcome" "projects projects projects" "bio bio stack";
     margin-left: 47px;
   }
 }
@@ -497,7 +498,7 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 1024px) {
   #stack {
-    width: 39%;
+    width: 55%;
   }
 }
 

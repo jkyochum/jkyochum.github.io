@@ -35,7 +35,9 @@ main {
     grid-area: main;
 
     @include break(laptop) {
-        @include grid($templateAreas: "welcome welcome" "projects projects" "bio stack");
+        @include grid($templateColumns: repeat(3, 1fr), $templateAreas: "welcome welcome welcome"
+            "projects projects projects"
+            "bio bio stack");
         margin-left: 47px;
     }
 }
@@ -499,7 +501,7 @@ header {
     }
 
     @include break(laptop) {
-        width: 39%;
+        width: 55%;
     }
 }
 
