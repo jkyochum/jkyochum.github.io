@@ -544,6 +544,10 @@ header {
             width: 85%;
             margin: 0 auto;
         }
+
+        @include break(laptop) {
+            display: none;
+        }
     }
 
     p {
@@ -575,10 +579,16 @@ header {
 
     @include break(laptop) {
         width: 100%;
-        @include grid($templateAreas: "image header"
+        @include grid($templateAreas: "header header"
             "story story");
         margin-left: 8%;
         width: 95%;
+        color: white;
+        background: url(../images/grand-canyon-pic.jpg) rgba(0, 0, 0, .6);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode: color;
     }
 }
 

@@ -544,6 +544,11 @@ header #navToggle .navLine.open::after {
     margin: 0 auto;
   }
 }
+@media only screen and (min-width: 1024px) {
+  #bio img {
+    display: none;
+  }
+}
 #bio p {
   margin-top: 2px;
   font-size: 0.95em;
@@ -579,9 +584,15 @@ header #navToggle .navLine.open::after {
     width: 100%;
     display: grid;
     grid-template-rows: auto;
-    grid-template-areas: "image header" "story story";
+    grid-template-areas: "header header" "story story";
     margin-left: 8%;
     width: 95%;
+    color: white;
+    background: url(../images/grand-canyon-pic.jpg) rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: color;
   }
 }
 
