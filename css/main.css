@@ -23,6 +23,11 @@ body h2 {
     font-size: 1.8em;
   }
 }
+@media only screen and (min-width: 2560px) {
+  body h2 {
+    font-size: 3em;
+  }
+}
 body p {
   font-weight: 500;
 }
@@ -111,7 +116,8 @@ header #slidingMenu ul li a:visited {
   color: #e6e6e6;
 }
 header #slidingMenu.closed {
-  right: -100%;
+  right: -104%;
+  opacity: 0;
 }
 header #slidingMenu.open {
   right: 0;
@@ -212,13 +218,33 @@ header #navToggle .navLine.open::after {
     font-size: 2.6em;
   }
 }
+@media only screen and (min-width: 1024px) {
+  #welcome #welcomeWrapper h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #welcome #welcomeWrapper h1 {
+    font-size: 4em;
+  }
+}
 #welcome #welcomeWrapper p:nth-of-type(1) {
   font-size: 1.5em;
   margin-bottom: 4px;
 }
 @media only screen and (min-width: 768px) {
   #welcome #welcomeWrapper p:nth-of-type(1) {
-    font-size: 1.7;
+    font-size: 1.7em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #welcome #welcomeWrapper p:nth-of-type(1) {
+    font-size: 2.1em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #welcome #welcomeWrapper p:nth-of-type(1) {
+    font-size: 3em;
   }
 }
 #welcome #welcomeWrapper p:nth-of-type(2) {
@@ -226,7 +252,17 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 768px) {
   #welcome #welcomeWrapper p:nth-of-type(2) {
-    font-size: 1.5;
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #welcome #welcomeWrapper p:nth-of-type(2) {
+    font-size: 1.9em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #welcome #welcomeWrapper p:nth-of-type(2) {
+    font-size: 2.5em;
   }
 }
 #welcome #fixedMenu {
@@ -253,6 +289,11 @@ header #navToggle .navLine.open::after {
   text-decoration: none;
   color: #000000;
 }
+@media only screen and (min-width: 2560px) {
+  #welcome #fixedMenu ul {
+    font-size: 3.2em;
+  }
+}
 @media only screen and (min-width: 1024px) {
   #welcome #fixedMenu {
     display: flex;
@@ -260,6 +301,14 @@ header #navToggle .navLine.open::after {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    top: 50%;
+    left: 9%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #welcome #fixedMenu {
+    width: 326px;
+    height: 320px;
   }
 }
 #welcome #scrollArrow {
@@ -296,18 +345,12 @@ header #navToggle .navLine.open::after {
 @media only screen and (min-width: 425px) {
   #welcome #scrollArrow {
     top: 23%;
-    left: 43%;
+    left: 46.5%;
   }
 }
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 620px) {
   #welcome #scrollArrow {
-    left: 23%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #welcome #scrollArrow {
-    top: 91%;
-    left: 46%;
+    top: 95.5%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -321,6 +364,19 @@ header #navToggle .navLine.open::after {
   margin: 20px auto;
   scroll-margin-block-start: 80px;
   grid-area: projects;
+}
+#projects h2 {
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  #projects h2 {
+    font-size: 1.8em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #projects h2 {
+    font-size: 3em;
+  }
 }
 #projects #projectsWrapper {
   display: flex;
@@ -359,6 +415,11 @@ header #navToggle .navLine.open::after {
     font-size: 1.8em;
   }
 }
+@media only screen and (min-width: 2560px) {
+  #projects #projectsWrapper .card h3 {
+    font-size: 2.5em;
+  }
+}
 #projects #projectsWrapper .card img {
   width: 210px;
   height: 155px;
@@ -378,9 +439,25 @@ header #navToggle .navLine.open::after {
     height: 192px;
   }
 }
+@media only screen and (min-width: 2560px) {
+  #projects #projectsWrapper .card img {
+    width: 305px;
+    height: 225px;
+  }
+}
 @media only screen and (min-width: 1024px) {
   #projects #projectsWrapper .card p {
     font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #projects #projectsWrapper .card p {
+    font-size: 1.9em;
+  }
+}
+@media only screen and (min-width: 545px) {
+  #projects #projectsWrapper .card {
+    width: 448px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -395,13 +472,33 @@ header #navToggle .navLine.open::after {
     height: 350px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  #projects #projectsWrapper .card {
+    width: 410px;
+    height: 390px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #projects #projectsWrapper .card {
+    width: 650px;
+    height: 490px;
+  }
+}
 @media only screen and (min-width: 768px) {
   #projects #projectsWrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 22px;
+    gap: 20px 2px;
+  }
+}
+@media only screen and (min-width: 845px) {
+  #projects #projectsWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 @media only screen and (min-width: 425px) {
@@ -444,20 +541,50 @@ header #navToggle .navLine.open::after {
 #stack #techWrapper .utility:nth-child(1) img {
   width: 50px;
 }
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(1) img {
+    width: 75px;
+  }
+}
 #stack #techWrapper .utility:nth-child(2) img {
   width: 50px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(2) img {
+    width: 75px;
+  }
 }
 #stack #techWrapper .utility:nth-child(3) img {
   width: 59px;
 }
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(3) img {
+    width: 88px;
+  }
+}
 #stack #techWrapper .utility:nth-child(4) img {
   width: 70px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(4) img {
+    width: 103px;
+  }
 }
 #stack #techWrapper .utility:nth-child(5) img {
   width: 65px;
 }
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(5) img {
+    width: 102px;
+  }
+}
 #stack #techWrapper .utility:nth-child(6) img {
   width: 61px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(6) img {
+    width: 86px;
+  }
 }
 @media only screen and (min-width: 375px) {
   #stack #techWrapper {
@@ -475,6 +602,14 @@ header #navToggle .navLine.open::after {
     gap: 15px 4em;
   }
 }
+@media only screen and (min-width: 663px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 2.4em;
+  }
+}
 @media only screen and (min-width: 768px) {
   #stack #techWrapper {
     display: flex;
@@ -488,7 +623,15 @@ header #navToggle .navLine.open::after {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 @media only screen and (min-width: 425px) {
@@ -498,7 +641,14 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 1024px) {
   #stack {
-    width: 55%;
+    width: 330px;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #stack {
+    width: 65%;
+    align-self: center;
   }
 }
 
@@ -523,6 +673,11 @@ header #navToggle .navLine.open::after {
   #bio h2 {
     align-self: end;
     margin: 0 auto 22px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #bio h2 {
+    font-size: 3.5em;
   }
 }
 #bio img {
@@ -565,6 +720,11 @@ header #navToggle .navLine.open::after {
     margin: 0 15px;
   }
 }
+@media only screen and (min-width: 2560px) {
+  #bio p {
+    font-size: 1.95em;
+  }
+}
 @media only screen and (min-width: 425px) {
   #bio {
     width: 85%;
@@ -581,11 +741,11 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 1024px) {
   #bio {
-    width: 100%;
+    width: 80%;
     display: grid;
     grid-template-rows: auto;
     grid-template-areas: "header header" "story story";
-    margin-left: 8%;
+    margin-left: 6%;
     width: 95%;
     color: white;
     background: url(../images/grand-canyon-pic.jpg) rgba(0, 0, 0, 0.6);
@@ -593,6 +753,12 @@ header #navToggle .navLine.open::after {
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: color;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #bio {
+    width: 91%;
+    margin-left: 9%;
   }
 }
 

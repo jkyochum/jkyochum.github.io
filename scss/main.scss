@@ -20,6 +20,10 @@ body {
         @include break(tablet) {
             font-size: 1.8em;
         }
+
+        @include break(4k) {
+            font-size: 3em;
+        }
     }
 
     p {
@@ -107,7 +111,8 @@ header {
         }
 
         &.closed {
-            right: -100%;
+            right: -104%;
+            opacity: 0;
         }
 
         &.open {
@@ -217,6 +222,14 @@ header {
             @include break(tablet) {
                 font-size: 2.6em;
             }
+
+            @include break(laptop) {
+                font-size: 3em;
+            }
+
+            @include break(4k) {
+                font-size: 4em;
+            }
         }
 
         p {
@@ -226,7 +239,15 @@ header {
                 margin-bottom: 4px;
 
                 @include break(tablet) {
-                    font-size: 1.7;
+                    font-size: 1.7em;
+                }
+
+                @include break(laptop) {
+                    font-size: 2.1em;
+                }
+
+                @include break(4k) {
+                    font-size: 3em;
                 }
             }
 
@@ -234,7 +255,15 @@ header {
                 font-size: 1.3em;
 
                 @include break(tablet) {
-                    font-size: 1.5;
+                    font-size: 1.5em;
+                }
+
+                @include break(laptop) {
+                    font-size: 1.9em;
+                }
+
+                @include break(4k) {
+                    font-size: 2.5em;
                 }
             }
         }
@@ -267,12 +296,27 @@ header {
                     color: $black;
                 }
             }
+
+            @include break(4k) {
+                font-size: 3.2em;
+            }
         }
 
         @include break(laptop) {
             @include flex($justify: center, $align: center);
+            top: 50%;
+            left: 9%;
         }
 
+        // @include break(laptop-large) {
+        //     top: 38%;
+        //     left: 7%;
+        // }
+
+        @include break(4k) {
+            width: 326px;
+            height: 320px;
+        }
     }
 
     #scrollArrow {
@@ -309,16 +353,11 @@ header {
 
         @include break(mobile-large) {
             top: 23%;
-            left: 43%;
+            left: 46.5%;
         }
 
-        @include break(450px) {
-            left: 23%;
-        }
-
-        @include break(tablet) {
-            top: 91%;
-            left: 46%;
+        @include break(620px) {
+            top: 95.5%;
         }
 
         @include break(laptop) {
@@ -332,6 +371,18 @@ header {
     margin: 20px auto;
     scroll-margin-block-start: 80px;
     grid-area: projects;
+
+    h2 {
+        text-align: center;
+
+        @include break(laptop) {
+            font-size: 1.8em;
+        }
+
+        @include break(4k) {
+            font-size: 3em;
+        }
+    }
 
     #projectsWrapper {
         @include flex($flexDir: column, $gap: 12px);
@@ -365,6 +416,10 @@ header {
                 @include break(laptop) {
                     font-size: 1.8em;
                 }
+
+                @include break(4k) {
+                    font-size: 2.5em;
+                }
             }
 
             img {
@@ -383,6 +438,11 @@ header {
                     width: 255px;
                     height: 192px;
                 }
+
+                @include break(4k) {
+                    width: 305px;
+                    height: 225px;
+                }
             }
 
             p {
@@ -390,6 +450,14 @@ header {
                 @include break(laptop) {
                     font-size: 1.2em;
                 }
+
+                @include break(4k) {
+                    font-size: 1.9em;
+                }
+            }
+
+            @include break(545px) {
+                width: 448px;
             }
 
             @include break(tablet) {
@@ -401,10 +469,24 @@ header {
                 width: 430px;
                 height: 350px;
             }
+
+            @include break(laptop-large) {
+                width: 410px;
+                height: 390px;
+            }
+
+            @include break(4k) {
+                width: 650px;
+                height: 490px;
+            }
         }
 
         @include break(tablet) {
-            @include flex($flexDir: row, $justify: space-between, $gap: 22px);
+            @include flex($flexDir: row, $justify: space-between, $gap: 20px 2px);
+        }
+
+        @include break(845px) {
+            @include flex($justify: space-evenly);
         }
     }
 
@@ -440,6 +522,10 @@ header {
 
                 img {
                     width: 50px;
+
+                    @include break(4k) {
+                        width: 75px;
+                    }
                 }
             }
 
@@ -447,6 +533,10 @@ header {
 
                 img {
                     width: 50px;
+
+                    @include break(4k) {
+                        width: 75px;
+                    }
                 }
             }
 
@@ -454,6 +544,10 @@ header {
 
                 img {
                     width: 59px;
+
+                    @include break(4k) {
+                        width: 88px;
+                    }
                 }
             }
 
@@ -461,6 +555,10 @@ header {
 
                 img {
                     width: 70px;
+
+                    @include break(4k) {
+                        width: 103px;
+                    }
                 }
             }
 
@@ -468,6 +566,10 @@ header {
 
                 img {
                     width: 65px;
+
+                    @include break(4k) {
+                        width: 102px;
+                    }
                 }
             }
 
@@ -475,6 +577,10 @@ header {
 
                 img {
                     width: 61px;
+
+                    @include break(4k) {
+                        width: 86px;
+                    }
                 }
             }
         }
@@ -487,12 +593,20 @@ header {
             @include flex($gap: 15px 4em);
         }
 
+        @include break(663px) {
+            @include flex($gap: 15px 2.4em);
+        }
+
         @include break(tablet) {
             @include flex($gap: 15px 2.5em);
         }
 
         @include break(laptop) {
-            @include flex($justify: space-between);
+            @include flex($justify: space-evenly);
+        }
+
+        @include break(laptop-large) {
+            @include flex($justify: space-evenly);
         }
     }
 
@@ -501,7 +615,13 @@ header {
     }
 
     @include break(laptop) {
-        width: 55%;
+        width: 330px;
+        align-self: center;
+    }
+
+    @include break(4k) {
+        width: 65%;
+        align-self: center;
     }
 }
 
@@ -525,6 +645,10 @@ header {
         @include break(tablet) {
             align-self: end;
             margin: 0 auto 22px;
+        }
+
+        @include break(4k) {
+            font-size: 3.5em;
         }
     }
 
@@ -565,6 +689,10 @@ header {
             text-align: center;
             margin: 0 15px;
         }
+
+        @include break(4k) {
+            font-size: 1.95em;
+        }
     }
 
     @include break(mobile-large) {
@@ -578,10 +706,10 @@ header {
     }
 
     @include break(laptop) {
-        width: 100%;
+        width: 80%;
         @include grid($templateAreas: "header header"
             "story story");
-        margin-left: 8%;
+        margin-left: 6%;
         width: 95%;
         color: white;
         background: url(../images/grand-canyon-pic.jpg) rgba(0, 0, 0, .6);
@@ -589,6 +717,11 @@ header {
         background-repeat: no-repeat;
         background-position: center;
         background-blend-mode: color;
+    }
+
+    @include break(laptop-large) {
+        width: 91%;
+        margin-left: 9%;
     }
 }
 
