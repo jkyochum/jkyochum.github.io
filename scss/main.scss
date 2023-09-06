@@ -96,6 +96,10 @@ header {
                 color: darken($white, 10%);
                 padding: 12px 0;
 
+                &:hover {
+                    text-decoration: underline;
+                }
+
                 a {
                     text-decoration: none;
 
@@ -282,14 +286,16 @@ header {
 
         ul {
             height: 100%;
-            font-size: 2.5em;
-            font-weight: 300;
+            font-size: 2.3em;
+            font-weight: 400;
             list-style: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+            @include flex($flexDir: column, $justify: space-evenly);
 
             li {
+
+                &:hover {
+                    text-decoration: underline;
+                }
 
                 a {
                     text-decoration: none;
@@ -307,11 +313,6 @@ header {
             top: 50%;
             left: 9%;
         }
-
-        // @include break(laptop-large) {
-        //     top: 38%;
-        //     left: 7%;
-        // }
 
         @include break(4k) {
             width: 326px;

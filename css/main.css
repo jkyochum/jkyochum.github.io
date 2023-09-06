@@ -106,6 +106,9 @@ header #slidingMenu ul li {
   color: #e6e6e6;
   padding: 12px 0;
 }
+header #slidingMenu ul li:hover {
+  text-decoration: underline;
+}
 header #slidingMenu ul li a {
   text-decoration: none;
 }
@@ -278,12 +281,16 @@ header #navToggle .navLine.open::after {
 }
 #welcome #fixedMenu ul {
   height: 100%;
-  font-size: 2.5em;
-  font-weight: 300;
+  font-size: 2.3em;
+  font-weight: 400;
   list-style: none;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+}
+#welcome #fixedMenu ul li:hover {
+  text-decoration: underline;
 }
 #welcome #fixedMenu ul li a {
   text-decoration: none;
