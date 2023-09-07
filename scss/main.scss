@@ -808,6 +808,10 @@ header {
             }
         }
     }
+
+    &.closed {
+        display: none;
+    }
 }
 
 footer {

@@ -7,6 +7,7 @@ const burger = document.querySelector('.navLine');
 const welcomeWrapper = document.querySelector('#welcomeWrapper');
 const scrollArrow = document.querySelector('#scrollArrow');
 const projects = document.querySelector('#projects');
+const contactModal = document.querySelector('#contactModal');
 const resumeModal = document.querySelector('#resumeModal');
 const resume = document.querySelector('.resume');
 const fixedMenu = document.querySelector('#fixedMenu');
@@ -22,13 +23,18 @@ scrollArrow.addEventListener('click', arrowScroll);
 
 slidingMenu.addEventListener('click', (e) => {
     console.log(e);
-    const className = e.target.parentElement.className;
-    const parentId = e.target.parentElement.id;
-    if (className === 'navLink') {
+    const target = e.target;
+    if (target.parentElement.className === 'navLink' || target.className === 'navLink') {
         toggleNav();
     }
 
-    if (parentId === 'headerResume') {
+    if (target.parentElement.id === 'headerContact' || target.id === 'headerContact') {
+        contactModal.classList.remove('closed');
+        toggleScrollbar(true);
+        html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
+    }
+
+    if (target.parentElement.id === 'headerResume' || target.id === 'headerResume') {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
@@ -36,20 +42,34 @@ slidingMenu.addEventListener('click', (e) => {
     }
 });
 
+contactModal.addEventListener('click', (e) => {
+    closeContactModal(e);
+});
+
 resumeModal.addEventListener('click', (e) => {
     closeResumeModal(e);
 });
 
 footerNav.addEventListener('click', (e) => {
-    if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'resume' || e.target.parentElement.parentElement.parentElement.id === 'resume' || e.target.parentElement.parentElement.id === 'resume' || e.target.parentElement.id === 'resume' || e.target.id === 'resume') {
+    if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.id === 'footerResume' || e.target.id === 'footerResume') {
         resumeModal.classList.remove('closed');
+        toggleScrollbar(true);
+    }
+
+    if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'footerContact' || e.target.parentElement.parentElement.parentElement.id === 'footerContact' || e.target.parentElement.parentElement.id === 'footerContact' || e.target.parentElement.id === 'footerContact' || e.target.id === 'footerContact') {
+        contactModal.classList.remove('closed');
         toggleScrollbar(true);
     }
 });
 
 fixedMenu.addEventListener('click', (e) => {
-    const parentId = e.target.parentElement.id;
-    if (parentId === 'welcomeResume') {
+    const target = e.target;
+    if (target.parentElement.id === 'welcomeContact' || target.id === 'welcomeContact') {
+        contactModal.classList.remove('closed');
+        toggleScrollbar(true);
+    }
+
+    if (target.parentElement.id === 'welcomeResume' || target.id === 'welcomeResume') {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
     }
@@ -99,6 +119,13 @@ function toggleNav() {
         // navToggle.style.right = '1rem';
         toggleScrollbar(false);
         html.style.backgroundColor = '#ffffff';
+    }
+}
+
+function closeContactModal(e) {
+    if (e.target.parentElement.id !== 'contactCard') {
+        contactModal.classList.add('closed');
+        toggleScrollbar(false);
     }
 }
 

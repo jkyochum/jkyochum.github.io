@@ -864,6 +864,9 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard #contactForm #btnSendMessage:active {
   background-color: #7e2e2e;
 }
+#contactModal.closed {
+  display: none;
+}
 
 footer {
   height: 50px;
