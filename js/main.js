@@ -15,6 +15,7 @@ const welcomeResume = document.querySelector('#welcomeResume');
 const footerNav = document.querySelector('#footerNav');
 const footerResume = document.querySelector('#resume');
 
+
 //Event Handlers
 
 btnNavToggle.addEventListener('click', toggleNav);
@@ -30,13 +31,13 @@ slidingMenu.addEventListener('click', (e) => {
 
     if (target.parentElement.id === 'headerContact' || target.id === 'headerContact') {
         contactModal.classList.remove('closed');
-        toggleScrollbar(true);
+        // toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 
     if (target.parentElement.id === 'headerResume' || target.id === 'headerResume') {
         resumeModal.classList.remove('closed');
-        toggleScrollbar(true);
+        // toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
 
     }
