@@ -757,7 +757,7 @@ header #navToggle .navLine.open::after {
     margin-left: 6%;
     width: 95%;
     color: white;
-    background: url(../images/grand-canyon-pic.jpg) rgba(0, 0, 0, 0.6);
+    background: url("../images/grand-canyon-pic.jpg") rgba(0, 0, 0, 0.6);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -780,7 +780,7 @@ header #navToggle .navLine.open::after {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -794,8 +794,61 @@ header #navToggle .navLine.open::after {
 #resumeModal #resumeCard img {
   width: 90%;
 }
+#resumeModal #downloadLink a {
+  color: #ffffff;
+}
 #resumeModal.closed {
   display: none;
+}
+
+#contactModal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#contactModal #contactCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: url("../images/paper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  border-radius: 3px;
+}
+#contactModal #contactCard #contactForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#contactModal #contactCard #contactForm input {
+  padding: 8px;
+  border-radius: 3px;
+  width: 80%;
+  font-family: Urbanist, sans-serif;
+  font-weight: 500;
+}
+#contactModal #contactCard #contactForm #email {
+  width: 100%;
+}
+#contactModal #contactCard #contactForm #message {
+  font-family: Urbanist, sans-serif;
+  padding: 8px;
+}
+#contactModal #contactCard #contactForm #btnSendMessage {
+  font-family: Urbanist, sans-serif;
+  width: 50%;
+  padding: 10px;
 }
 
 footer {

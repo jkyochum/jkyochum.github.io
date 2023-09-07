@@ -715,7 +715,7 @@ header {
         margin-left: 6%;
         width: 95%;
         color: white;
-        background: url(../images/grand-canyon-pic.jpg) rgba(0, 0, 0, .6);
+        background: url('../images/grand-canyon-pic.jpg') rgba(0, 0, 0, .6);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -729,14 +729,8 @@ header {
 }
 
 #resumeModal {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: rgba($black, 0.8);
-    @include flex($justify: center, $align: center);
+    @include modal();
+    @include flex($flexDir: column, $justify: center, $align: center);
 
     #resumeCard {
         @include flex($justify: center);
@@ -746,8 +740,57 @@ header {
         }
     }
 
+    #downloadLink {
+
+        a {
+            color: $white;
+
+        }
+    }
+
     &.closed {
         display: none;
+    }
+}
+
+#contactModal {
+    @include modal();
+    @include flex($justify: center, $align: center);
+
+    #contactCard {
+        @include flex($flexDir: column);
+        background: url('../images/paper.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 50px;
+        border-radius: 3px;
+
+        #contactForm {
+            @include flex($flexDir: column, $gap: 20px);
+
+            input {
+                padding: 8px;
+                border-radius: 3px;
+                width: 80%;
+                font-family: $main-text-font;
+                font-weight: 500;
+            }
+
+            #email {
+                width: 100%;
+            }
+
+            #message {
+                font-family: $main-text-font;
+                padding: 8px;
+            }
+
+            #btnSendMessage {
+                font-family: $main-text-font;
+                width: 50%;
+                padding: 10px;
+            }
+        }
     }
 }
 
