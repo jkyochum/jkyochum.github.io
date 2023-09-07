@@ -770,6 +770,7 @@ header {
 
             input {
                 padding: 8px;
+                border: 2px inset $black;
                 border-radius: 3px;
                 width: 80%;
                 font-family: $main-text-font;
@@ -783,12 +784,27 @@ header {
             #message {
                 font-family: $main-text-font;
                 padding: 8px;
+                border: 2px inset $black;
+                border-radius: 3px;
             }
 
             #btnSendMessage {
                 font-family: $main-text-font;
                 width: 50%;
                 padding: 10px;
+                border: 2px inset $black;
+                border-radius: 3px;
+                background-color: $burnt-red;
+                color: $white;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: lighten($burnt-red, 10%);
+                }
+
+                &:active {
+                    background-color: darken($burnt-red, 10%);
+                }
             }
         }
     }

@@ -833,6 +833,7 @@ header #navToggle .navLine.open::after {
 }
 #contactModal #contactCard #contactForm input {
   padding: 8px;
+  border: 2px inset #000000;
   border-radius: 3px;
   width: 80%;
   font-family: Urbanist, sans-serif;
@@ -844,11 +845,24 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard #contactForm #message {
   font-family: Urbanist, sans-serif;
   padding: 8px;
+  border: 2px inset #000000;
+  border-radius: 3px;
 }
 #contactModal #contactCard #contactForm #btnSendMessage {
   font-family: Urbanist, sans-serif;
   width: 50%;
   padding: 10px;
+  border: 2px inset #000000;
+  border-radius: 3px;
+  background-color: #a33c3c;
+  color: #ffffff;
+  cursor: pointer;
+}
+#contactModal #contactCard #contactForm #btnSendMessage:hover {
+  background-color: #c05252;
+}
+#contactModal #contactCard #contactForm #btnSendMessage:active {
+  background-color: #7e2e2e;
 }
 
 footer {
