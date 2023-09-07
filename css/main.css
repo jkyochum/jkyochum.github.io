@@ -104,10 +104,11 @@ header #slidingMenu ul {
 }
 header #slidingMenu ul li {
   color: #e6e6e6;
-  padding: 12px 0;
+  margin: 25px 0;
 }
 header #slidingMenu ul li:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 header #slidingMenu ul li a {
   text-decoration: none;
@@ -291,6 +292,7 @@ header #navToggle .navLine.open::after {
 }
 #welcome #fixedMenu ul li:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 #welcome #fixedMenu ul li a {
   text-decoration: none;
@@ -767,6 +769,33 @@ header #navToggle .navLine.open::after {
     width: 91%;
     margin-left: 9%;
   }
+}
+
+#resumeModal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#resumeModal #resumeCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#resumeModal #resumeCard img {
+  width: 90%;
+}
+#resumeModal.closed {
+  display: none;
 }
 
 footer {

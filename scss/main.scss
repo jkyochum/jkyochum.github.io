@@ -94,10 +94,11 @@ header {
 
             li {
                 color: darken($white, 10%);
-                padding: 12px 0;
+                margin: 25px 0;
 
                 &:hover {
                     text-decoration: underline;
+                    cursor: pointer;
                 }
 
                 a {
@@ -295,6 +296,7 @@ header {
 
                 &:hover {
                     text-decoration: underline;
+                    cursor: pointer;
                 }
 
                 a {
@@ -723,6 +725,29 @@ header {
     @include break(laptop-large) {
         width: 91%;
         margin-left: 9%;
+    }
+}
+
+#resumeModal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba($black, 0.8);
+    @include flex($justify: center, $align: center);
+
+    #resumeCard {
+        @include flex($justify: center);
+
+        img {
+            width: 90%;
+        }
+    }
+
+    &.closed {
+        display: none;
     }
 }
 
