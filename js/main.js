@@ -44,6 +44,7 @@ slidingMenu.addEventListener('click', (e) => {
 });
 
 contactModal.addEventListener('click', (e) => {
+    console.log(e);
     closeContactModal(e);
 });
 
@@ -124,7 +125,7 @@ function toggleNav() {
 }
 
 function closeContactModal(e) {
-    if (e.target.parentElement.id !== 'contactCard') {
+    if (e.target.id === 'contactModal') {
         contactModal.classList.add('closed');
         toggleScrollbar(false);
     }

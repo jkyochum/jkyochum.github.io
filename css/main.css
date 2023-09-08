@@ -781,11 +781,12 @@ header #navToggle .navLine.open::after {
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
 #resumeModal #resumeCard {
+  max-width: 550px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

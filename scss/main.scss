@@ -730,9 +730,10 @@ header {
 
 #resumeModal {
     @include modal();
-    @include flex($flexDir: column, $justify: center, $align: center);
+    @include flex($flexDir: column, $wrap: nowrap, $justify: center, $align: center);
 
     #resumeCard {
+        max-width: 550px;
         @include flex($justify: center);
 
         img {

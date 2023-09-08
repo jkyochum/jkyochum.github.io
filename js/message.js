@@ -5,12 +5,12 @@ const fields = {};
 
 //API call to email validator
 
-const options = { method: 'GET' };
+// const options = { method: 'GET' };
 
-fetch(`https://emailvalidation.abstractapi.com/v1?api_key=2ecd09ec15af4720a0d8c6945df1dc97&email=${fields.email}`, options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
+// fetch(`https://emailvalidation.abstractapi.com/v1?api_key=2ecd09ec15af4720a0d8c6945df1dc97&email=${fields.email}`, options)
+//     .then(response => response.json())
+//     .then(response => console.log(response))
+//     .catch(err => console.error(err));
 
 
 
