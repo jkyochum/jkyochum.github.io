@@ -31,13 +31,13 @@ slidingMenu.addEventListener('click', (e) => {
 
     if (target.parentElement.id === 'headerContact' || target.id === 'headerContact') {
         contactModal.classList.remove('closed');
-        // toggleScrollbar(true);
+        toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 
     if (target.parentElement.id === 'headerResume' || target.id === 'headerResume') {
         resumeModal.classList.remove('closed');
-        // toggleScrollbar(true);
+        toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
 
     }
@@ -56,11 +56,13 @@ footerNav.addEventListener('click', (e) => {
     if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.id === 'footerResume' || e.target.id === 'footerResume') {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
+        html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 
     if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'footerContact' || e.target.parentElement.parentElement.parentElement.id === 'footerContact' || e.target.parentElement.parentElement.id === 'footerContact' || e.target.parentElement.id === 'footerContact' || e.target.id === 'footerContact') {
         contactModal.classList.remove('closed');
         toggleScrollbar(true);
+        html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 });
 
@@ -69,11 +71,13 @@ fixedMenu.addEventListener('click', (e) => {
     if (target.parentElement.id === 'welcomeContact' || target.id === 'welcomeContact') {
         contactModal.classList.remove('closed');
         toggleScrollbar(true);
+        html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 
     if (target.parentElement.id === 'welcomeResume' || target.id === 'welcomeResume') {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
+        html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 })
 
@@ -125,14 +129,15 @@ function toggleNav() {
 }
 
 function closeContactModal(e) {
-    if (e.target.id === 'contactModal') {
+    console.log(e);
+    if (e.target.id === 'contactModal' || e.target.id === 'contactExitBtn') {
         contactModal.classList.add('closed');
         toggleScrollbar(false);
     }
 }
 
 function closeResumeModal(e) {
-    if (e.target.parentElement.id !== 'resumeCard') {
+    if (e.target.parentElement.id !== 'resumeCard' || e.target.id === 'resumeExitBtn') {
         resumeModal.classList.add('closed');
         toggleScrollbar(false);
     }

@@ -172,11 +172,13 @@ header {
                 background: transparent;
 
                 &::before {
-                    @include before($transform: rotate(45deg) translate(6px, 10px));
+                    @include before($backgroundColor: $black);
+                    transform: rotate(45deg) translate(6px, 10px);
                 }
 
                 &::after {
-                    @include after($transform: rotate(-45deg) translate(8px, -12px));
+                    @include after($backgroundColor: $black);
+                    transform: rotate(-45deg) translate(8px, -12px);
                 }
             }
         }
@@ -738,18 +740,19 @@ header {
 
         #resumeExitBtn {
             position: relative;
-            top: 15px;
-            left: 87%;
+            top: -102%;
+            left: 87.5%;
             color: $white;
+            cursor: pointer;
 
             &::before {
-                @include before($width: 15px);
-                transform: rotate(45deg) translate(5px, 10px);
+                @include before($width: 15px, $backgroundColor: $white);
+                transform: rotate(45deg) translate(4px, 10px);
             }
 
             &::after {
-                @include after($width: 15px);
-                transform: rotate(45deg) translate(7px, -12px);
+                @include after($width: 15px, $backgroundColor: $white);
+                transform: rotate(-45deg) translate(6px, -12px);
             }
         }
 
@@ -784,16 +787,19 @@ header {
 
         #contactExitBtn {
             position: relative;
-            top: 15px;
-            left: 87%;
+            top: -62px;
+            left: 120%;
             color: $white;
+            cursor: pointer;
 
             &::before {
-                @include before($width: 15px, rotate(45deg) translate(5px, 10px));
+                @include before($width: 15px, $backgroundColor: $white);
+                transform: rotate(45deg) translate(4px, 10px);
             }
 
             &::after {
-                @include after($width: 15px, rotate(-45deg) translate(7px, -12px));
+                @include after($width: 15px, $backgroundColor: $white);
+                transform: rotate(-45deg) translate(6px, -12px);
             }
         }
 
@@ -819,6 +825,7 @@ header {
                 padding: 8px;
                 border: 2px inset $black;
                 border-radius: 3px;
+                resize: none;
             }
 
             #btnSendMessage {

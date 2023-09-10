@@ -31,22 +31,22 @@
     grid-template-areas: $templateAreas;
 }
 
-@mixin before ($width: 30px) {
+@mixin before ($width: 30px, $backgroundColor: null) {
     content: '';
     position: absolute;
     bottom: 10.5px;
     width: $width;
     height: 3px;
-    background-color: $white;
+    background-color: $backgroundColor;
 }
 
-@mixin after($width: 30px) {
+@mixin after($width: 30px, $backgroundColor: null) {
     content: '';
     position: absolute;
     bottom: -10.5px;
     width: $width;
     height: 3px;
-    background-color: $white;
+    background-color: $backgroundColor;
 }
 
 @mixin break ($breakpoint) {
