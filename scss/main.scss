@@ -172,11 +172,11 @@ header {
                 background: transparent;
 
                 &::before {
-                    transform: rotate(45deg) translate(6px, 10px);
+                    @include before($transform: rotate(45deg) translate(6px, 10px));
                 }
 
                 &::after {
-                    transform: rotate(-45deg) translate(8px, -12px);
+                    @include after($transform: rotate(-45deg) translate(8px, -12px));
                 }
             }
         }
@@ -736,6 +736,23 @@ header {
         max-width: 550px;
         @include flex($justify: center);
 
+        #resumeExitBtn {
+            position: relative;
+            top: 15px;
+            left: 87%;
+            color: $white;
+
+            &::before {
+                @include before($width: 15px);
+                transform: rotate(45deg) translate(5px, 10px);
+            }
+
+            &::after {
+                @include after($width: 15px);
+                transform: rotate(45deg) translate(7px, -12px);
+            }
+        }
+
         img {
             width: 90%;
         }
@@ -745,7 +762,6 @@ header {
 
         a {
             color: $white;
-
         }
     }
 
@@ -765,6 +781,22 @@ header {
         background-repeat: no-repeat;
         padding: 50px;
         border-radius: 3px;
+
+        #contactExitBtn {
+            position: relative;
+            top: 15px;
+            left: 87%;
+            color: $white;
+
+            &::before {
+                @include before($width: 15px, rotate(45deg) translate(5px, 10px));
+            }
+
+            &::after {
+                @include after($width: 15px, rotate(-45deg) translate(7px, -12px));
+            }
+        }
+
 
         #contactForm {
             @include flex($flexDir: column, $gap: 20px);

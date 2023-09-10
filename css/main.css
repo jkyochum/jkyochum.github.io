@@ -170,9 +170,21 @@ header #navToggle .navLine.open {
   background: transparent;
 }
 header #navToggle .navLine.open::before {
+  content: "";
+  position: absolute;
+  bottom: 10.5px;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
   transform: rotate(45deg) translate(6px, 10px);
 }
 header #navToggle .navLine.open::after {
+  content: "";
+  position: absolute;
+  bottom: -10.5px;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
   transform: rotate(-45deg) translate(8px, -12px);
 }
 @media only screen and (min-width: 1024px) {
@@ -791,6 +803,30 @@ header #navToggle .navLine.open::after {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+#resumeModal #resumeCard #resumeExitBtn {
+  position: relative;
+  top: 15px;
+  left: 87%;
+  color: #ffffff;
+}
+#resumeModal #resumeCard #resumeExitBtn::before {
+  content: "";
+  position: absolute;
+  bottom: 10.5px;
+  width: 15px;
+  height: 3px;
+  background-color: #ffffff;
+  transform: rotate(45deg) translate(6px, 10px);
+}
+#resumeModal #resumeCard #resumeExitBtn::after {
+  content: "";
+  position: absolute;
+  bottom: -10.5px;
+  width: 15px;
+  height: 3px;
+  background-color: #ffffff;
+  transform: rotate(-45deg) translate(8px, -12px);
 }
 #resumeModal #resumeCard img {
   width: 90%;

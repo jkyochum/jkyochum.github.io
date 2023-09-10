@@ -31,6 +31,24 @@
     grid-template-areas: $templateAreas;
 }
 
+@mixin before ($width: 30px) {
+    content: '';
+    position: absolute;
+    bottom: 10.5px;
+    width: $width;
+    height: 3px;
+    background-color: $white;
+}
+
+@mixin after($width: 30px) {
+    content: '';
+    position: absolute;
+    bottom: -10.5px;
+    width: $width;
+    height: 3px;
+    background-color: $white;
+}
+
 @mixin break ($breakpoint) {
     @if($breakpoint ==mobile-medium) {
         @media only screen and (min-width: 375px) {
