@@ -816,8 +816,26 @@ header {
                 font-weight: 500;
             }
 
+            #firstName {
+
+                &.invalid {
+                    color: red;
+                }
+            }
+
+            #lastName {
+
+                &.invalid {
+                    color: red;
+                }
+            }
+
             #email {
                 width: 100%;
+
+                &.invalid {
+                    color: red;
+                }
             }
 
             #message {
@@ -826,6 +844,10 @@ header {
                 border: 2px inset $black;
                 border-radius: 3px;
                 resize: none;
+
+                &.invalid {
+                    color: red;
+                }
             }
 
             #btnSendMessage {
@@ -854,17 +876,17 @@ header {
     }
 
     #messageSent {
-        @include flex($flexDir: column, $justify: center);
+        @include flex($flexDir: column, $justify: center, $align: center);
         background: url('../images/paper.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 50px;
+        padding: 50px 50px 46px;
         border-radius: 3px;
 
         #messageSentExitBtn {
             position: relative;
             top: -62px;
-            left: 136%;
+            left: 110%;
             color: $white;
             cursor: pointer;
 
@@ -881,6 +903,16 @@ header {
 
         img {
             width: 96px;
+        }
+
+        #btnSendAnother {
+            margin-top: 22px;
+            padding: 8px;
+
+            &:hover {
+                color: green;
+                cursor: pointer;
+            }
         }
 
         &.closed {

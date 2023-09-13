@@ -902,8 +902,17 @@ header #navToggle .navLine.open::after {
   font-family: Urbanist, sans-serif;
   font-weight: 500;
 }
+#contactModal #contactCard #contactForm #firstName.invalid {
+  color: red;
+}
+#contactModal #contactCard #contactForm #lastName.invalid {
+  color: red;
+}
 #contactModal #contactCard #contactForm #email {
   width: 100%;
+}
+#contactModal #contactCard #contactForm #email.invalid {
+  color: red;
 }
 #contactModal #contactCard #contactForm #message {
   font-family: Urbanist, sans-serif;
@@ -911,6 +920,9 @@ header #navToggle .navLine.open::after {
   border: 2px inset #000000;
   border-radius: 3px;
   resize: none;
+}
+#contactModal #contactCard #contactForm #message.invalid {
+  color: red;
 }
 #contactModal #contactCard #contactForm #btnSendMessage {
   font-family: Urbanist, sans-serif;
@@ -936,16 +948,17 @@ header #navToggle .navLine.open::after {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   background: url("../images/paper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 50px;
+  padding: 50px 50px 46px;
   border-radius: 3px;
 }
 #contactModal #messageSent #messageSentExitBtn {
   position: relative;
   top: -62px;
-  left: 136%;
+  left: 110%;
   color: #ffffff;
   cursor: pointer;
 }
@@ -969,6 +982,14 @@ header #navToggle .navLine.open::after {
 }
 #contactModal #messageSent img {
   width: 96px;
+}
+#contactModal #messageSent #btnSendAnother {
+  margin-top: 22px;
+  padding: 8px;
+}
+#contactModal #messageSent #btnSendAnother:hover {
+  color: green;
+  cursor: pointer;
 }
 #contactModal #messageSent.closed {
   display: none;
