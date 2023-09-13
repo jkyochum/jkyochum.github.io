@@ -20,6 +20,7 @@ function sendMessage() {
     } else {
         firstName.classList.add('invalid');
         firstName.placeholder = 'First name *';
+        goodFirstName = false;
     }
 
     if (isValid(lastName.value)) {
@@ -28,6 +29,7 @@ function sendMessage() {
     } else {
         lastName.classList.add('invalid');
         lastName.placeholder = 'Last name *';
+        goodLastName = false;
     }
 
     if (isValid(email.value)) {
@@ -37,11 +39,13 @@ function sendMessage() {
         } else {
             email.classList.add('invalid');
             console.log('Error: Invalid Email Address');
+            goodEmail = false;
         }
 
     } else {
         email.classList.add('invalid');
         email.placeholder = 'Email address *';
+        goodEmail = false;
     }
 
     if (isValid(message.value)) {
@@ -50,6 +54,7 @@ function sendMessage() {
     } else {
         message.classList.add('invalid');
         message.placeholder = 'Your message *';
+        goodMessage = false;
     }
 
     if (goodFirstName && goodLastName && goodEmail && goodMessage) {
@@ -58,12 +63,14 @@ function sendMessage() {
             To: 'whiterwidow@gmail.com',
             From: "whiterwidow@gmail.com",
             Subject: "New Message!",
-            Body: "And this is the body"
+            Body: `${createBody(firstName.value, lastName.value, email.value, message.value)}`
         }).then(
             message => alert(message)
         );
 
-        // console.log('message sent');
+        clearInputs();
+
+        console.log('Congratulations: Your Message Has Been Sent');
         messageSent = true;
         messageSentCard.classList.remove('closed');
         messageSentCard.parentElement.firstElementChild.classList.add('closed');
@@ -89,11 +96,26 @@ function isValid(value) {
 }
 
 function isEmail(email) {
-    const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
     return regex.test(String(email).toLowerCase());
 }
 
+function createBody(first, last, email, msg) {
+    const body = `<br>
+        Message from: ${first} ${last}<br><br>
+        ${first}'s email address: ${email}<br><br>
+        Message:<br>
+        ${msg}
+    `;
+    return body;
+}
 
+function clearInputs() {
+    firstName.value = '';
+    lastName.value = '';
+    email.value = '';
+    message.value = '';
+}
 
 
 

@@ -866,7 +866,7 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard #contactExitBtn {
   position: relative;
   top: -62px;
-  left: 120%;
+  left: 122%;
   color: #ffffff;
   cursor: pointer;
 }
@@ -970,7 +970,7 @@ header #navToggle .navLine.open::after {
 #contactModal #messageSent #messageSentExitBtn {
   position: relative;
   top: -62px;
-  left: 110%;
+  left: 89%;
   color: #ffffff;
   cursor: pointer;
 }
