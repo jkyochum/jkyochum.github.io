@@ -932,9 +932,9 @@ header {
         }
     }
 
-    // &.closed {
-    //     display: none;
-    // }
+    &.closed {
+        display: none;
+    }
 }
 
 footer {

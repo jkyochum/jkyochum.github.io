@@ -1006,6 +1006,9 @@ header #navToggle .navLine.open::after {
 #contactModal #messageSent.closed {
   display: none;
 }
+#contactModal.closed {
+  display: none;
+}
 
 footer {
   height: 50px;
