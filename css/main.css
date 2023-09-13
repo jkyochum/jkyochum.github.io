@@ -902,16 +902,25 @@ header #navToggle .navLine.open::after {
   font-family: Urbanist, sans-serif;
   font-weight: 500;
 }
-#contactModal #contactCard #contactForm #firstName.invalid {
+#contactModal #contactCard #contactForm #firstName.invalid::-moz-placeholder {
   color: red;
 }
-#contactModal #contactCard #contactForm #lastName.invalid {
+#contactModal #contactCard #contactForm #firstName.invalid::placeholder {
+  color: red;
+}
+#contactModal #contactCard #contactForm #lastName.invalid::-moz-placeholder {
+  color: red;
+}
+#contactModal #contactCard #contactForm #lastName.invalid::placeholder {
   color: red;
 }
 #contactModal #contactCard #contactForm #email {
   width: 100%;
 }
-#contactModal #contactCard #contactForm #email.invalid {
+#contactModal #contactCard #contactForm #email.invalid::-moz-placeholder {
+  color: red;
+}
+#contactModal #contactCard #contactForm #email.invalid::placeholder {
   color: red;
 }
 #contactModal #contactCard #contactForm #message {
@@ -921,7 +930,10 @@ header #navToggle .navLine.open::after {
   border-radius: 3px;
   resize: none;
 }
-#contactModal #contactCard #contactForm #message.invalid {
+#contactModal #contactCard #contactForm #message.invalid::-moz-placeholder {
+  color: red;
+}
+#contactModal #contactCard #contactForm #message.invalid::placeholder {
   color: red;
 }
 #contactModal #contactCard #contactForm #btnSendMessage {
@@ -992,9 +1004,6 @@ header #navToggle .navLine.open::after {
   cursor: pointer;
 }
 #contactModal #messageSent.closed {
-  display: none;
-}
-#contactModal.closed {
   display: none;
 }
 

@@ -819,14 +819,20 @@ header {
             #firstName {
 
                 &.invalid {
-                    color: red;
+
+                    &::placeholder {
+                        color: red;
+                    }
                 }
             }
 
             #lastName {
 
                 &.invalid {
-                    color: red;
+
+                    &::placeholder {
+                        color: red;
+                    }
                 }
             }
 
@@ -834,7 +840,10 @@ header {
                 width: 100%;
 
                 &.invalid {
-                    color: red;
+
+                    &::placeholder {
+                        color: red;
+                    }
                 }
             }
 
@@ -846,7 +855,10 @@ header {
                 resize: none;
 
                 &.invalid {
-                    color: red;
+
+                    &::placeholder {
+                        color: red;
+                    }
                 }
             }
 
@@ -920,9 +932,9 @@ header {
         }
     }
 
-    &.closed {
-        display: none;
-    }
+    // &.closed {
+    //     display: none;
+    // }
 }
 
 footer {

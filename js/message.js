@@ -19,7 +19,7 @@ function sendMessage() {
         firstName.classList.remove('invalid');
     } else {
         firstName.classList.add('invalid');
-        firstName.textContent = 'First name *';
+        firstName.placeholder = 'First name *';
     }
 
     if (isValid(lastName.value)) {
@@ -27,7 +27,7 @@ function sendMessage() {
         lastName.classList.remove('invalid');
     } else {
         lastName.classList.add('invalid');
-        lastName.textContent = 'Last name *';
+        lastName.placeholder = 'Last name *';
     }
 
     if (isValid(email.value)) {
@@ -36,12 +36,12 @@ function sendMessage() {
             email.classList.remove('invalid');
         } else {
             email.classList.add('invalid');
-            console.log('invalid email');
+            console.log('Error: Invalid Email Address');
         }
 
     } else {
         email.classList.add('invalid');
-        email.textContent = 'Email address *';
+        email.placeholder = 'Email address *';
     }
 
     if (isValid(message.value)) {
@@ -49,7 +49,7 @@ function sendMessage() {
         message.classList.remove('invalid');
     } else {
         message.classList.add('invalid');
-        message.textContent = 'Your message *';
+        message.placeholder = 'Your message *';
     }
 
     if (goodFirstName && goodLastName && goodEmail && goodMessage) {
