@@ -928,6 +928,51 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard #contactForm #btnSendMessage:active {
   background-color: #7e2e2e;
 }
+#contactModal #contactCard.closed {
+  display: none;
+}
+#contactModal #messageSent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: url("../images/paper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  border-radius: 3px;
+}
+#contactModal #messageSent #messageSentExitBtn {
+  position: relative;
+  top: -62px;
+  left: 136%;
+  color: #ffffff;
+  cursor: pointer;
+}
+#contactModal #messageSent #messageSentExitBtn::before {
+  content: "";
+  position: absolute;
+  bottom: 10.5px;
+  width: 15px;
+  height: 3px;
+  background-color: #ffffff;
+  transform: rotate(45deg) translate(4px, 10px);
+}
+#contactModal #messageSent #messageSentExitBtn::after {
+  content: "";
+  position: absolute;
+  bottom: -10.5px;
+  width: 15px;
+  height: 3px;
+  background-color: #ffffff;
+  transform: rotate(-45deg) translate(6px, -12px);
+}
+#contactModal #messageSent img {
+  width: 96px;
+}
+#contactModal #messageSent.closed {
+  display: none;
+}
 #contactModal.closed {
   display: none;
 }

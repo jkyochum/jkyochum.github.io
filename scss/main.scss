@@ -847,6 +847,45 @@ header {
                 }
             }
         }
+
+        &.closed {
+            display: none;
+        }
+    }
+
+    #messageSent {
+        @include flex($flexDir: column, $justify: center);
+        background: url('../images/paper.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 50px;
+        border-radius: 3px;
+
+        #messageSentExitBtn {
+            position: relative;
+            top: -62px;
+            left: 136%;
+            color: $white;
+            cursor: pointer;
+
+            &::before {
+                @include before($width: 15px, $backgroundColor: $white);
+                transform: rotate(45deg) translate(4px, 10px);
+            }
+
+            &::after {
+                @include after($width: 15px, $backgroundColor: $white);
+                transform: rotate(-45deg) translate(6px, -12px);
+            }
+        }
+
+        img {
+            width: 96px;
+        }
+
+        &.closed {
+            display: none;
+        }
     }
 
     &.closed {

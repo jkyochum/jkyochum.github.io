@@ -129,7 +129,6 @@ function toggleNav() {
 }
 
 function closeContactModal(e) {
-    console.log(e);
     if (e.target.id === 'contactModal' || e.target.id === 'contactExitBtn') {
         contactModal.classList.add('closed');
         toggleScrollbar(false);
