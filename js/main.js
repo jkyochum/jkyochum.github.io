@@ -129,7 +129,7 @@ function toggleNav() {
 }
 
 function closeContactModal(e) {
-    if (e.target.id === 'contactModal' || e.target.id === 'contactExitBtn') {
+    if (e.target.id === 'contactModal' || e.target.id === 'contactExitBtn' || e.target.id === 'messageSentExitBtn') {
         contactModal.classList.add('closed');
         toggleScrollbar(false);
     }
