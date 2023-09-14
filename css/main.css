@@ -124,6 +124,12 @@ header #slidingMenu ul li a:link {
 header #slidingMenu ul li a:visited {
   color: #e6e6e6;
 }
+@media (orientation: landscape) {
+  header #slidingMenu ul {
+    left: 0;
+    top: 0;
+  }
+}
 header #slidingMenu.closed {
   right: -104%;
   opacity: 0;
@@ -846,14 +852,32 @@ header #navToggle .navLine.open::after {
   background-color: #ffffff;
   transform: rotate(-45deg) translate(6px, -12px);
 }
+@media (orientation: landscape) {
+  #resumeModal #resumeCard #resumeExitBtn {
+    position: relative;
+    bottom: -190px;
+    padding-bottom: 20px;
+  }
+}
 #resumeModal #resumeCard img {
   width: 90%;
+}
+@media (orientation: landscape) {
+  #resumeModal #resumeCard {
+    position: relative;
+    top: 180px;
+  }
 }
 #resumeModal #downloadLink a {
   color: #ffffff;
 }
 #resumeModal.closed {
   display: none;
+}
+@media (orientation: landscape) {
+  #resumeModal {
+    overflow-y: auto;
+  }
 }
 
 #contactModal {
@@ -869,7 +893,6 @@ header #navToggle .navLine.open::after {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
 }
 #contactModal #contactCard {
   display: flex;
@@ -973,6 +996,12 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard.closed {
   display: none;
 }
+@media (orientation: landscape) {
+  #contactModal #contactCard {
+    position: relative;
+    top: 35px;
+  }
+}
 #contactModal #messageSent {
   display: flex;
   flex-direction: column;
@@ -1026,6 +1055,11 @@ header #navToggle .navLine.open::after {
 }
 #contactModal.closed {
   display: none;
+}
+@media (orientation: landscape) {
+  #contactModal {
+    overflow-y: auto;
+  }
 }
 
 footer {
