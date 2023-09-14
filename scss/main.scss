@@ -206,7 +206,7 @@ header {
         url('../images/paper.jpg');
     background-repeat: no-repeat;
     background-size: contain, cover;
-    background-position: right bottom, center;
+    background-position: right bottom 65px, center;
     border-bottom: 1px solid $black;
     box-shadow: 0px 3px 10px rgba($black, 0.7);
     grid-area: welcome;
