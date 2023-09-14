@@ -412,6 +412,14 @@ header {
                 box-shadow: 5px 5px 5px rgba($black, .7);
             }
 
+            a {
+                text-decoration: none;
+
+                &:nth-of-type(1) {
+                    align-self: center;
+                }
+            }
+
             h3 {
                 font-size: 1.2em;
                 color: $burnt-red;
@@ -432,7 +440,6 @@ header {
                 height: 155px;
                 margin-bottom: 8px;
                 border: 1px solid rgba($black, .2);
-                align-self: center;
 
                 @include break(mobile-large) {
                     width: 226px;

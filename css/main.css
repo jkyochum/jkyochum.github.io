@@ -425,6 +425,12 @@ header #navToggle .navLine.open::after {
   transform: scale(1.01);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
+#projects #projectsWrapper .card a {
+  text-decoration: none;
+}
+#projects #projectsWrapper .card a:nth-of-type(1) {
+  align-self: center;
+}
 #projects #projectsWrapper .card h3 {
   font-size: 1.2em;
   color: #a33c3c;
@@ -446,7 +452,6 @@ header #navToggle .navLine.open::after {
   height: 155px;
   margin-bottom: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  align-self: center;
 }
 @media only screen and (min-width: 425px) {
   #projects #projectsWrapper .card img {
