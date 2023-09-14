@@ -92,8 +92,8 @@ header {
             list-style: none;
             font-size: xx-large;
             position: relative;
-            left: -20px;
-            top: -70px;
+            left: -10px;
+            top: -14px;
 
             li {
                 color: darken($white, 10%);
@@ -209,7 +209,7 @@ header {
         url('../images/paper.jpg');
     background-repeat: no-repeat;
     background-size: contain, cover;
-    background-position: right bottom 65px, center;
+    background-position: right bottom 75px, center;
     border-bottom: 1px solid $black;
     box-shadow: 0px 3px 10px rgba($black, 0.7);
     grid-area: welcome;
