@@ -386,6 +386,11 @@ header #navToggle .navLine.open::after {
     display: none;
   }
 }
+@media (orientation: landscape) {
+  #welcome {
+    background-position: right bottom, center;
+  }
+}
 
 #projects {
   width: 90%;

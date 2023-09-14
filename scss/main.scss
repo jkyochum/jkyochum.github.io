@@ -374,6 +374,10 @@ header {
             display: none;
         }
     }
+
+    @include break(landscape) {
+        background-position: right bottom, center;
+    }
 }
 
 #projects {
