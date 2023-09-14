@@ -213,10 +213,12 @@ header #navToggle .navLine.open::after {
   background: url("../svgs/mizu.svg"), url("../images/paper.jpg");
   background-repeat: no-repeat;
   background-size: contain, cover;
-  background-position: right bottom 75px, center;
+  background-position: right bottom 80px, center;
   border-bottom: 1px solid #000000;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
   grid-area: welcome;
+  display: flex;
+  flex-direction: column;
 }
 #welcome #welcomeWrapper {
   position: relative;
@@ -337,8 +339,8 @@ header #navToggle .navLine.open::after {
 }
 #welcome #scrollArrow {
   position: absolute;
+  align-self: center;
   top: 32%;
-  left: 42%;
   cursor: pointer;
 }
 #welcome #scrollArrow::before {
@@ -369,7 +371,6 @@ header #navToggle .navLine.open::after {
 @media only screen and (min-width: 425px) {
   #welcome #scrollArrow {
     top: 23%;
-    left: 46.5%;
   }
 }
 @media only screen and (min-width: 620px) {
