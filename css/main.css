@@ -9,11 +9,13 @@ html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
   transition: 0.3s all ease-in-out;
+  background-color: #000000;
 }
 
 body {
   background-color: #faf7e8;
   font-family: Urbanist, sans-serif;
+  width: 100%;
 }
 body h2 {
   margin-bottom: 15px;

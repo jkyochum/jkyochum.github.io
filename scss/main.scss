@@ -8,11 +8,13 @@ html {
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
     @include transition(.3s);
+    background-color: $black;
 }
 
 body {
     background-color: $tapioca-white;
     font-family: $main-text-font;
+    width: 100%;
 
     h2 {
         margin-bottom: 15px;
