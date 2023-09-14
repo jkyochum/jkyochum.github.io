@@ -91,6 +91,9 @@ header {
         ul {
             list-style: none;
             font-size: xx-large;
+            position: relative;
+            left: -20px;
+            top: -70px;
 
             li {
                 color: darken($white, 10%);

@@ -101,6 +101,9 @@ header #slidingMenu {
 header #slidingMenu ul {
   list-style: none;
   font-size: xx-large;
+  position: relative;
+  left: -20px;
+  top: -70px;
 }
 header #slidingMenu ul li {
   color: #e6e6e6;
