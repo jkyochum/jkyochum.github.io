@@ -951,7 +951,7 @@ header {
 }
 
 footer {
-    height: 50px;
+    height: 70px;
     background: linear-gradient(110deg, $white, $black 60%, $black);
     grid-area: footer;
 
@@ -993,7 +993,7 @@ footer {
         ul {
             @include flex($justify: flex-end, $gap: 15px);
             margin-right: 15px;
-            height: 50px;
+            height: 70px;
 
             li {
                 list-style: none;
@@ -1001,8 +1001,8 @@ footer {
                 cursor: pointer;
 
                 svg {
-                    width: 30px;
-                    height: 30px;
+                    width: 45px;
+                    height: 45px;
                     fill: $white;
                     @include transition(.25s);
 
