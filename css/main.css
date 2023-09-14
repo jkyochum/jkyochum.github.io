@@ -384,7 +384,7 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 620px) {
   #welcome #scrollArrow {
-    top: 85%;
+    top: 92%;
   }
 }
 @media only screen and (min-width: 1024px) {
