@@ -493,7 +493,7 @@ header {
 
             @include break(laptop) {
                 width: 430px;
-                height: 350px;
+                height: 368px;
             }
 
             @include break(laptop-large) {
@@ -987,7 +987,6 @@ footer {
     background: linear-gradient(110deg, $white, $black 60%, $black);
     grid-area: footer;
 
-
     #footerNav {
 
         @keyframes airSlide {
@@ -1061,6 +1060,10 @@ footer {
                             animation: textSlide .5s linear forwards;
                         }
                     }
+
+                    @include break(laptop) {
+                        width: 30px;
+                    }
                 }
             }
 
@@ -1068,7 +1071,7 @@ footer {
                 @include flex($flexDir: column);
                 align-self: flex-end;
                 margin: 0 0 5px 0;
-                height: 184px;
+                height: 235px;
             }
         }
 

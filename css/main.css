@@ -513,7 +513,7 @@ header #navToggle .navLine.open::after {
 @media only screen and (min-width: 1024px) {
   #projects #projectsWrapper .card {
     width: 430px;
-    height: 350px;
+    height: 368px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -1135,13 +1135,18 @@ footer #footerNav ul li svg:hover .bottomLine {
   animation: textSlide 0.5s linear forwards;
 }
 @media only screen and (min-width: 1024px) {
+  footer #footerNav ul li svg {
+    width: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
   footer #footerNav ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-self: flex-end;
     margin: 0 0 5px 0;
-    height: 184px;
+    height: 235px;
   }
 }
 @media only screen and (min-width: 1024px) {
