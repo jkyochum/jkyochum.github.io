@@ -85,6 +85,10 @@ header {
         &.closed {
             display: none;
         }
+
+        @include break(laptop) {
+            display: none;
+        }
     }
 
     #slidingMenu {
@@ -140,6 +144,10 @@ header {
         &.open {
             right: 0;
             opacity: 1;
+        }
+
+        @include break(laptop) {
+            display: none;
         }
     }
 
@@ -298,9 +306,7 @@ header {
     #fixedMenu {
         display: none;
         position: absolute;
-        top: 35%;
-        left: 12%;
-        width: 200px;
+        width: 250px;
         height: 300px;
         background: rgba($black, 0.1);
         border-radius: 10px;
@@ -315,14 +321,14 @@ header {
 
             li {
 
-                &:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-
                 a {
                     text-decoration: none;
                     color: $black;
+
+                    &:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -333,8 +339,8 @@ header {
 
         @include break(laptop) {
             @include flex($justify: center, $align: center);
-            top: 50%;
-            left: 9%;
+            bottom: 40px;
+            left: 87px;
         }
 
         @include break(4k) {
@@ -649,6 +655,8 @@ header {
         }
 
         @include break(laptop) {
+            width: 320px;
+            margin: auto;
             @include flex($justify: space-evenly);
         }
 
@@ -657,18 +665,17 @@ header {
         }
     }
 
-    @include break(mobile-large) {
-        width: 85%;
-    }
+    // @include break(mobile-large) {
+    //     width: 85%;
+    // }
 
     @include break(laptop) {
-        width: 430px;
+        margin-right: 9%;
         align-self: center;
     }
 
     @include break(4k) {
         width: 65%;
-        align-self: center;
     }
 }
 
@@ -756,7 +763,6 @@ header {
         width: 80%;
         @include grid($templateAreas: "header header"
             "story story");
-        margin-left: 6%;
         width: 95%;
         color: white;
         background: url('../images/grand-canyon-pic.jpg') rgba(0, 0, 0, .6);
@@ -768,7 +774,7 @@ header {
 
     @include break(laptop-large) {
         width: 91%;
-        margin-left: 9%;
+        margin-left: 6%;
     }
 }
 

@@ -71,13 +71,13 @@ footerNav.addEventListener('click', (e) => {
 
 fixedMenu.addEventListener('click', (e) => {
     const target = e.target;
-    if (target.parentElement.id === 'welcomeContact' || target.id === 'welcomeContact') {
+    if (target.id === 'welcomeContact') {
         contactModal.classList.remove('closed');
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 
-    if (target.parentElement.id === 'welcomeResume' || target.id === 'welcomeResume') {
+    if (target.id === 'welcomeResume') {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
@@ -93,6 +93,18 @@ document.addEventListener('scroll', (e) => {
         header.classList.add('closed');
         header.classList.remove('open');
     }
+});
+
+window.addEventListener('resize', (e) => {
+    let width = document.documentElement.clientWidth + 17;
+    console.log(width);
+
+    if (slidingMenu.classList.contains('open')) {
+        if (width >= 1024) {
+            toggleNav();
+        }
+    }
+
 });
 
 
@@ -146,8 +158,3 @@ function closeResumeModal(e) {
         toggleScrollbar(false);
     }
 }
-
-// window.onload = (e) => {
-//     window.scrollY = 0;
-// };
-

@@ -97,6 +97,11 @@ header #menuOverlay {
 header #menuOverlay.closed {
   display: none;
 }
+@media only screen and (min-width: 1024px) {
+  header #menuOverlay {
+    display: none;
+  }
+}
 header #slidingMenu {
   position: fixed;
   height: 100vh;
@@ -143,6 +148,11 @@ header #slidingMenu.closed {
 header #slidingMenu.open {
   right: 0;
   opacity: 1;
+}
+@media only screen and (min-width: 1024px) {
+  header #slidingMenu {
+    display: none;
+  }
 }
 header #navToggle {
   position: fixed;
@@ -305,9 +315,7 @@ header #navToggle .navLine.open::after {
 #welcome #fixedMenu {
   display: none;
   position: absolute;
-  top: 35%;
-  left: 12%;
-  width: 200px;
+  width: 250px;
   height: 300px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -323,13 +331,13 @@ header #navToggle .navLine.open::after {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-#welcome #fixedMenu ul li:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
 #welcome #fixedMenu ul li a {
   text-decoration: none;
   color: #000000;
+}
+#welcome #fixedMenu ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 @media only screen and (min-width: 2560px) {
   #welcome #fixedMenu ul {
@@ -343,8 +351,8 @@ header #navToggle .navLine.open::after {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    left: 9%;
+    bottom: 40px;
+    left: 87px;
   }
 }
 @media only screen and (min-width: 2560px) {
@@ -649,6 +657,8 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 1024px) {
   #stack #techWrapper {
+    width: 320px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -663,21 +673,15 @@ header #navToggle .navLine.open::after {
     justify-content: space-evenly;
   }
 }
-@media only screen and (min-width: 425px) {
-  #stack {
-    width: 85%;
-  }
-}
 @media only screen and (min-width: 1024px) {
   #stack {
-    width: 430px;
+    margin-right: 9%;
     align-self: center;
   }
 }
 @media only screen and (min-width: 2560px) {
   #stack {
     width: 65%;
-    align-self: center;
   }
 }
 
@@ -774,7 +778,6 @@ header #navToggle .navLine.open::after {
     display: grid;
     grid-template-rows: auto;
     grid-template-areas: "header header" "story story";
-    margin-left: 6%;
     width: 95%;
     color: white;
     background: url("../images/grand-canyon-pic.jpg") rgba(0, 0, 0, 0.6);
@@ -787,7 +790,7 @@ header #navToggle .navLine.open::after {
 @media only screen and (min-width: 1440px) {
   #bio {
     width: 91%;
-    margin-left: 9%;
+    margin-left: 6%;
   }
 }
 
