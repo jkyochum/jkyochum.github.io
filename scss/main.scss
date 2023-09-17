@@ -104,7 +104,7 @@ header {
             position: relative;
             width: 100%;
             padding-left: 30px;
-            top: -120px;
+            // top: -120px;
 
             li {
                 color: darken($white, 10%);
@@ -128,9 +128,8 @@ header {
                 }
             }
 
-            // @include break(landscape) {
-            //     left: 0;
-            //     top: 0;
+            // @include break(tablet) {
+            //     top: -35px;
             // }
         }
 
@@ -147,7 +146,7 @@ header {
     #navToggle {
         position: fixed;
         top: 4px;
-        right: 8px;
+        right: 0.5rem;
         width: 48px;
         height: 48px;
         align-self: center;
@@ -469,20 +468,20 @@ header {
                 border: 1px solid rgba($black, .2);
                 align-self: center;
 
-                @include break(mobile-large) {
-                    width: 226px;
-                    height: 171px;
-                }
+                // @include break(mobile-large) {
+                //     width: 226px;
+                //     height: 171px;
+                // }
 
-                @include break(laptop) {
-                    width: 255px;
-                    height: 192px;
-                }
+                // @include break(laptop) {
+                //     width: 255px;
+                //     height: 192px;
+                // }
 
-                @include break(4k) {
-                    width: 305px;
-                    height: 225px;
-                }
+                // @include break(4k) {
+                //     width: 305px;
+                //     height: 225px;
+                // }
             }
 
             p {
@@ -503,7 +502,7 @@ header {
 
             @include break(tablet) {
                 width: 338px;
-                height: 340px;
+                height: 380px;
             }
 
             @include break(laptop) {
@@ -519,6 +518,134 @@ header {
             @include break(4k) {
                 width: 650px;
                 height: 490px;
+            }
+        }
+
+        #stack {
+            width: 90%;
+            margin: 25px auto 25px;
+            grid-area: stack;
+
+            h2 {
+                text-align: center;
+            }
+
+            #techWrapper {
+                @include flex($justify: center, $gap: 10px 2.5em);
+
+                .utility {
+                    @include flex($align: center);
+
+                    &:nth-child(1) {
+
+                        img {
+                            width: 50px;
+
+                            @include break(4k) {
+                                width: 75px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+
+                        img {
+                            width: 50px;
+
+                            @include break(4k) {
+                                width: 75px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+
+                        img {
+                            width: 59px;
+
+                            @include break(4k) {
+                                width: 88px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+
+                        img {
+                            width: 70px;
+
+                            @include break(4k) {
+                                width: 103px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(5) {
+
+                        img {
+                            width: 65px;
+
+                            @include break(4k) {
+                                width: 102px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(6) {
+
+                        img {
+                            width: 61px;
+
+                            @include break(4k) {
+                                width: 86px;
+                            }
+                        }
+                    }
+                }
+
+                @include break(mobile-medium) {
+                    @include flex($gap: 15px 3.5em);
+                }
+
+                @include break(mobile-large) {
+                    @include flex($gap: 15px 4em);
+                }
+
+                @include break(663px) {
+                    @include flex($gap: 15px 2.4em);
+                }
+
+                @include break(tablet) {
+                    @include flex($gap: 15px 2.5em);
+                }
+
+                @include break(laptop) {
+                    @include flex($justify: space-evenly);
+                }
+
+                @include break(laptop-large) {
+                    @include flex($justify: space-evenly);
+                }
+            }
+
+            @include break(mobile-large) {
+                width: 85%;
+            }
+
+            @include break(tablet) {
+                width: 338px;
+                margin: 0;
+                align-self: center;
+            }
+
+            @include break(laptop) {
+                width: 330px;
+                align-self: center;
+            }
+
+            @include break(4k) {
+                width: 65%;
+                align-self: center;
             }
         }
 
@@ -541,128 +668,6 @@ header {
 
     @include break(laptop) {
         scroll-margin-block-start: 20px;
-    }
-}
-
-#stack {
-    width: 90%;
-    margin: 25px auto 25px;
-    grid-area: stack;
-
-    h2 {
-        text-align: center;
-    }
-
-    #techWrapper {
-        @include flex($justify: center, $gap: 10px 2.5em);
-
-        .utility {
-            @include flex($align: center);
-
-            &:nth-child(1) {
-
-                img {
-                    width: 50px;
-
-                    @include break(4k) {
-                        width: 75px;
-                    }
-                }
-            }
-
-            &:nth-child(2) {
-
-                img {
-                    width: 50px;
-
-                    @include break(4k) {
-                        width: 75px;
-                    }
-                }
-            }
-
-            &:nth-child(3) {
-
-                img {
-                    width: 59px;
-
-                    @include break(4k) {
-                        width: 88px;
-                    }
-                }
-            }
-
-            &:nth-child(4) {
-
-                img {
-                    width: 70px;
-
-                    @include break(4k) {
-                        width: 103px;
-                    }
-                }
-            }
-
-            &:nth-child(5) {
-
-                img {
-                    width: 65px;
-
-                    @include break(4k) {
-                        width: 102px;
-                    }
-                }
-            }
-
-            &:nth-child(6) {
-
-                img {
-                    width: 61px;
-
-                    @include break(4k) {
-                        width: 86px;
-                    }
-                }
-            }
-        }
-
-        @include break(mobile-medium) {
-            @include flex($gap: 15px 3.5em);
-        }
-
-        @include break(mobile-large) {
-            @include flex($gap: 15px 4em);
-        }
-
-        @include break(663px) {
-            @include flex($gap: 15px 2.4em);
-        }
-
-        @include break(tablet) {
-            @include flex($gap: 15px 2.5em);
-        }
-
-        @include break(laptop) {
-            @include flex($justify: space-evenly);
-        }
-
-        @include break(laptop-large) {
-            @include flex($justify: space-evenly);
-        }
-    }
-
-    @include break(mobile-large) {
-        width: 85%;
-    }
-
-    @include break(laptop) {
-        width: 330px;
-        align-self: center;
-    }
-
-    @include break(4k) {
-        width: 65%;
-        align-self: center;
     }
 }
 
@@ -771,6 +776,7 @@ header {
     @include flex($flexDir: column, $wrap: nowrap, $justify: center, $align: center);
 
     #resumeCard {
+        width: 95%;
         max-width: 550px;
         @include flex($justify: center);
 
@@ -1042,7 +1048,7 @@ footer {
         }
 
         ul {
-            @include flex($justify: flex-end, $gap: 15px);
+            @include flex($justify: flex-end, $gap: 18px);
             margin-right: 15px;
             height: 65px;
 
@@ -1052,8 +1058,8 @@ footer {
                 cursor: pointer;
 
                 svg {
-                    width: 40px;
-                    height: 40px;
+                    width: 35px;
+                    height: 35px;
                     fill: $white;
                     @include transition(.25s);
 
