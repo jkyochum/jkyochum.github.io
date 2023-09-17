@@ -118,6 +118,7 @@ header #slidingMenu ul {
   position: relative;
   width: 100%;
   padding-left: 30px;
+  top: -35px;
 }
 header #slidingMenu ul li {
   color: #e6e6e6;
@@ -378,19 +379,9 @@ header #navToggle .navLine.open::after {
   background-color: #b3b3b3;
   transform: rotate(-28deg) translateX(-3px);
 }
-@media only screen and (min-width: 375px) {
-  #welcome #scrollArrow {
-    top: 27%;
-  }
-}
 @media only screen and (min-width: 425px) {
   #welcome #scrollArrow {
     top: 23%;
-  }
-}
-@media only screen and (min-width: 620px) {
-  #welcome #scrollArrow {
-    top: 88%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -398,9 +389,20 @@ header #navToggle .navLine.open::after {
     display: none;
   }
 }
-@media (orientation: landscape) {
+@media only screen and (min-width: 500px) {
   #welcome {
+    background-size: 500px, cover;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #welcome {
+    background-size: 550px, cover;
     background-position: right bottom, center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #welcome {
+    background-size: 700px, cover;
   }
 }
 
@@ -502,13 +504,7 @@ header #navToggle .navLine.open::after {
 @media only screen and (min-width: 1024px) {
   #projects #projectsWrapper .card {
     width: 430px;
-    height: 368px;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  #projects #projectsWrapper .card {
-    width: 410px;
-    height: 390px;
+    height: 460px;
   }
 }
 @media only screen and (min-width: 2560px) {
@@ -517,154 +513,13 @@ header #navToggle .navLine.open::after {
     height: 490px;
   }
 }
-#projects #projectsWrapper #stack {
-  width: 90%;
-  margin: 25px auto 25px;
-  grid-area: stack;
-}
-#projects #projectsWrapper #stack h2 {
-  text-align: center;
-}
-#projects #projectsWrapper #stack #techWrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 2.5em;
-}
-#projects #projectsWrapper #stack #techWrapper .utility {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-#projects #projectsWrapper #stack #techWrapper .utility:nth-child(1) img {
-  width: 50px;
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack #techWrapper .utility:nth-child(1) img {
-    width: 75px;
-  }
-}
-#projects #projectsWrapper #stack #techWrapper .utility:nth-child(2) img {
-  width: 50px;
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack #techWrapper .utility:nth-child(2) img {
-    width: 75px;
-  }
-}
-#projects #projectsWrapper #stack #techWrapper .utility:nth-child(3) img {
-  width: 59px;
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack #techWrapper .utility:nth-child(3) img {
-    width: 88px;
-  }
-}
-#projects #projectsWrapper #stack #techWrapper .utility:nth-child(4) img {
-  width: 70px;
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack #techWrapper .utility:nth-child(4) img {
-    width: 103px;
-  }
-}
-#projects #projectsWrapper #stack #techWrapper .utility:nth-child(5) img {
-  width: 65px;
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack #techWrapper .utility:nth-child(5) img {
-    width: 102px;
-  }
-}
-#projects #projectsWrapper #stack #techWrapper .utility:nth-child(6) img {
-  width: 61px;
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack #techWrapper .utility:nth-child(6) img {
-    width: 86px;
-  }
-}
-@media only screen and (min-width: 375px) {
-  #projects #projectsWrapper #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 3.5em;
-  }
-}
-@media only screen and (min-width: 425px) {
-  #projects #projectsWrapper #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 4em;
-  }
-}
-@media only screen and (min-width: 663px) {
-  #projects #projectsWrapper #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 2.4em;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #projects #projectsWrapper #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 15px 2.5em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  #projects #projectsWrapper #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  #projects #projectsWrapper #stack #techWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-}
-@media only screen and (min-width: 425px) {
-  #projects #projectsWrapper #stack {
-    width: 85%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #projects #projectsWrapper #stack {
-    width: 338px;
-    margin: 0;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  #projects #projectsWrapper #stack {
-    width: 330px;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 2560px) {
-  #projects #projectsWrapper #stack {
-    width: 65%;
-    align-self: center;
-  }
-}
 @media only screen and (min-width: 768px) {
   #projects #projectsWrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px 2px;
+    justify-content: center;
+    gap: 20px;
   }
 }
 @media only screen and (min-width: 845px) {
@@ -688,6 +543,141 @@ header #navToggle .navLine.open::after {
 @media only screen and (min-width: 1024px) {
   #projects {
     scroll-margin-block-start: 20px;
+  }
+}
+
+#stack {
+  width: 90%;
+  margin: 25px auto 25px;
+  grid-area: stack;
+}
+#stack h2 {
+  text-align: center;
+}
+#stack #techWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 2.5em;
+}
+#stack #techWrapper .utility {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#stack #techWrapper .utility:nth-child(1) img {
+  width: 50px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(1) img {
+    width: 75px;
+  }
+}
+#stack #techWrapper .utility:nth-child(2) img {
+  width: 50px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(2) img {
+    width: 75px;
+  }
+}
+#stack #techWrapper .utility:nth-child(3) img {
+  width: 59px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(3) img {
+    width: 88px;
+  }
+}
+#stack #techWrapper .utility:nth-child(4) img {
+  width: 70px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(4) img {
+    width: 103px;
+  }
+}
+#stack #techWrapper .utility:nth-child(5) img {
+  width: 65px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(5) img {
+    width: 102px;
+  }
+}
+#stack #techWrapper .utility:nth-child(6) img {
+  width: 61px;
+}
+@media only screen and (min-width: 2560px) {
+  #stack #techWrapper .utility:nth-child(6) img {
+    width: 86px;
+  }
+}
+@media only screen and (min-width: 375px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 3.5em;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 4em;
+  }
+}
+@media only screen and (min-width: 663px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 2.4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px 2.5em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #stack #techWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 425px) {
+  #stack {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #stack {
+    width: 430px;
+    align-self: center;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  #stack {
+    width: 65%;
+    align-self: center;
   }
 }
 

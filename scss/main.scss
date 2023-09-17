@@ -104,7 +104,7 @@ header {
             position: relative;
             width: 100%;
             padding-left: 30px;
-            // top: -120px;
+            top: -35px;
 
             li {
                 color: darken($white, 10%);
@@ -371,16 +371,12 @@ header {
             transform: rotate(-28deg) translateX(-3px);
         }
 
-        @include break(mobile-medium) {
-            top: 27%;
-        }
+        // @include break(mobile-medium) {
+        //     top: 27%;
+        // }
 
         @include break(mobile-large) {
             top: 23%;
-        }
-
-        @include break(620px) {
-            top: 88%;
         }
 
         @include break(laptop) {
@@ -388,8 +384,17 @@ header {
         }
     }
 
-    @include break(landscape) {
+    @include break(500px) {
+        background-size: 500px, cover;
+    }
+
+    @include break(tablet) {
+        background-size: 550px, cover;
         background-position: right bottom, center;
+    }
+
+    @include break(laptop) {
+        background-size: 700px, cover;
     }
 }
 
@@ -507,13 +512,13 @@ header {
 
             @include break(laptop) {
                 width: 430px;
-                height: 368px;
+                height: 460px;
             }
 
-            @include break(laptop-large) {
-                width: 410px;
-                height: 390px;
-            }
+            // @include break(laptop-large) {
+            //     width: 410px;
+            //     height: 390px;
+            // }
 
             @include break(4k) {
                 width: 650px;
@@ -521,136 +526,10 @@ header {
             }
         }
 
-        #stack {
-            width: 90%;
-            margin: 25px auto 25px;
-            grid-area: stack;
 
-            h2 {
-                text-align: center;
-            }
-
-            #techWrapper {
-                @include flex($justify: center, $gap: 10px 2.5em);
-
-                .utility {
-                    @include flex($align: center);
-
-                    &:nth-child(1) {
-
-                        img {
-                            width: 50px;
-
-                            @include break(4k) {
-                                width: 75px;
-                            }
-                        }
-                    }
-
-                    &:nth-child(2) {
-
-                        img {
-                            width: 50px;
-
-                            @include break(4k) {
-                                width: 75px;
-                            }
-                        }
-                    }
-
-                    &:nth-child(3) {
-
-                        img {
-                            width: 59px;
-
-                            @include break(4k) {
-                                width: 88px;
-                            }
-                        }
-                    }
-
-                    &:nth-child(4) {
-
-                        img {
-                            width: 70px;
-
-                            @include break(4k) {
-                                width: 103px;
-                            }
-                        }
-                    }
-
-                    &:nth-child(5) {
-
-                        img {
-                            width: 65px;
-
-                            @include break(4k) {
-                                width: 102px;
-                            }
-                        }
-                    }
-
-                    &:nth-child(6) {
-
-                        img {
-                            width: 61px;
-
-                            @include break(4k) {
-                                width: 86px;
-                            }
-                        }
-                    }
-                }
-
-                @include break(mobile-medium) {
-                    @include flex($gap: 15px 3.5em);
-                }
-
-                @include break(mobile-large) {
-                    @include flex($gap: 15px 4em);
-                }
-
-                @include break(663px) {
-                    @include flex($gap: 15px 2.4em);
-                }
-
-                @include break(tablet) {
-                    @include flex($gap: 15px 2.5em);
-                }
-
-                @include break(laptop) {
-                    @include flex($justify: space-evenly);
-                }
-
-                @include break(laptop-large) {
-                    @include flex($justify: space-evenly);
-                }
-            }
-
-            @include break(mobile-large) {
-                width: 85%;
-            }
-
-            @include break(tablet) {
-                width: 338px;
-                margin: 0;
-                align-self: center;
-            }
-
-            @include break(laptop) {
-                width: 330px;
-                align-self: center;
-            }
-
-            @include break(4k) {
-                width: 65%;
-                align-self: center;
-            }
-        }
 
         @include break(tablet) {
-            @include flex($flexDir: row, $justify: space-between, $gap: 20px 2px);
+            @include flex($flexDir: row, $justify: center, $gap: 20px);
         }
 
         @include break(845px) {
@@ -668,6 +547,128 @@ header {
 
     @include break(laptop) {
         scroll-margin-block-start: 20px;
+    }
+}
+
+#stack {
+    width: 90%;
+    margin: 25px auto 25px;
+    grid-area: stack;
+
+    h2 {
+        text-align: center;
+    }
+
+    #techWrapper {
+        @include flex($justify: center, $gap: 10px 2.5em);
+
+        .utility {
+            @include flex($align: center);
+
+            &:nth-child(1) {
+
+                img {
+                    width: 50px;
+
+                    @include break(4k) {
+                        width: 75px;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+
+                img {
+                    width: 50px;
+
+                    @include break(4k) {
+                        width: 75px;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+
+                img {
+                    width: 59px;
+
+                    @include break(4k) {
+                        width: 88px;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+
+                img {
+                    width: 70px;
+
+                    @include break(4k) {
+                        width: 103px;
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+
+                img {
+                    width: 65px;
+
+                    @include break(4k) {
+                        width: 102px;
+                    }
+                }
+            }
+
+            &:nth-child(6) {
+
+                img {
+                    width: 61px;
+
+                    @include break(4k) {
+                        width: 86px;
+                    }
+                }
+            }
+        }
+
+        @include break(mobile-medium) {
+            @include flex($gap: 15px 3.5em);
+        }
+
+        @include break(mobile-large) {
+            @include flex($gap: 15px 4em);
+        }
+
+        @include break(663px) {
+            @include flex($gap: 15px 2.4em);
+        }
+
+        @include break(tablet) {
+            @include flex($gap: 15px 2.5em);
+        }
+
+        @include break(laptop) {
+            @include flex($justify: space-evenly);
+        }
+
+        @include break(laptop-large) {
+            @include flex($justify: space-evenly);
+        }
+    }
+
+    @include break(mobile-large) {
+        width: 85%;
+    }
+
+    @include break(laptop) {
+        width: 430px;
+        align-self: center;
+    }
+
+    @include break(4k) {
+        width: 65%;
+        align-self: center;
     }
 }
 
