@@ -1,6 +1,7 @@
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
+const menuOverlay = document.querySelector('#menuOverlay');
 const slidingMenu = document.querySelector('#slidingMenu');
 const btnNavToggle = document.querySelector('#navToggle');
 const burger = document.querySelector('.navLine');
@@ -22,20 +23,22 @@ btnNavToggle.addEventListener('click', toggleNav);
 
 scrollArrow.addEventListener('click', arrowScroll);
 
+menuOverlay.addEventListener('click', toggleNav);
+
 slidingMenu.addEventListener('click', (e) => {
     console.log(e);
     const target = e.target;
-    if (target.parentElement.className === 'navLink' || target.className === 'navLink') {
+    if (target.className === 'navLink') {
         toggleNav();
     }
 
-    if (target.parentElement.id === 'headerContact' || target.id === 'headerContact') {
+    if (target.id === 'headerContact') {
         contactModal.classList.remove('closed');
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
 
-    if (target.parentElement.id === 'headerResume' || target.id === 'headerResume') {
+    if (target.id === 'headerResume') {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
@@ -111,6 +114,7 @@ function toggleNav() {
     if (slidingMenu.classList.contains('closed')) {
         slidingMenu.classList.add('open');
         slidingMenu.classList.remove('closed');
+        menuOverlay.classList.remove('closed');
         burger.classList.add('open');
         burger.classList.remove('closed');
         // navToggle.style.right = '2.1rem';
@@ -120,6 +124,7 @@ function toggleNav() {
     } else {
         slidingMenu.classList.add('closed');
         slidingMenu.classList.remove('open');
+        menuOverlay.classList.add('closed');
         burger.classList.add('closed');
         burger.classList.remove('open');
         // navToggle.style.right = '1rem';

@@ -8,7 +8,6 @@
 html {
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
-  transition: 0.3s all ease-in-out;
   background-color: #000000;
 }
 
@@ -86,13 +85,26 @@ header #logo svg {
     height: 47px;
   }
 }
+header #menuOverlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+header #menuOverlay.closed {
+  display: none;
+}
 header #slidingMenu {
   position: fixed;
   height: 100vh;
-  width: 100vw;
+  width: 250px;
   top: 0%;
-  right: -100%;
+  right: -250px;
   background-color: #a33c3c;
+  z-index: 2;
   transition: 0.3s all ease-in-out;
   display: flex;
   flex-direction: column;
@@ -104,16 +116,13 @@ header #slidingMenu ul {
   list-style: none;
   font-size: xx-large;
   position: relative;
-  left: -10px;
-  top: -110px;
+  width: 100%;
+  padding-left: 30px;
+  top: -120px;
 }
 header #slidingMenu ul li {
   color: #e6e6e6;
   margin: 25px 0;
-}
-header #slidingMenu ul li:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 header #slidingMenu ul li a {
   text-decoration: none;
@@ -124,14 +133,11 @@ header #slidingMenu ul li a:link {
 header #slidingMenu ul li a:visited {
   color: #e6e6e6;
 }
-@media (orientation: landscape) {
-  header #slidingMenu ul {
-    left: 0;
-    top: 0;
-  }
+header #slidingMenu ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 header #slidingMenu.closed {
-  right: -104%;
   opacity: 0;
 }
 header #slidingMenu.open {
@@ -146,6 +152,7 @@ header #navToggle {
   height: 48px;
   align-self: center;
   border-radius: 5px;
+  z-index: 2;
   cursor: pointer;
 }
 header #navToggle:active {
