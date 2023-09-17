@@ -829,12 +829,13 @@ header {
         background-size: cover;
         background-repeat: no-repeat;
         padding: 50px;
+        width: 350px;
         border-radius: 3px;
 
         #contactExitBtn {
             position: relative;
             top: -62px;
-            left: 122%;
+            left: 116%;
             color: $white;
             cursor: pointer;
 
