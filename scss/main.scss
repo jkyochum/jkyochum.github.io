@@ -7,7 +7,6 @@
 html {
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
-    // @include transition(.3s);
     background-color: $black;
 }
 
@@ -96,7 +95,7 @@ header {
         right: -250px;
         background-color: $burnt-red;
         z-index: 2;
-        @include transition(.3s);
+        @include transition(.2s);
         @include flex($flexDir: column, $justify: center, $align: center);
 
         ul {
@@ -148,7 +147,7 @@ header {
     #navToggle {
         position: fixed;
         top: 4px;
-        right: 1rem;
+        right: 8px;
         width: 48px;
         height: 48px;
         align-self: center;
@@ -427,20 +426,25 @@ header {
             border-radius: 4px;
             // max-width: 375px;
             align-self: center;
-            cursor: pointer;
-            @include transition(.2s);
+            // cursor: pointer;
+            // @include transition(.2s);
             @include flex($flexDir: column);
 
-            &:hover {
-                transform: scale(1.01);
-                box-shadow: 5px 5px 5px rgba($black, .7);
-            }
+            // &:hover {
+            //     transform: scale(1.01);
+            //     box-shadow: 5px 5px 5px rgba($black, .7);
+            // }
 
             a {
                 text-decoration: none;
+                color: $black;
 
-                &:nth-of-type(1) {
-                    align-self: center;
+                &.webLink {
+                    color: $royal-violet;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
 
@@ -460,10 +464,10 @@ header {
             }
 
             img {
-                width: 210px;
-                height: 155px;
+                width: 100%;
                 margin-bottom: 8px;
                 border: 1px solid rgba($black, .2);
+                align-self: center;
 
                 @include break(mobile-large) {
                     width: 226px;
@@ -482,6 +486,7 @@ header {
             }
 
             p {
+                color: $black;
 
                 @include break(laptop) {
                     font-size: 1.2em;

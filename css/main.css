@@ -105,7 +105,7 @@ header #slidingMenu {
   right: -250px;
   background-color: #a33c3c;
   z-index: 2;
-  transition: 0.3s all ease-in-out;
+  transition: 0.2s all ease-in-out;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -147,7 +147,7 @@ header #slidingMenu.open {
 header #navToggle {
   position: fixed;
   top: 4px;
-  right: 1rem;
+  right: 8px;
   width: 48px;
   height: 48px;
   align-self: center;
@@ -440,21 +440,19 @@ header #navToggle .navLine.open::after {
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
   border-radius: 4px;
   align-self: center;
-  cursor: pointer;
-  transition: 0.2s all ease-in-out;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-#projects #projectsWrapper .card:hover {
-  transform: scale(1.01);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-}
 #projects #projectsWrapper .card a {
   text-decoration: none;
+  color: #000000;
 }
-#projects #projectsWrapper .card a:nth-of-type(1) {
-  align-self: center;
+#projects #projectsWrapper .card a.webLink {
+  color: #843bbf;
+}
+#projects #projectsWrapper .card a.webLink:hover {
+  text-decoration: underline;
 }
 #projects #projectsWrapper .card h3 {
   font-size: 1.2em;
@@ -473,10 +471,10 @@ header #navToggle .navLine.open::after {
   }
 }
 #projects #projectsWrapper .card img {
-  width: 210px;
-  height: 155px;
+  width: 100%;
   margin-bottom: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  align-self: center;
 }
 @media only screen and (min-width: 425px) {
   #projects #projectsWrapper .card img {
@@ -495,6 +493,9 @@ header #navToggle .navLine.open::after {
     width: 305px;
     height: 225px;
   }
+}
+#projects #projectsWrapper .card p {
+  color: #000000;
 }
 @media only screen and (min-width: 1024px) {
   #projects #projectsWrapper .card p {
