@@ -1001,6 +1001,9 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard #contactForm #btnSendMessage:active {
   background-color: #7e2e2e;
 }
+#contactModal #contactCard #error {
+  color: red;
+}
 #contactModal #contactCard.closed {
   display: none;
 }

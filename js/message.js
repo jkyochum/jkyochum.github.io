@@ -2,6 +2,7 @@ const firstName = document.querySelector('#firstName');
 const lastName = document.querySelector('#lastName');
 const email = document.querySelector('#email');
 const message = document.querySelector('#message');
+const error = document.querySelector('#error');
 const messageSentCard = document.querySelector('#messageSent');
 const sendAnotherBtn = document.querySelector('#btnSendAnother');
 let goodFirstName = false;
@@ -39,6 +40,7 @@ function sendMessage() {
         } else {
             email.classList.add('invalid');
             console.log('Error: Invalid Email Address');
+            error.innerHTML = '*Try another email address';
             goodEmail = false;
         }
 
