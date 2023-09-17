@@ -655,7 +655,7 @@ header {
         }
 
         @include break(laptop) {
-            width: 320px;
+            width: 310px;
             margin: auto;
             @include flex($justify: space-evenly);
         }

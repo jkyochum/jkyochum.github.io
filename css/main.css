@@ -657,7 +657,7 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 1024px) {
   #stack #techWrapper {
-    width: 320px;
+    width: 310px;
     margin: auto;
     display: flex;
     flex-direction: row;

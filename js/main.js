@@ -97,7 +97,6 @@ document.addEventListener('scroll', (e) => {
 
 window.addEventListener('resize', (e) => {
     let width = document.documentElement.clientWidth + 17;
-    console.log(width);
 
     if (slidingMenu.classList.contains('open')) {
         if (width >= 1024) {
