@@ -67,7 +67,7 @@ function sendMessage() {
             Subject: "New Message!",
             Body: `${createBody(firstName.value, lastName.value, email.value, message.value)}`
         }).then(
-            message => alert(message)
+            // message => alert(message)
         );
 
         clearInputs();
