@@ -364,7 +364,7 @@ header #navToggle .navLine.open::after {
 #welcome #scrollArrow {
   position: absolute;
   align-self: center;
-  top: 32%;
+  top: 28%;
   cursor: pointer;
 }
 #welcome #scrollArrow::before {
@@ -389,7 +389,7 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 425px) {
   #welcome #scrollArrow {
-    top: 23%;
+    top: 21%;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -399,13 +399,17 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 500px) {
   #welcome {
-    background-size: 500px, cover;
+    background-size: 420px, cover;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #welcome {
+    background-position: right bottom, center;
   }
 }
 @media only screen and (min-width: 768px) {
   #welcome {
     background-size: 550px, cover;
-    background-position: right bottom, center;
   }
 }
 @media only screen and (min-width: 1024px) {

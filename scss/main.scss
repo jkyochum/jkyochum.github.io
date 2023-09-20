@@ -352,7 +352,7 @@ header {
     #scrollArrow {
         position: absolute;
         align-self: center;
-        top: 32%;
+        top: 28%;
         cursor: pointer;
 
         &::before {
@@ -382,7 +382,7 @@ header {
         // }
 
         @include break(mobile-large) {
-            top: 23%;
+            top: 21%;
         }
 
         @include break(laptop) {
@@ -391,12 +391,15 @@ header {
     }
 
     @include break(500px) {
-        background-size: 500px, cover;
+        background-size: 420px, cover;
+    }
+
+    @include break(600px) {
+        background-position: right bottom, center;
     }
 
     @include break(tablet) {
         background-size: 550px, cover;
-        background-position: right bottom, center;
     }
 
     @include break(laptop) {
