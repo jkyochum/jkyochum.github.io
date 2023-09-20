@@ -409,7 +409,7 @@ header #navToggle .navLine.open::after {
 }
 @media only screen and (min-width: 768px) {
   #welcome {
-    background-size: 550px, cover;
+    background-size: 460px, cover;
   }
 }
 @media only screen and (min-width: 1024px) {

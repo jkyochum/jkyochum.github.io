@@ -399,7 +399,7 @@ header {
     }
 
     @include break(tablet) {
-        background-size: 550px, cover;
+        background-size: 460px, cover;
     }
 
     @include break(laptop) {
