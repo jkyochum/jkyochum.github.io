@@ -494,6 +494,11 @@ header #navToggle .navLine.open::after {
   margin-bottom: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   align-self: center;
+  transition: 0.2s all ease-in-out;
+}
+#projects #projectsWrapper .card img:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
 }
 #projects #projectsWrapper .card p {
   color: #000000;
@@ -789,7 +794,7 @@ header #navToggle .navLine.open::after {
     grid-template-rows: auto;
     grid-template-areas: "header header" "story story";
     width: 95%;
-    color: white;
+    color: #ffffff;
     background: url("../images/grand-canyon-pic.jpg") rgba(0, 0, 0, 0.6);
     background-size: cover;
     background-repeat: no-repeat;
@@ -950,25 +955,25 @@ header #navToggle .navLine.open::after {
   font-weight: 500;
 }
 #contactModal #contactCard #contactForm #firstName.invalid::-moz-placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #firstName.invalid::placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #lastName.invalid::-moz-placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #lastName.invalid::placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #email {
   width: 100%;
 }
 #contactModal #contactCard #contactForm #email.invalid::-moz-placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #email.invalid::placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #message {
   font-family: Urbanist, sans-serif;
@@ -978,10 +983,10 @@ header #navToggle .navLine.open::after {
   resize: none;
 }
 #contactModal #contactCard #contactForm #message.invalid::-moz-placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #message.invalid::placeholder {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #btnSendMessage {
   font-family: Urbanist, sans-serif;
@@ -1000,7 +1005,7 @@ header #navToggle .navLine.open::after {
   background-color: #7e2e2e;
 }
 #contactModal #contactCard #error {
-  color: red;
+  color: #ff0000;
 }
 #contactModal #contactCard.closed {
   display: none;
@@ -1058,7 +1063,7 @@ header #navToggle .navLine.open::after {
   padding: 8px;
 }
 #contactModal #messageSent #btnSendAnother:hover {
-  color: green;
+  color: #008000;
   cursor: pointer;
 }
 #contactModal #messageSent.closed {

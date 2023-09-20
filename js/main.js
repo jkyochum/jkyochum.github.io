@@ -25,8 +25,8 @@ scrollArrow.addEventListener('click', arrowScroll);
 
 menuOverlay.addEventListener('click', toggleNav);
 
+//Event listener for links in the slide-out menu
 slidingMenu.addEventListener('click', (e) => {
-    console.log(e);
     const target = e.target;
     if (target.className === 'navLink') {
         toggleNav();
@@ -47,7 +47,6 @@ slidingMenu.addEventListener('click', (e) => {
 });
 
 contactModal.addEventListener('click', (e) => {
-    console.log(e);
     closeContactModal(e);
 });
 
@@ -55,6 +54,7 @@ resumeModal.addEventListener('click', (e) => {
     closeResumeModal(e);
 });
 
+//Click events for the footer SVG elements
 footerNav.addEventListener('click', (e) => {
     if (e.target.parentElement.parentElement.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.parentElement.id === 'footerResume' || e.target.parentElement.id === 'footerResume' || e.target.id === 'footerResume') {
         resumeModal.classList.remove('closed');
@@ -69,6 +69,7 @@ footerNav.addEventListener('click', (e) => {
     }
 });
 
+//Opening links on the fixed welcome menu
 fixedMenu.addEventListener('click', (e) => {
     const target = e.target;
     if (target.id === 'welcomeContact') {
@@ -82,8 +83,10 @@ fixedMenu.addEventListener('click', (e) => {
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
     }
-})
+});
 
+
+//Listener to activate header toggle
 document.addEventListener('scroll', (e) => {
     if (window.scrollY > 90) {
         header.classList.add('open');
@@ -95,6 +98,7 @@ document.addEventListener('scroll', (e) => {
     }
 });
 
+//If window size is so large, close the side navigation menu to allow for fixed menu to display
 window.addEventListener('resize', (e) => {
     let width = document.documentElement.clientWidth + 17;
 
@@ -109,6 +113,7 @@ window.addEventListener('resize', (e) => {
 
 //Helper Functions
 
+//Function to eliminate scrollbar action
 function toggleScrollbar(open) {
     if (open) {
         body.style.overflow = 'hidden';
@@ -121,6 +126,7 @@ function arrowScroll() {
     projects.scrollIntoView();
 }
 
+//Function to toggle sliding navigation menu when used in the event listener
 function toggleNav() {
     if (slidingMenu.classList.contains('closed')) {
         slidingMenu.classList.add('open');
@@ -128,7 +134,6 @@ function toggleNav() {
         menuOverlay.classList.remove('closed');
         burger.classList.add('open');
         burger.classList.remove('closed');
-        // navToggle.style.right = '2.1rem';
         toggleScrollbar(true);
         html.style.backgroundColor = '#a33c3c';
 
@@ -138,12 +143,12 @@ function toggleNav() {
         menuOverlay.classList.add('closed');
         burger.classList.add('closed');
         burger.classList.remove('open');
-        // navToggle.style.right = '1rem';
         toggleScrollbar(false);
         html.style.backgroundColor = '#ffffff';
     }
 }
 
+//Alternate ways to close contact modal screen
 function closeContactModal(e) {
     if (e.target.id === 'contactModal' || e.target.id === 'contactExitBtn' || e.target.id === 'messageSentExitBtn') {
         contactModal.classList.add('closed');
@@ -151,6 +156,7 @@ function closeContactModal(e) {
     }
 }
 
+//Alternate ways to close resume modal screen
 function closeResumeModal(e) {
     if (e.target.parentElement.id !== 'resumeCard' || e.target.id === 'resumeExitBtn') {
         resumeModal.classList.add('closed');

@@ -77,7 +77,6 @@ function sendMessage() {
         messageSentCard.classList.remove('closed');
         messageSentCard.parentElement.firstElementChild.classList.add('closed');
     }
-
 }
 
 
@@ -118,14 +117,3 @@ function clearInputs() {
     email.value = '';
     message.value = '';
 }
-
-
-
-//Get all form elements when page loads
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     fields.firstName = document.querySelector('#firstName');
-//     fields.lastName = document.querySelector('#lastName');
-//     fields.email = document.querySelector('#email');
-//     fields.message = document.querySelector('#message');
-// });

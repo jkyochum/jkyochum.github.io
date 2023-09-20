@@ -1,9 +1,5 @@
 @import 'resets', 'variables', 'mixins';
 
-* {
-    // border: 1px solid red;
-}
-
 html {
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
@@ -131,10 +127,6 @@ header {
                     }
                 }
             }
-
-            // @include break(tablet) {
-            //     top: -35px;
-            // }
         }
 
         &.closed {
@@ -377,10 +369,6 @@ header {
             transform: rotate(-28deg) translateX(-3px);
         }
 
-        // @include break(mobile-medium) {
-        //     top: 27%;
-        // }
-
         @include break(mobile-large) {
             top: 21%;
         }
@@ -437,16 +425,8 @@ header {
             border: 1px solid rgba($black, .5);
             box-shadow: 3px 3px 5px rgba($black, .7);
             border-radius: 4px;
-            // max-width: 375px;
             align-self: center;
-            // cursor: pointer;
-            // @include transition(.2s);
             @include flex($flexDir: column);
-
-            // &:hover {
-            //     transform: scale(1.01);
-            //     box-shadow: 5px 5px 5px rgba($black, .7);
-            // }
 
             a {
                 text-decoration: none;
@@ -481,21 +461,12 @@ header {
                 margin-bottom: 8px;
                 border: 1px solid rgba($black, .2);
                 align-self: center;
+                @include transition(.2s);
 
-                // @include break(mobile-large) {
-                //     width: 226px;
-                //     height: 171px;
-                // }
-
-                // @include break(laptop) {
-                //     width: 255px;
-                //     height: 192px;
-                // }
-
-                // @include break(4k) {
-                //     width: 305px;
-                //     height: 225px;
-                // }
+                &:hover {
+                    transform: scale(1.01);
+                    box-shadow: 3px 3px 3px rgba($black, .7);
+                }
             }
 
             p {
@@ -523,11 +494,6 @@ header {
                 width: 430px;
                 height: 460px;
             }
-
-            // @include break(laptop-large) {
-            //     width: 410px;
-            //     height: 390px;
-            // }
 
             @include break(4k) {
                 width: 650px;
@@ -668,10 +634,6 @@ header {
         }
     }
 
-    // @include break(mobile-large) {
-    //     width: 85%;
-    // }
-
     @include break(laptop) {
         margin-right: 9%;
         align-self: center;
@@ -767,7 +729,7 @@ header {
         @include grid($templateAreas: "header header"
             "story story");
         width: 95%;
-        color: white;
+        color: $white;
         background: url('../images/grand-canyon-pic.jpg') rgba(0, 0, 0, .6);
         background-size: cover;
         background-repeat: no-repeat;
@@ -810,12 +772,6 @@ header {
                 @include after($width: 15px, $backgroundColor: $white);
                 transform: rotate(-45deg) translate(6px, -12px);
             }
-
-            // @include break(landscape) {
-            //     position: relative;
-            //     bottom: -190px;
-            //     padding-bottom: 20px;
-            // }
         }
 
         img {
@@ -834,10 +790,6 @@ header {
     &.closed {
         display: none;
     }
-
-    // @include break(landscape) {
-    //     overflow-y: auto;
-    // }
 }
 
 #contactModal {
@@ -894,7 +846,7 @@ header {
                 &.invalid {
 
                     &::placeholder {
-                        color: red;
+                        color: $bright-red;
                     }
                 }
             }
@@ -904,7 +856,7 @@ header {
                 &.invalid {
 
                     &::placeholder {
-                        color: red;
+                        color: $bright-red;
                     }
                 }
             }
@@ -915,7 +867,7 @@ header {
                 &.invalid {
 
                     &::placeholder {
-                        color: red;
+                        color: $bright-red;
                     }
                 }
             }
@@ -930,7 +882,7 @@ header {
                 &.invalid {
 
                     &::placeholder {
-                        color: red;
+                        color: $bright-red;
                     }
                 }
             }
@@ -956,7 +908,7 @@ header {
         }
 
         #error {
-            color: red;
+            color: $bright-red;
         }
 
         &.closed {
@@ -1001,7 +953,7 @@ header {
             padding: 8px;
 
             &:hover {
-                color: green;
+                color: $shamrock-green;
                 cursor: pointer;
             }
         }
