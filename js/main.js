@@ -27,9 +27,13 @@ menuOverlay.addEventListener('click', toggleNav);
 
 //Event listener for links in the slide-out menu
 slidingMenu.addEventListener('click', (e) => {
-    const target = e.target;
     if (target.className === 'navLink') {
         toggleNav();
+    }
+
+    //clicking inside of sliding menu empty space will trigger toggle button focus
+    if (target.id === 'slidingMenu' || e.target.tagName === 'LI' || e.target.tagName === 'UL') {
+        btnNavToggle.focus();
     }
 
     if (target.id === 'headerContact') {
@@ -98,6 +102,65 @@ document.addEventListener('scroll', (e) => {
     }
 });
 
+//Setting tab order for page elements
+document.addEventListener('keydown', (e) => {
+    const activeElement = document.activeElement;
+    const menu = slidingMenu.firstElementChild;
+    const menuItems = menu.children;
+    const target = e.target;
+    checkForOpenHeader();
+
+    if (e.key === 'Enter') {
+        if (target.id === 'scrollArrow') {
+            arrowScroll();
+        }
+
+        if (target.id === 'navToggle') {
+            toggleNav();
+        }
+    }
+
+    if (slidingMenu.classList.contains('open')) {
+
+        for (let i = 0; i < menuItems.length; i++) {
+            menuItems[i].firstChild.setAttribute('tabindex', '0');
+        }
+
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            if (activeElement.id === 'navToggle') {
+                menu.firstElementChild.firstElementChild.focus();
+            } else {
+                if (activeElement === menu.lastElementChild.firstElementChild) {
+                    btnNavToggle.focus();
+                } else {
+                    activeElement.parentElement.nextElementSibling.firstElementChild.focus();
+                }
+            }
+        }
+
+        if (e.shiftKey) {
+            if (e.key === 'Tab') {
+                if (activeElement.id === 'navToggle') {
+                    menu.lastElementChild.firstElementChild.focus();
+                } else {
+                    if (activeElement === menu.firstElementChild.firstElementChild) {
+                        btnNavToggle.focus();
+                    } else {
+                        activeElement.parentElement.previousElementSibling.firstElementChild.focus();
+                    }
+                }
+            }
+        }
+    } else if (slidingMenu.classList.contains('closed')) {
+        const menu = slidingMenu.firstElementChild;
+        const menuItems = menu.children;
+        for (let i = 0; i < menuItems.length; i++) {
+            menuItems[i].firstChild.setAttribute('tabindex', '-1');
+        }
+    }
+});
+
 //If window size is so large, close the side navigation menu to allow for fixed menu to display
 window.addEventListener('resize', (e) => {
     let width = document.documentElement.clientWidth + 17;
@@ -119,6 +182,14 @@ function toggleScrollbar(open) {
         body.style.overflow = 'hidden';
     } else {
         body.style.overflow = 'auto';
+    }
+}
+
+function checkForOpenHeader() {
+    if (header.classList.contains('open')) {
+        header.firstElementChild.firstElementChild.firstElementChild.setAttribute('tabindex', '0');
+    } else {
+        header.firstElementChild.firstElementChild.firstElementChild.setAttribute('tabindex', '-1');
     }
 }
 

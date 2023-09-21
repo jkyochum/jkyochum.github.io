@@ -173,7 +173,7 @@ header {
                 width: 30px;
                 height: 3px;
                 background-color: $black;
-                @include transition(.2s);
+                // @include transition(.2s);
             }
 
             &::after {
@@ -191,11 +191,13 @@ header {
 
                 &::before {
                     @include before($backgroundColor: $black);
+                    bottom: 21.5px;
                     transform: rotate(45deg) translate(6px, 10px);
                 }
 
                 &::after {
                     @include after($backgroundColor: $black);
+                    bottom: 20.5px;
                     transform: rotate(-45deg) translate(8px, -12px);
                 }
             }

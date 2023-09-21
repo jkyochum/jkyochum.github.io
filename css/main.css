@@ -183,7 +183,6 @@ header #navToggle .navLine::before {
   width: 30px;
   height: 3px;
   background-color: #000000;
-  transition: 0.2s all ease-in-out;
 }
 header #navToggle .navLine::after {
   content: "";
@@ -207,6 +206,7 @@ header #navToggle .navLine.open::before {
   background-color: #ffffff;
   transform: rotate(45deg) translate(4px, 10px);
   margin: 0;
+  bottom: 21.5px;
   transform: rotate(45deg) translate(6px, 10px);
 }
 header #navToggle .navLine.open::after {
@@ -219,6 +219,7 @@ header #navToggle .navLine.open::after {
   margin: 0;
   background-color: #ffffff;
   transform: rotate(-45deg) translate(6px, -12px);
+  bottom: 20.5px;
   transform: rotate(-45deg) translate(8px, -12px);
 }
 @media only screen and (min-width: 1024px) {
