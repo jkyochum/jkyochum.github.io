@@ -955,6 +955,9 @@ header #navToggle .navLine.open::after {
   font-family: Urbanist, sans-serif;
   font-weight: 500;
 }
+#contactModal #contactCard #contactForm input:focus {
+  background-color: cornsilk;
+}
 #contactModal #contactCard #contactForm #firstName.invalid::-moz-placeholder {
   color: #ff0000;
 }
@@ -983,6 +986,9 @@ header #navToggle .navLine.open::after {
   border-radius: 3px;
   resize: none;
 }
+#contactModal #contactCard #contactForm #message:focus {
+  background-color: cornsilk;
+}
 #contactModal #contactCard #contactForm #message.invalid::-moz-placeholder {
   color: #ff0000;
 }
@@ -1004,6 +1010,9 @@ header #navToggle .navLine.open::after {
 }
 #contactModal #contactCard #contactForm #btnSendMessage:active {
   background-color: #7e2e2e;
+}
+#contactModal #contactCard #contactForm #btnSendMessage:focus {
+  background-color: #c05252;
 }
 #contactModal #contactCard #error {
   color: #ff0000;

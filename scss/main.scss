@@ -837,6 +837,10 @@ header {
                 width: 80%;
                 font-family: $main-text-font;
                 font-weight: 500;
+
+                &:focus {
+                    background-color: cornsilk;
+                }
             }
 
             #firstName {
@@ -877,6 +881,10 @@ header {
                 border-radius: 3px;
                 resize: none;
 
+                &:focus {
+                    background-color: cornsilk;
+                }
+
                 &.invalid {
 
                     &::placeholder {
@@ -901,6 +909,10 @@ header {
 
                 &:active {
                     background-color: darken($burnt-red, 10%);
+                }
+
+                &:focus {
+                    background-color: lighten($burnt-red, 10%);
                 }
             }
         }

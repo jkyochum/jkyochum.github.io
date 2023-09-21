@@ -9,6 +9,9 @@ const welcomeWrapper = document.querySelector('#welcomeWrapper');
 const scrollArrow = document.querySelector('#scrollArrow');
 const projects = document.querySelector('#projects');
 const contactModal = document.querySelector('#contactModal');
+const contactExit = document.querySelector('#contactExitBtn');
+const messageSentCard = document.querySelector('#messageSent');
+const messageSentExit = document.querySelector('#messageSentBtn');
 const resumeModal = document.querySelector('#resumeModal');
 const resume = document.querySelector('.resume');
 const fixedMenu = document.querySelector('#fixedMenu');
@@ -47,12 +50,17 @@ slidingMenu.addEventListener('click', (e) => {
         resumeModal.classList.remove('closed');
         toggleScrollbar(true);
         html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
-
     }
 });
 
 contactModal.addEventListener('click', (e) => {
     closeContactModal(e);
+    const target = e.target;
+
+    console.log(target);
+    if (target.id === 'contactHeader' || target.id === 'contactForm' || target.id === 'contactCard') {
+        contactExit.focus();
+    }
 });
 
 resumeModal.addEventListener('click', (e) => {
@@ -116,6 +124,25 @@ document.addEventListener('keydown', (e) => {
         }
 
         if (target.id === 'navToggle') {
+            toggleNav();
+        }
+
+        if (target.id === 'headerContact') {
+            contactModal.classList.remove('closed');
+            toggleScrollbar(true);
+            html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
+            toggleNav();
+        }
+
+        if (target === contactExit) {
+            closeContactModal(e);
+            btnNavToggle.focus();
+        }
+
+        if (target.id === 'headerResume') {
+            resumeModal.classList.remove('closed');
+            toggleScrollbar(true);
+            html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
             toggleNav();
         }
     }
@@ -191,6 +218,24 @@ document.addEventListener('keydown', (e) => {
                 } else {
                     activeElement.previousElementSibling.focus();
                 }
+            }
+        }
+    }
+
+    //making message sent page tabbable upon opening
+    if (!msgSentCard.classList.contains('closed')) {
+        const sendAnotherBtn = document.querySelector('#btnSendAnother');
+        messageSentExit.setAttribute('tabindex', '0');
+        sendAnotherBtn.setAttribute('tabindex', '0');
+
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            if (activeElement.id === 'btnSendMessage') {
+                sendAnotherBtn.focus();
+            } else if (activeElement === sendAnotherBtn) {
+                messageSentExit.focus();
+            } else if (activeElement === messageSentExit) {
+                sendAnotherBtn.focus();
             }
         }
     }
