@@ -27,6 +27,7 @@ menuOverlay.addEventListener('click', toggleNav);
 
 //Event listener for links in the slide-out menu
 slidingMenu.addEventListener('click', (e) => {
+    const target = e.target;
     if (target.className === 'navLink') {
         toggleNav();
     }
@@ -105,8 +106,7 @@ document.addEventListener('scroll', (e) => {
 //Setting tab order for page elements
 document.addEventListener('keydown', (e) => {
     const activeElement = document.activeElement;
-    const menu = slidingMenu.firstElementChild;
-    const menuItems = menu.children;
+
     const target = e.target;
     checkForOpenHeader();
 
@@ -120,8 +120,12 @@ document.addEventListener('keydown', (e) => {
         }
     }
 
+
+    //making sliding menu tabbable upon opening
     if (slidingMenu.classList.contains('open')) {
 
+        const menu = slidingMenu.firstElementChild;
+        const menuItems = menu.children;
         for (let i = 0; i < menuItems.length; i++) {
             menuItems[i].firstChild.setAttribute('tabindex', '0');
         }
@@ -159,6 +163,38 @@ document.addEventListener('keydown', (e) => {
             menuItems[i].firstChild.setAttribute('tabindex', '-1');
         }
     }
+
+    //making contact page tabbable upon opening
+    if (!contactModal.classList.contains('closed')) {
+        const contactExit = document.querySelector('#contactExitBtn');
+        const contactForm = document.querySelector('#contactForm');
+        contactExit.setAttribute('tabindex', '0');
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            console.log(activeElement);
+
+            if (activeElement.classList.contains('navLink') || activeElement === contactExit) {
+                contactForm.firstElementChild.focus();
+            } else if (activeElement === contactForm.lastElementChild) {
+                contactExit.focus();
+            } else {
+                activeElement.nextElementSibling.focus();
+            }
+        }
+
+        if (e.shiftKey) {
+            if (e.key === 'Tab') {
+                if (activeElement === contactExit) {
+                    contactForm.lastElementChild.focus();
+                } else if (activeElement === contactForm.firstElementChild) {
+                    contactExit.focus();
+                } else {
+                    activeElement.previousElementSibling.focus();
+                }
+            }
+        }
+    }
+
 });
 
 //If window size is so large, close the side navigation menu to allow for fixed menu to display
