@@ -13,6 +13,7 @@ let messageSent = false;
 
 
 //Main Function
+
 function sendMessage() {
 
     if (isValid(firstName.value)) {
@@ -81,10 +82,12 @@ function sendMessage() {
 
 
 //Event Handlers
+
 sendAnotherBtn.addEventListener('click', function () {
     messageSentCard.classList.add('closed');
     messageSentCard.parentElement.firstElementChild.classList.remove('closed');
 });
+
 
 //Helper Functions
 

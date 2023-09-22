@@ -10,8 +10,8 @@ const scrollArrow = document.querySelector('#scrollArrow');
 const projects = document.querySelector('#projects');
 const contactModal = document.querySelector('#contactModal');
 const contactExit = document.querySelector('#contactExitBtn');
-const messageSentCard = document.querySelector('#messageSent');
-const messageSentExit = document.querySelector('#messageSentBtn');
+// const messageSentCard = document.querySelector('#messageSent');
+const messageSentExit = document.querySelector('#messageSentExitBtn');
 const resumeModal = document.querySelector('#resumeModal');
 const resume = document.querySelector('.resume');
 const fixedMenu = document.querySelector('#fixedMenu');
@@ -57,10 +57,32 @@ contactModal.addEventListener('click', (e) => {
     closeContactModal(e);
     const target = e.target;
 
+    // console.log(e);
     console.log(target);
+
+    //set focus on exit button if any empty space is clicked on contact form
     if (target.id === 'contactHeader' || target.id === 'contactForm' || target.id === 'contactCard') {
         contactExit.focus();
     }
+
+    //set focus on exit button if any empty space is clicked on message sent card
+    if (target === messageSentCard || target.tagName === 'H4' || target.tagName === 'IMG' || target.tagName === 'P') {
+        messageSentExit.focus();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 resumeModal.addEventListener('click', (e) => {
@@ -118,7 +140,17 @@ document.addEventListener('keydown', (e) => {
     const target = e.target;
     checkForOpenHeader();
 
+    console.log('Contact form keydown (e): ');
+    console.log(e);
+    console.log('Contact form activeElement: ');
+    console.log(document.activeElement);
+
     if (e.key === 'Enter') {
+
+        if (target.className === 'navLink') {
+            toggleNav();
+        }
+
         if (target.id === 'scrollArrow') {
             arrowScroll();
         }
@@ -131,10 +163,14 @@ document.addEventListener('keydown', (e) => {
             contactModal.classList.remove('closed');
             toggleScrollbar(true);
             html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
-            toggleNav();
         }
 
         if (target === contactExit) {
+            closeContactModal(e);
+            btnNavToggle.focus();
+        }
+
+        if (target === messageSentExit) {
             closeContactModal(e);
             btnNavToggle.focus();
         }
@@ -143,7 +179,6 @@ document.addEventListener('keydown', (e) => {
             resumeModal.classList.remove('closed');
             toggleScrollbar(true);
             html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
-            toggleNav();
         }
     }
 
@@ -191,54 +226,75 @@ document.addEventListener('keydown', (e) => {
         }
     }
 
-    //making contact page tabbable upon opening
-    if (!contactModal.classList.contains('closed')) {
-        const contactExit = document.querySelector('#contactExitBtn');
-        const contactForm = document.querySelector('#contactForm');
-        contactExit.setAttribute('tabindex', '0');
-        if (e.key === 'Tab') {
-            e.preventDefault();
-            console.log(activeElement);
 
-            if (activeElement.classList.contains('navLink') || activeElement === contactExit) {
-                contactForm.firstElementChild.focus();
-            } else if (activeElement === contactForm.lastElementChild) {
-                contactExit.focus();
-            } else {
-                activeElement.nextElementSibling.focus();
+    if (!contactModal.classList.contains('closed')) {
+
+        //making contact page tabbable upon opening
+        if (!contactCard.classList.contains('closed')) {
+            const contactExit = document.querySelector('#contactExitBtn');
+            const contactForm = document.querySelector('#contactForm');
+            contactExit.setAttribute('tabindex', '0');
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                console.log(activeElement);
+
+                if (activeElement.classList.contains('navLink') || activeElement === contactExit) {
+                    contactForm.firstElementChild.focus();
+                } else if (activeElement === contactForm.lastElementChild) {
+                    contactExit.focus();
+                } else {
+                    activeElement.nextElementSibling.focus();
+                }
+            }
+
+            if (e.shiftKey) {
+                if (e.key === 'Tab') {
+                    if (activeElement === contactExit) {
+                        contactForm.lastElementChild.focus();
+                    } else if (activeElement === contactForm.firstElementChild) {
+                        contactExit.focus();
+                    } else {
+                        activeElement.previousElementSibling.focus();
+                    }
+                }
             }
         }
 
-        if (e.shiftKey) {
+
+        //making message sent page tabbable upon opening
+        if (!messageSentCard.classList.contains('closed')) {
+            // const sendAnotherBtn = document.querySelector('#btnSendAnother');
+            messageSentExit.setAttribute('tabindex', '0');
+            sendAnotherBtn.setAttribute('tabindex', '0');
+
             if (e.key === 'Tab') {
-                if (activeElement === contactExit) {
-                    contactForm.lastElementChild.focus();
-                } else if (activeElement === contactForm.firstElementChild) {
-                    contactExit.focus();
-                } else {
-                    activeElement.previousElementSibling.focus();
+                e.preventDefault();
+                console.log('First tab in message sent modal: ');
+                console.log(e);
+                console.log('Active element in message sent: ');
+                console.log(activeElement);
+                if (activeElement.tagName === 'BODY' || activeElement.classList.contains('navLink') || activeElement === messageSentExit) {
+                    sendAnotherBtn.focus();
+                } else if (activeElement === sendAnotherBtn) {
+                    messageSentExit.focus();
+                }
+            }
+
+            if (e.shiftKey) {
+                if (e.key === 'Tab') {
+                    if (activeElement.tagName === 'BODY' || activeElement.classList.contains('navLink') || activeElement === messageSentExit) {
+                        sendAnotherBtn.focus();
+                    } else if (activeElement === sendAnotherBtn) {
+                        messageSentExit.focus();
+                    }
                 }
             }
         }
     }
 
-    //making message sent page tabbable upon opening
-    if (!msgSentCard.classList.contains('closed')) {
-        const sendAnotherBtn = document.querySelector('#btnSendAnother');
-        messageSentExit.setAttribute('tabindex', '0');
-        sendAnotherBtn.setAttribute('tabindex', '0');
 
-        if (e.key === 'Tab') {
-            e.preventDefault();
-            if (activeElement.id === 'btnSendMessage') {
-                sendAnotherBtn.focus();
-            } else if (activeElement === sendAnotherBtn) {
-                messageSentExit.focus();
-            } else if (activeElement === messageSentExit) {
-                sendAnotherBtn.focus();
-            }
-        }
-    }
+
+
 
 });
 
