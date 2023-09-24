@@ -330,9 +330,7 @@ document.addEventListener('keydown', (e) => {
 
             if (e.key === 'Tab') {
                 e.preventDefault();
-                console.log(e);
-                console.log(activeElement);
-                if (activeElement === body || activeElement.classList.contains('navLink') || activeElement === messageSentExit || activeElement === btnNavToggle) {
+                if (activeElement === body || activeElement.classList.contains('navLink') || activeElement.parentElement.classList.contains('navLink') || activeElement === messageSentExit || activeElement === btnNavToggle) {
                     sendAnotherBtn.focus();
                 } else {
                     messageSentExit.focus();
@@ -377,7 +375,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-
+//check for window size to close sliding menu at 1024px
 window.addEventListener('resize', (e) => {
     if (window.innerWidth > 1024) {
         slidingMenu.classList.add('closed');
