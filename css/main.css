@@ -894,6 +894,7 @@ header #navToggle .navLine.open::after {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 #contactModal #contactCard {
   display: flex;
