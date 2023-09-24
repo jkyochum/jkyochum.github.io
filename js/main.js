@@ -173,8 +173,8 @@ document.addEventListener('keydown', (e) => {
 
         if (target.id === 'headerContact') {
             contactModal.classList.remove('closed');
-            // toggleScrollbar(true);
             toggleNav();
+            toggleScrollbar(true);
             html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
             headerLinkActive = true;
             welcomeLinkActive = false;
@@ -183,8 +183,8 @@ document.addEventListener('keydown', (e) => {
 
         if (target.id === 'headerResume') {
             resumeModal.classList.remove('closed');
-            toggleScrollbar(true);
             toggleNav();
+            toggleScrollbar(true);
             html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
             headerLinkActive = true;
             welcomeLinkActive = false;
@@ -391,6 +391,7 @@ window.addEventListener('resize', (e) => {
 //Function to eliminate scrollbar action
 function toggleScrollbar(open) {
     if (open) {
+        html.style.scrollbarGutter = 'stable';
         body.style.overflow = 'hidden';
     } else {
         body.style.overflow = 'auto';

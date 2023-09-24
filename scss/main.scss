@@ -1,7 +1,6 @@
 @import 'resets', 'variables', 'mixins';
 
 html {
-    scrollbar-gutter: stable;
     scroll-behavior: smooth;
     background-color: $black;
 }
@@ -796,7 +795,7 @@ header {
 #contactModal {
     @include modal();
     @include flex($justify: center, $align: center);
-    overflow: auto;
+    // overflow: hidden;
 
     #contactCard {
         @include flex($flexDir: column);
