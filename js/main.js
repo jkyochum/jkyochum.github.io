@@ -94,12 +94,14 @@ contactModal.addEventListener('click', (e) => {
 
     //set focus on exit button if any empty space is clicked on contact form
     if (target.id === 'contactHeader' || target.id === 'contactForm' || target.id === 'contactCard') {
-        contactExit.focus();
+        body.focus();
+    } else {
+        target.focus();
     }
 
     //set focus on exit button if any empty space is clicked on message sent card
     if (target === messageSentCard || target.tagName === 'H4' || target.tagName === 'IMG' || target.tagName === 'P') {
-        messageSentExit.focus();
+        body.focus();
     }
 
 
@@ -110,7 +112,7 @@ resumeModal.addEventListener('click', (e) => {
     const target = e.target;
 
     if (target.tagName === 'IMG') {
-        resumeExit.focus();
+        body.focus();
     }
 });
 
@@ -294,8 +296,8 @@ document.addEventListener('keydown', (e) => {
             contactExit.setAttribute('tabindex', '0');
             if (e.key === 'Tab') {
                 e.preventDefault();
-
-                if (activeElement.classList.contains('navLink') || activeElement.parentElement === footerContact || activeElement === contactExit) {
+                console.log(activeElement);
+                if (activeElement.classList.contains('navLink') || activeElement.parentElement === footerContact || activeElement === contactExit || activeElement === btnNavToggle) {
                     contactForm.firstElementChild.focus();
                 } else if (activeElement === contactForm.lastElementChild) {
                     contactExit.focus();
@@ -310,7 +312,7 @@ document.addEventListener('keydown', (e) => {
                     console.log(activeElement);
                     if (activeElement === contactExit) {
                         contactForm.lastElementChild.focus();
-                    } else if (activeElement === contactForm.firstElementChild || activeElement.classList.contains('navLink') || activeElement.parentElement.classList.contains('navLink')) {
+                    } else if (activeElement === body || activeElement === contactForm.firstElementChild || activeElement.classList.contains('navLink') || activeElement.parentElement.classList.contains('navLink') || activeElement === btnNavToggle) {
                         contactExit.focus();
                     } else {
                         activeElement.previousElementSibling.focus();
@@ -328,18 +330,20 @@ document.addEventListener('keydown', (e) => {
 
             if (e.key === 'Tab') {
                 e.preventDefault();
-                if (activeElement.tagName === 'BODY' || activeElement.classList.contains('navLink') || activeElement === messageSentExit) {
+                console.log(e);
+                console.log(activeElement);
+                if (activeElement === body || activeElement.classList.contains('navLink') || activeElement === messageSentExit || activeElement === btnNavToggle) {
                     sendAnotherBtn.focus();
-                } else if (activeElement === sendAnotherBtn) {
+                } else {
                     messageSentExit.focus();
                 }
             }
 
             if (e.shiftKey) {
                 if (e.key === 'Tab') {
-                    if (activeElement.tagName === 'BODY' || activeElement.classList.contains('navLink') || activeElement === messageSentExit) {
+                    if (activeElement === body || activeElement === messageSentExit) {
                         sendAnotherBtn.focus();
-                    } else if (activeElement === sendAnotherBtn) {
+                    } else {
                         messageSentExit.focus();
                     }
                 }
@@ -354,7 +358,7 @@ document.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
             e.preventDefault();
 
-            if (activeElement.classList.contains('navLink') || activeElement.parentElement === footerResume || activeElement === resumeExit) {
+            if (activeElement === body || activeElement.classList.contains('navLink') || activeElement.parentElement === footerResume || activeElement === resumeExit || activeElement === btnNavToggle) {
                 downloadLink.focus();
             } else {
                 resumeExit.focus();
