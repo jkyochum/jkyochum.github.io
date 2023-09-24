@@ -29,6 +29,7 @@ body {
 
     @include break(laptop) {
         @include grid($templateAreas: "footer main");
+        overflow: auto;
     }
 }
 

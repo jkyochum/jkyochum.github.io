@@ -159,9 +159,9 @@ document.addEventListener('keydown', (e) => {
         console.log(target.parentElement);
 
 
-        if (target.className === 'navLink') {
-            toggleNav();
-        }
+        // if (target.className === 'navLink') {
+        //     toggleNav();
+        // }
 
         if (target.id === 'scrollArrow') {
             arrowScroll();
@@ -173,7 +173,8 @@ document.addEventListener('keydown', (e) => {
 
         if (target.id === 'headerContact') {
             contactModal.classList.remove('closed');
-            toggleScrollbar(true);
+            // toggleScrollbar(true);
+            toggleNav();
             html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
             headerLinkActive = true;
             welcomeLinkActive = false;
@@ -183,6 +184,7 @@ document.addEventListener('keydown', (e) => {
         if (target.id === 'headerResume') {
             resumeModal.classList.remove('closed');
             toggleScrollbar(true);
+            toggleNav();
             html.style.backgroundColor = 'rgba(0, 0, 0, 0.8';
             headerLinkActive = true;
             welcomeLinkActive = false;
@@ -371,20 +373,18 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-//If window size is so large, close the side navigation menu to allow for fixed menu to display
+
 window.addEventListener('resize', (e) => {
-    // let width = document.documentElement.clientWidth + 17;
-    let width = e.target.innerWidth;
-    // console.log(e);
-
-    // if (slidingMenu.classList.contains('open')) {
-    if (width > 1023) {
-        toggleNav();
+    if (window.innerWidth > 1024) {
+        slidingMenu.classList.add('closed');
+        slidingMenu.classList.remove('open');
+        menuOverlay.classList.add('closed');
+        burger.classList.add('closed');
+        burger.classList.remove('open');
+        toggleScrollbar(false);
+        html.style.backgroundColor = '#ffffff';
     }
-    // }
-
 });
-
 
 //Helper Functions
 

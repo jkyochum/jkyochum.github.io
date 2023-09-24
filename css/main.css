@@ -37,6 +37,7 @@ body p {
     display: grid;
     grid-template-rows: auto;
     grid-template-areas: "footer main";
+    overflow: auto;
   }
 }
 
