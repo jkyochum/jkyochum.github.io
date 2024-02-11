@@ -605,6 +605,13 @@ header {
                     }
                 }
             }
+
+            &:nth-child(7) {
+
+                img {
+                    width: 70px;
+                }
+            }
         }
 
         @include break(mobile-medium) {
