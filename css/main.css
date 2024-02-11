@@ -639,6 +639,9 @@ header #navToggle .navLine.open::after {
     width: 86px;
   }
 }
+#stack #techWrapper .utility:nth-child(7) img {
+  width: 70px;
+}
 @media only screen and (min-width: 375px) {
   #stack #techWrapper {
     display: flex;
@@ -958,13 +961,7 @@ header #navToggle .navLine.open::after {
 #contactModal #contactCard #contactForm input:focus {
   background-color: cornsilk;
 }
-#contactModal #contactCard #contactForm #firstName.invalid::-moz-placeholder {
-  color: #ff0000;
-}
 #contactModal #contactCard #contactForm #firstName.invalid::placeholder {
-  color: #ff0000;
-}
-#contactModal #contactCard #contactForm #lastName.invalid::-moz-placeholder {
   color: #ff0000;
 }
 #contactModal #contactCard #contactForm #lastName.invalid::placeholder {
@@ -972,9 +969,6 @@ header #navToggle .navLine.open::after {
 }
 #contactModal #contactCard #contactForm #email {
   width: 100%;
-}
-#contactModal #contactCard #contactForm #email.invalid::-moz-placeholder {
-  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #email.invalid::placeholder {
   color: #ff0000;
@@ -988,9 +982,6 @@ header #navToggle .navLine.open::after {
 }
 #contactModal #contactCard #contactForm #message:focus {
   background-color: cornsilk;
-}
-#contactModal #contactCard #contactForm #message.invalid::-moz-placeholder {
-  color: #ff0000;
 }
 #contactModal #contactCard #contactForm #message.invalid::placeholder {
   color: #ff0000;
